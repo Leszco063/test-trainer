@@ -3645,6 +3645,3484 @@ window.QUESTIONS = [
   "correct": 1,
   "explain": "Achtung! 'don't have to' = musst nicht. 'mustn't' = darfst nicht.",
   "id": "60664738e1f6"
+ },
+ {
+  "cat": "Mathe",
+  "level": 1,
+  "q": "Ein Monatsticket kostet 49 €. Was kostet es für ein ganzes Jahr?",
+  "opts": [
+   "578 €",
+   "588 €",
+   "598 €",
+   "490 €"
+  ],
+  "correct": 1,
+  "explain": "49 € × 12 = 588 €. Tipp: 50 × 12 = 600, dann 12 × 1 € abziehen.",
+  "id": "8341e91be909"
+ },
+ {
+  "cat": "Mathe",
+  "level": 1,
+  "q": "Wie viel sind 50 % von 146?",
+  "opts": [
+   "63",
+   "73",
+   "76",
+   "83"
+  ],
+  "correct": 1,
+  "explain": "50 % = die Hälfte. 146 ÷ 2 = 73.",
+  "id": "d882b9f570e6"
+ },
+ {
+  "cat": "Mathe",
+  "level": 1,
+  "q": "Du hast 20 € und kaufst 3 Kabel zu je 4,50 €. Wie viel Geld bleibt übrig?",
+  "opts": [
+   "5,50 €",
+   "6,00 €",
+   "6,50 €",
+   "7,50 €"
+  ],
+  "correct": 2,
+  "explain": "3 × 4,50 € = 13,50 €. 20 € − 13,50 € = 6,50 €.",
+  "id": "87811e3d7262"
+ },
+ {
+  "cat": "Mathe",
+  "level": 1,
+  "q": "Wie viele Minuten sind 2,5 Stunden?",
+  "opts": [
+   "125",
+   "150",
+   "250",
+   "180"
+  ],
+  "correct": 1,
+  "explain": "2 Stunden = 120 min, eine halbe Stunde = 30 min. Zusammen 150 min.",
+  "id": "bc4917ee364f"
+ },
+ {
+  "cat": "Mathe",
+  "level": 1,
+  "q": "Wie viel ist 1/4 + 1/2?",
+  "opts": [
+   "2/6",
+   "3/4",
+   "1/6",
+   "2/4"
+  ],
+  "correct": 1,
+  "explain": "1/2 = 2/4. 1/4 + 2/4 = 3/4. Brüche nur mit gleichem Nenner addieren!",
+  "id": "d932b8185b68"
+ },
+ {
+  "cat": "Mathe",
+  "level": 1,
+  "q": "Ein Paket wiegt 2,4 kg. Wie viel Gramm sind das?",
+  "opts": [
+   "240 g",
+   "2.400 g",
+   "24.000 g",
+   "2.040 g"
+  ],
+  "correct": 1,
+  "explain": "1 kg = 1.000 g. 2,4 × 1.000 = 2.400 g.",
+  "id": "45ecdfce0667"
+ },
+ {
+  "cat": "Mathe",
+  "level": 1,
+  "q": "Wie viel sind 20 % von 45 €?",
+  "opts": [
+   "4,50 €",
+   "8 €",
+   "9 €",
+   "12 €"
+  ],
+  "correct": 2,
+  "explain": "10 % von 45 € = 4,50 €. 20 % = das Doppelte = 9 €.",
+  "id": "357f58828b4e"
+ },
+ {
+  "cat": "Mathe",
+  "level": 1,
+  "q": "Rechne: 0,5 × 36 = ?",
+  "opts": [
+   "16",
+   "18",
+   "72",
+   "3,6"
+  ],
+  "correct": 1,
+  "explain": "× 0,5 ist dasselbe wie ÷ 2. 36 ÷ 2 = 18.",
+  "id": "6f932c722ffe"
+ },
+ {
+  "cat": "Mathe",
+  "level": 1,
+  "q": "Ein Handy für 480 € wird in 12 gleichen Monatsraten bezahlt. Wie hoch ist eine Rate?",
+  "opts": [
+   "35 €",
+   "40 €",
+   "45 €",
+   "48 €"
+  ],
+  "correct": 1,
+  "explain": "480 € ÷ 12 = 40 €.",
+  "id": "5a50d2573d49"
+ },
+ {
+  "cat": "Mathe",
+  "level": 1,
+  "q": "Ein Glasfaserkabel ist 1,2 km lang. Wie viele Meter sind das?",
+  "opts": [
+   "120 m",
+   "1.200 m",
+   "12.000 m",
+   "1.020 m"
+  ],
+  "correct": 1,
+  "explain": "1 km = 1.000 m. 1,2 × 1.000 = 1.200 m.",
+  "id": "4bb88ef3d1cc"
+ },
+ {
+  "cat": "Mathe",
+  "level": 2,
+  "q": "Ein Kunde zahlt 3 Monate lang 25 € und danach 5 Monate lang 30 €. Wie viel zahlt er insgesamt?",
+  "opts": [
+   "205 €",
+   "215 €",
+   "225 €",
+   "240 €"
+  ],
+  "correct": 2,
+  "explain": "3 × 25 € = 75 €, 5 × 30 € = 150 €. Zusammen 225 €.",
+  "id": "3ba23a40879e"
+ },
+ {
+  "cat": "Mathe",
+  "level": 2,
+  "q": "8 Drucker verbrauchen im Monat 40 Tonerkartuschen. Wie viele verbrauchen 12 Drucker?",
+  "opts": [
+   "48",
+   "56",
+   "60",
+   "64"
+  ],
+  "correct": 2,
+  "explain": "Pro Drucker 40 ÷ 8 = 5 Kartuschen. 12 × 5 = 60.",
+  "id": "3b4d6b54f369"
+ },
+ {
+  "cat": "Mathe",
+  "level": 2,
+  "q": "Ein Techniker verdient 18 € pro Stunde. Wie viel verdient er in einer Woche mit 37,5 Stunden?",
+  "opts": [
+   "650 €",
+   "665 €",
+   "675 €",
+   "685 €"
+  ],
+  "correct": 2,
+  "explain": "18 × 37,5 = 18 × 37 + 18 × 0,5 = 666 + 9 = 675 €.",
+  "id": "367d0eafc9e7"
+ },
+ {
+  "cat": "Mathe",
+  "level": 2,
+  "q": "Auf 1 Ausbilder kommen 6 Azubis. Es gibt 42 Azubis. Wie viele Ausbilder gibt es?",
+  "opts": [
+   "6",
+   "7",
+   "8",
+   "36"
+  ],
+  "correct": 1,
+  "explain": "42 ÷ 6 = 7 Ausbilder.",
+  "id": "eb4d5e3a6aa4"
+ },
+ {
+  "cat": "Mathe",
+  "level": 2,
+  "q": "Ein Auto verbraucht 6 Liter auf 100 km. Wie viel braucht es für 350 km?",
+  "opts": [
+   "18 l",
+   "20 l",
+   "21 l",
+   "24 l"
+  ],
+  "correct": 2,
+  "explain": "350 km = 3,5 × 100 km. 3,5 × 6 l = 21 l.",
+  "id": "a60dd97a9a6c"
+ },
+ {
+  "cat": "Mathe",
+  "level": 2,
+  "q": "Wie groß ist der Durchschnitt von 4, 8, 10 und 14?",
+  "opts": [
+   "8",
+   "9",
+   "10",
+   "12"
+  ],
+  "correct": 1,
+  "explain": "Summe 36, geteilt durch 4 Zahlen = 9.",
+  "id": "f5e76d1f85fe"
+ },
+ {
+  "cat": "Mathe",
+  "level": 2,
+  "q": "Welcher Wert ist am größten?",
+  "opts": [
+   "0,7",
+   "3/5",
+   "65 %",
+   "0,68"
+  ],
+  "correct": 0,
+  "explain": "Alles in Dezimalzahlen: 0,7 – 0,6 – 0,65 – 0,68. Am größten ist 0,7.",
+  "id": "a1234ae4a2a1"
+ },
+ {
+  "cat": "Mathe",
+  "level": 2,
+  "q": "Wie viel sind 3/8 von 64?",
+  "opts": [
+   "18",
+   "21",
+   "24",
+   "32"
+  ],
+  "correct": 2,
+  "explain": "64 ÷ 8 = 8. 8 × 3 = 24.",
+  "id": "e93859f5db19"
+ },
+ {
+  "cat": "Mathe",
+  "level": 2,
+  "q": "Jemand arbeitet von 7:45 Uhr bis 16:15 Uhr und macht 30 Minuten Pause. Wie lange arbeitet er?",
+  "opts": [
+   "7 h 30 min",
+   "8 h",
+   "8 h 30 min",
+   "9 h"
+  ],
+  "correct": 1,
+  "explain": "7:45 bis 16:15 sind 8 h 30 min. Minus 30 min Pause = 8 h.",
+  "id": "beb371480a32"
+ },
+ {
+  "cat": "Mathe",
+  "level": 2,
+  "q": "In einer Gruppe sind 12 Männer und 18 Frauen. Wie viel Prozent sind Männer?",
+  "opts": [
+   "33 %",
+   "40 %",
+   "45 %",
+   "60 %"
+  ],
+  "correct": 1,
+  "explain": "Insgesamt 30 Personen. 12 ÷ 30 = 0,4 = 40 %.",
+  "id": "a44b3c50b6bc"
+ },
+ {
+  "cat": "Mathe",
+  "level": 2,
+  "q": "x + 3x = 48. Wie groß ist x?",
+  "opts": [
+   "10",
+   "12",
+   "16",
+   "24"
+  ],
+  "correct": 1,
+  "explain": "x + 3x = 4x. 4x = 48 → x = 12.",
+  "id": "424173a2450b"
+ },
+ {
+  "cat": "Mathe",
+  "level": 3,
+  "q": "Ein Router kostet 119 € inklusive 19 % Mehrwertsteuer. Wie viel Mehrwertsteuer ist enthalten?",
+  "opts": [
+   "19,00 €",
+   "22,61 €",
+   "17,00 €",
+   "21,00 €"
+  ],
+  "correct": 0,
+  "explain": "119 € = 119 %. Netto = 100 €, also stecken 19 € Mehrwertsteuer drin. 19 % von 119 € (= 22,61 €) wäre falsch!",
+  "id": "68380f69be05"
+ },
+ {
+  "cat": "Mathe",
+  "level": 3,
+  "q": "5.000 € werden 2 Jahre lang mit 2 % Zinseszins angelegt. Wie viel Geld ist es danach?",
+  "opts": [
+   "5.200 €",
+   "5.202 €",
+   "5.204 €",
+   "5.100 €"
+  ],
+  "correct": 1,
+  "explain": "Jahr 1: 5.000 × 1,02 = 5.100 €. Jahr 2: 5.100 × 1,02 = 5.202 € (Zinsen auf die Zinsen).",
+  "id": "8cea764a09f4"
+ },
+ {
+  "cat": "Mathe",
+  "level": 3,
+  "q": "Ein Preis wird zweimal hintereinander um 20 % gesenkt. Um wie viel Prozent ist er insgesamt gesunken?",
+  "opts": [
+   "36 %",
+   "40 %",
+   "44 %",
+   "32 %"
+  ],
+  "correct": 0,
+  "explain": "0,8 × 0,8 = 0,64. Der Preis ist also noch 64 % → gesunken um 36 %, nicht um 40 %.",
+  "id": "60a5b0f94824"
+ },
+ {
+  "cat": "Mathe",
+  "level": 3,
+  "q": "Ein Zug fährt mit 120 km/h. Wie viele Minuten braucht er für 90 km?",
+  "opts": [
+   "40",
+   "45",
+   "50",
+   "75"
+  ],
+  "correct": 1,
+  "explain": "120 km/h = 2 km pro Minute. 90 ÷ 2 = 45 Minuten.",
+  "id": "8a35bc347772"
+ },
+ {
+  "cat": "Mathe",
+  "level": 3,
+  "q": "12 GB Datenvolumen sollen 30 Tage reichen. Nach 18 Tagen sind 8,4 GB verbraucht. Wie viel darf man pro Tag noch nutzen?",
+  "opts": [
+   "0,2 GB",
+   "0,3 GB",
+   "0,4 GB",
+   "0,5 GB"
+  ],
+  "correct": 1,
+  "explain": "Rest: 12 − 8,4 = 3,6 GB für 12 Tage. 3,6 ÷ 12 = 0,3 GB pro Tag.",
+  "id": "d9403a0b02f3"
+ },
+ {
+  "cat": "Mathe",
+  "level": 3,
+  "q": "3 Maschinen stellen in 4 Stunden 360 Teile her. Wie viele Teile stellen 5 Maschinen in 6 Stunden her?",
+  "opts": [
+   "600",
+   "750",
+   "900",
+   "1.080"
+  ],
+  "correct": 2,
+  "explain": "1 Maschine schafft pro Stunde 360 ÷ (3 × 4) = 30 Teile. 5 × 6 × 30 = 900.",
+  "id": "cfefdad463c8"
+ },
+ {
+  "cat": "Mathe",
+  "level": 3,
+  "q": "Von 2.800 € Bruttolohn gehen 38 % für Steuern und Abgaben weg. Wie viel bleibt netto?",
+  "opts": [
+   "1.064 €",
+   "1.736 €",
+   "1.764 €",
+   "1.836 €"
+  ],
+  "correct": 1,
+  "explain": "Es bleiben 62 %. 2.800 × 0,62 = 1.736 €. (1.064 € sind die Abzüge.)",
+  "id": "9d2e1103dd78"
+ },
+ {
+  "cat": "Mathe",
+  "level": 3,
+  "q": "Ein Kreis hat einen Radius von 5 cm. Wie groß ist seine Fläche ungefähr? (π ≈ 3,14)",
+  "opts": [
+   "15,7 cm²",
+   "31,4 cm²",
+   "78,5 cm²",
+   "157 cm²"
+  ],
+  "correct": 2,
+  "explain": "Fläche = π × r² = 3,14 × 25 = 78,5 cm². (31,4 cm ist der Umfang.)",
+  "id": "e76a8eaf60a9"
+ },
+ {
+  "cat": "Mathe",
+  "level": 3,
+  "q": "Ein Händler verkauft ein Gerät für 150 € und macht dabei 25 % Gewinn auf den Einkaufspreis. Wie hoch war der Einkaufspreis?",
+  "opts": [
+   "112,50 €",
+   "120 €",
+   "125 €",
+   "130 €"
+  ],
+  "correct": 1,
+  "explain": "150 € = 125 % des Einkaufspreises. 150 ÷ 1,25 = 120 €.",
+  "id": "be6baa0897a2"
+ },
+ {
+  "cat": "Logik",
+  "level": 1,
+  "q": "Wie geht die Reihe weiter? 3, 6, 9, 12, ...",
+  "opts": [
+   "14",
+   "15",
+   "16",
+   "18"
+  ],
+  "correct": 1,
+  "explain": "Immer +3: 12 + 3 = 15.",
+  "id": "3fde90a87f9e"
+ },
+ {
+  "cat": "Logik",
+  "level": 1,
+  "q": "Wie geht die Reihe weiter? 50, 45, 40, 35, ...",
+  "opts": [
+   "25",
+   "30",
+   "32",
+   "34"
+  ],
+  "correct": 1,
+  "explain": "Immer −5: 35 − 5 = 30.",
+  "id": "4b5755c49a52"
+ },
+ {
+  "cat": "Logik",
+  "level": 1,
+  "q": "Welches Wort passt nicht: Montag, Freitag, Juli, Sonntag?",
+  "opts": [
+   "Montag",
+   "Freitag",
+   "Juli",
+   "Sonntag"
+  ],
+  "correct": 2,
+  "explain": "Juli ist ein Monat, die anderen sind Wochentage.",
+  "id": "6cafcf8af36e"
+ },
+ {
+  "cat": "Logik",
+  "level": 1,
+  "q": "Welches Gerät passt nicht: Bildschirm, Drucker, Lautsprecher, Mikrofon?",
+  "opts": [
+   "Bildschirm",
+   "Drucker",
+   "Lautsprecher",
+   "Mikrofon"
+  ],
+  "correct": 3,
+  "explain": "Das Mikrofon ist ein Eingabegerät, die anderen sind Ausgabegeräte.",
+  "id": "4e5b8367c268"
+ },
+ {
+  "cat": "Logik",
+  "level": 1,
+  "q": "Arzt verhält sich zu Krankenhaus wie Lehrer zu...",
+  "opts": [
+   "Schüler",
+   "Schule",
+   "Unterricht",
+   "Tafel"
+  ],
+  "correct": 1,
+  "explain": "Beziehung Person → Arbeitsort: Arzt arbeitet im Krankenhaus, Lehrer in der Schule.",
+  "id": "5eeb864cf217"
+ },
+ {
+  "cat": "Logik",
+  "level": 1,
+  "q": "Hand verhält sich zu Handschuh wie Fuß zu...",
+  "opts": [
+   "Zeh",
+   "Bein",
+   "Socke",
+   "Laufen"
+  ],
+  "correct": 2,
+  "explain": "Körperteil → Kleidungsstück darüber: Handschuh für die Hand, Socke für den Fuß.",
+  "id": "da21f4f22a25"
+ },
+ {
+  "cat": "Logik",
+  "level": 1,
+  "q": "Wie geht die Reihe weiter? 1, 2, 4, 8, 16, ...",
+  "opts": [
+   "24",
+   "30",
+   "32",
+   "36"
+  ],
+  "correct": 2,
+  "explain": "Immer verdoppeln: 16 × 2 = 32.",
+  "id": "49d8e8e47be9"
+ },
+ {
+  "cat": "Logik",
+  "level": 1,
+  "q": "Tom ist älter als Lisa. Lisa ist älter als Ben. Wer ist am jüngsten?",
+  "opts": [
+   "Tom",
+   "Lisa",
+   "Ben",
+   "Kann man nicht sagen"
+  ],
+  "correct": 2,
+  "explain": "Reihenfolge nach Alter: Tom > Lisa > Ben. Ben ist am jüngsten.",
+  "id": "6d964ebd82ca"
+ },
+ {
+  "cat": "Logik",
+  "level": 1,
+  "q": "Uhr verhält sich zu Zeit wie Thermometer zu...",
+  "opts": [
+   "Wetter",
+   "Temperatur",
+   "Grad",
+   "Fieber"
+  ],
+  "correct": 1,
+  "explain": "Messgerät → gemessene Größe: Die Uhr misst die Zeit, das Thermometer die Temperatur.",
+  "id": "e898ede39640"
+ },
+ {
+  "cat": "Logik",
+  "level": 2,
+  "q": "Wie geht die Reihe weiter? 2, 5, 11, 23, ...",
+  "opts": [
+   "35",
+   "46",
+   "47",
+   "48"
+  ],
+  "correct": 2,
+  "explain": "Jede Zahl × 2 + 1: 23 × 2 + 1 = 47.",
+  "id": "2e42f38bcb59"
+ },
+ {
+  "cat": "Logik",
+  "level": 2,
+  "q": "Wie geht die Reihe weiter? 100, 50, 25, 12,5, ...",
+  "opts": [
+   "6",
+   "6,25",
+   "7,5",
+   "10"
+  ],
+  "correct": 1,
+  "explain": "Immer halbieren: 12,5 ÷ 2 = 6,25.",
+  "id": "27e5d5cc8fe5"
+ },
+ {
+  "cat": "Logik",
+  "level": 2,
+  "q": "Wie geht die Reihe weiter? 7, 10, 8, 11, 9, ...",
+  "opts": [
+   "10",
+   "12",
+   "13",
+   "7"
+  ],
+  "correct": 1,
+  "explain": "Abwechselnd +3 und −2: 9 + 3 = 12.",
+  "id": "bd433dc7f806"
+ },
+ {
+  "cat": "Logik",
+  "level": 2,
+  "q": "Wie geht die Reihe weiter? B, E, H, K, ...",
+  "opts": [
+   "L",
+   "M",
+   "N",
+   "O"
+  ],
+  "correct": 2,
+  "explain": "Immer 3 Buchstaben weiter: K → (L, M) → N.",
+  "id": "666753e2d128"
+ },
+ {
+  "cat": "Logik",
+  "level": 2,
+  "q": "Welches Wort passt nicht: Kupfer, Eisen, Holz, Aluminium?",
+  "opts": [
+   "Kupfer",
+   "Eisen",
+   "Holz",
+   "Aluminium"
+  ],
+  "correct": 2,
+  "explain": "Holz ist kein Metall.",
+  "id": "27b2822b1337"
+ },
+ {
+  "cat": "Logik",
+  "level": 2,
+  "q": "Kilobyte verhält sich zu Megabyte wie Meter zu...",
+  "opts": [
+   "Zentimeter",
+   "Kilometer",
+   "Millimeter",
+   "Meile"
+  ],
+  "correct": 1,
+  "explain": "Jeweils Faktor 1.000 größer: 1 MB = 1.000 kB, 1 km = 1.000 m.",
+  "id": "14fb70075365"
+ },
+ {
+  "cat": "Logik",
+  "level": 2,
+  "q": "Welche Zahl passt nicht: 2, 3, 5, 7, 9, 11?",
+  "opts": [
+   "3",
+   "7",
+   "9",
+   "11"
+  ],
+  "correct": 2,
+  "explain": "Alle anderen sind Primzahlen. 9 = 3 × 3 ist keine Primzahl.",
+  "id": "adb9fef4029d"
+ },
+ {
+  "cat": "Logik",
+  "level": 2,
+  "q": "Wie geht die Reihe weiter? 1, 3, 7, 15, 31, ...",
+  "opts": [
+   "47",
+   "62",
+   "63",
+   "64"
+  ],
+  "correct": 2,
+  "explain": "Jede Zahl × 2 + 1: 31 × 2 + 1 = 63.",
+  "id": "a351ae043dea"
+ },
+ {
+  "cat": "Logik",
+  "level": 2,
+  "q": "Wie geht die Reihe weiter? 5, 6, 8, 11, 15, 20, ...",
+  "opts": [
+   "24",
+   "25",
+   "26",
+   "27"
+  ],
+  "correct": 2,
+  "explain": "Differenzen +1, +2, +3, +4, +5 → als Nächstes +6: 20 + 6 = 26.",
+  "id": "1a75d4a8d46a"
+ },
+ {
+  "cat": "Logik",
+  "level": 2,
+  "q": "Wenn gestern Sonntag war – welcher Tag ist übermorgen?",
+  "opts": [
+   "Dienstag",
+   "Mittwoch",
+   "Donnerstag",
+   "Montag"
+  ],
+  "correct": 1,
+  "explain": "Gestern Sonntag → heute Montag → übermorgen Mittwoch.",
+  "id": "c751cda32fd4"
+ },
+ {
+  "cat": "Logik",
+  "level": 2,
+  "q": "Bei einem Würfel ergeben gegenüberliegende Seiten zusammen immer 7. Welche Zahl liegt der 2 gegenüber?",
+  "opts": [
+   "3",
+   "4",
+   "5",
+   "6"
+  ],
+  "correct": 2,
+  "explain": "7 − 2 = 5.",
+  "id": "1f10f065d752"
+ },
+ {
+  "cat": "Logik",
+  "level": 3,
+  "q": "Wenn es regnet, ist die Straße nass. Die Straße ist NICHT nass. Was folgt daraus?",
+  "opts": [
+   "Es regnet",
+   "Es regnet nicht",
+   "Die Straße wurde abgetrocknet",
+   "Man kann nichts sagen"
+  ],
+  "correct": 1,
+  "explain": "Würde es regnen, wäre die Straße nass. Sie ist nicht nass → es regnet nicht.",
+  "id": "45aa55e32bf1"
+ },
+ {
+  "cat": "Logik",
+  "level": 3,
+  "q": "Wie geht die Reihe weiter? 2, 4, 12, 48, 240, ...",
+  "opts": [
+   "480",
+   "960",
+   "1.200",
+   "1.440"
+  ],
+  "correct": 3,
+  "explain": "×2, ×3, ×4, ×5 → als Nächstes ×6: 240 × 6 = 1.440.",
+  "id": "1a50a8e0d100"
+ },
+ {
+  "cat": "Logik",
+  "level": 3,
+  "q": "Wie geht die Reihe weiter? 1, 4, 2, 8, 6, 24, ...",
+  "opts": [
+   "22",
+   "20",
+   "96",
+   "26"
+  ],
+  "correct": 0,
+  "explain": "Abwechselnd ×4 und −2: 6 × 4 = 24, 24 − 2 = 22.",
+  "id": "101a7467629d"
+ },
+ {
+  "cat": "Logik",
+  "level": 3,
+  "q": "Wie geht die Reihe weiter? 3, 5, 9, 17, 33, ...",
+  "opts": [
+   "49",
+   "57",
+   "65",
+   "66"
+  ],
+  "correct": 2,
+  "explain": "Differenzen verdoppeln sich: +2, +4, +8, +16 → +32: 33 + 32 = 65.",
+  "id": "38a64c4d89fa"
+ },
+ {
+  "cat": "Logik",
+  "level": 3,
+  "q": "Wie geht die Reihe weiter? 1, 2, 6, 24, 120, ...",
+  "opts": [
+   "240",
+   "600",
+   "720",
+   "840"
+  ],
+  "correct": 2,
+  "explain": "×2, ×3, ×4, ×5 → ×6: 120 × 6 = 720.",
+  "id": "3a039db5af34"
+ },
+ {
+  "cat": "Logik",
+  "level": 3,
+  "q": "Einige Techniker sind Azubis. Alle Azubis haben einen Laptop. Welche Aussage ist sicher richtig?",
+  "opts": [
+   "Alle Techniker haben einen Laptop",
+   "Einige Techniker haben einen Laptop",
+   "Kein Techniker hat einen Laptop",
+   "Alle Azubis sind Techniker"
+  ],
+  "correct": 1,
+  "explain": "Die Techniker, die Azubis sind, haben sicher einen Laptop. Über die anderen weiß man nichts.",
+  "id": "5723ef4335ae"
+ },
+ {
+  "cat": "Logik",
+  "level": 3,
+  "q": "Wie geht die Reihe weiter? A, B, D, G, K, ...",
+  "opts": [
+   "N",
+   "O",
+   "P",
+   "Q"
+  ],
+  "correct": 2,
+  "explain": "Schritte +1, +2, +3, +4 → +5: K + 5 = P.",
+  "id": "faeebd7dc385"
+ },
+ {
+  "cat": "Logik",
+  "level": 3,
+  "q": "Fünf Ordner stehen im Regal. E steht ganz links, C ganz rechts. D steht direkt zwischen A und B, und A steht links von B. Welcher Ordner steht in der Mitte?",
+  "opts": [
+   "A",
+   "B",
+   "D",
+   "E"
+  ],
+  "correct": 2,
+  "explain": "E _ _ _ C. Die Mitte füllen A, D, B in dieser Reihenfolge → E A D B C. In der Mitte steht D.",
+  "id": "89037e9c08c8"
+ },
+ {
+  "cat": "IT",
+  "level": 1,
+  "q": "Was ist ein USB-Stick?",
+  "opts": [
+   "Ein tragbarer Datenspeicher",
+   "Ein Netzwerkkabel",
+   "Ein Prozessor",
+   "Ein Betriebssystem"
+  ],
+  "correct": 0,
+  "explain": "Ein USB-Stick ist ein kleiner Flash-Speicher zum Mitnehmen von Daten.",
+  "id": "5bb98c71c385"
+ },
+ {
+  "cat": "IT",
+  "level": 1,
+  "q": "Welches davon ist ein Betriebssystem?",
+  "opts": [
+   "Linux",
+   "Excel",
+   "Chrome",
+   "Outlook"
+  ],
+  "correct": 0,
+  "explain": "Linux ist ein Betriebssystem. Excel und Outlook sind Anwendungen, Chrome ist ein Browser.",
+  "id": "d1913dfa9905"
+ },
+ {
+  "cat": "IT",
+  "level": 1,
+  "q": "Wofür steht 'PC'?",
+  "opts": [
+   "Personal Computer",
+   "Private Computer",
+   "Program Control",
+   "Public Computer"
+  ],
+  "correct": 0,
+  "explain": "PC = Personal Computer.",
+  "id": "b53dd2904908"
+ },
+ {
+  "cat": "IT",
+  "level": 1,
+  "q": "Was macht ein Virenscanner?",
+  "opts": [
+   "Erkennt und entfernt Schadsoftware",
+   "Beschleunigt das Internet",
+   "Speichert Passwörter",
+   "Druckt Dokumente"
+  ],
+  "correct": 0,
+  "explain": "Virenscanner (Antivirenprogramme) suchen nach Schadsoftware und entfernen sie.",
+  "id": "517e2a96b350"
+ },
+ {
+  "cat": "IT",
+  "level": 1,
+  "q": "Mit welcher Tastenkombination kopiert man unter Windows markierten Text?",
+  "opts": [
+   "Strg + C",
+   "Strg + V",
+   "Strg + X",
+   "Strg + Z"
+  ],
+  "correct": 0,
+  "explain": "Strg + C = kopieren (Copy), Strg + V = einfügen, Strg + X = ausschneiden.",
+  "id": "f683c24d4236"
+ },
+ {
+  "cat": "IT",
+  "level": 1,
+  "q": "Mit welcher Tastenkombination macht man unter Windows die letzte Aktion rückgängig?",
+  "opts": [
+   "Strg + Y",
+   "Strg + Z",
+   "Strg + R",
+   "Strg + A"
+  ],
+  "correct": 1,
+  "explain": "Strg + Z = rückgängig. Strg + Y = wiederherstellen, Strg + A = alles markieren.",
+  "id": "c2eafb4102af"
+ },
+ {
+  "cat": "IT",
+  "level": 1,
+  "q": "Welche Aufgabe hat der Router in einem Heimnetz?",
+  "opts": [
+   "Er verbindet das Heimnetz mit dem Internet",
+   "Er druckt Dokumente",
+   "Er speichert Fotos",
+   "Er kühlt den PC"
+  ],
+  "correct": 0,
+  "explain": "Der Router verbindet das lokale Netz mit dem Internet (anderes Netz) und leitet Daten weiter.",
+  "id": "ceb0be293c21"
+ },
+ {
+  "cat": "IT",
+  "level": 1,
+  "q": "Welche Einheit ist am größten?",
+  "opts": [
+   "Terabyte",
+   "Gigabyte",
+   "Megabyte",
+   "Kilobyte"
+  ],
+  "correct": 0,
+  "explain": "Kilo < Mega < Giga < Tera – jeweils etwa Faktor 1.000.",
+  "id": "dca3c2930735"
+ },
+ {
+  "cat": "IT",
+  "level": 1,
+  "q": "Wofür steht die Abkürzung 'IT'?",
+  "opts": [
+   "Informationstechnik",
+   "Internettechnik",
+   "Interne Technik",
+   "Informationstransport"
+  ],
+  "correct": 0,
+  "explain": "IT = Informationstechnik (englisch: information technology).",
+  "id": "7e2ba60e8e05"
+ },
+ {
+  "cat": "IT",
+  "level": 1,
+  "q": "Was ist das Mainboard?",
+  "opts": [
+   "Die Hauptplatine, die alle Komponenten verbindet",
+   "Der Arbeitsspeicher",
+   "Das Netzteil",
+   "Die Grafikkarte"
+  ],
+  "correct": 0,
+  "explain": "Auf dem Mainboard (Hauptplatine) stecken CPU, RAM, Grafikkarte usw.",
+  "id": "4843bff2885f"
+ },
+ {
+  "cat": "IT",
+  "level": 1,
+  "q": "Welche Komponente führt die Rechenoperationen eines Computers aus?",
+  "opts": [
+   "Festplatte",
+   "CPU",
+   "Netzteil",
+   "Monitor"
+  ],
+  "correct": 1,
+  "explain": "Die CPU (Prozessor) ist das 'Gehirn' des Computers.",
+  "id": "13c33ddc1387"
+ },
+ {
+  "cat": "IT",
+  "level": 2,
+  "q": "Was ist ein Cookie beim Surfen?",
+  "opts": [
+   "Eine kleine Datei, die eine Webseite im Browser speichert",
+   "Ein Virus",
+   "Ein Werbebanner",
+   "Ein Passwort"
+  ],
+  "correct": 0,
+  "explain": "Cookies speichern z. B. Login-Status oder Einstellungen einer Webseite im Browser.",
+  "id": "1d5c780c5735"
+ },
+ {
+  "cat": "IT",
+  "level": 2,
+  "q": "Wofür steht 'URL'?",
+  "opts": [
+   "Uniform Resource Locator",
+   "Universal Router Link",
+   "User Registration Login",
+   "Unified Remote Line"
+  ],
+  "correct": 0,
+  "explain": "Die URL ist die Webadresse, z. B. https://www.beispiel.de/seite.",
+  "id": "e3b06a17f5b9"
+ },
+ {
+  "cat": "IT",
+  "level": 2,
+  "q": "Was ist ein VPN?",
+  "opts": [
+   "Ein verschlüsselter Tunnel über ein öffentliches Netz",
+   "Ein Virenscanner",
+   "Ein Grafikprogramm",
+   "Ein Speicherchip"
+  ],
+  "correct": 0,
+  "explain": "Mit einem VPN (Virtual Private Network) verbindet man sich z. B. von zu Hause sicher ins Firmennetz.",
+  "id": "8a70438e62fe"
+ },
+ {
+  "cat": "IT",
+  "level": 2,
+  "q": "Was ist Ransomware?",
+  "opts": [
+   "Schadsoftware, die Daten verschlüsselt und Lösegeld fordert",
+   "Ein Backup-Programm",
+   "Ein kostenloses Antivirenprogramm",
+   "Ein Netzwerkprotokoll"
+  ],
+  "correct": 0,
+  "explain": "Ransom = Lösegeld. Beste Vorbeugung: regelmäßige Backups, die nicht dauerhaft verbunden sind.",
+  "id": "87fa5df0a918"
+ },
+ {
+  "cat": "IT",
+  "level": 2,
+  "q": "Welcher Anschluss überträgt Bild UND Ton digital an einen Monitor oder Fernseher?",
+  "opts": [
+   "HDMI",
+   "VGA",
+   "PS/2",
+   "RJ11"
+  ],
+  "correct": 0,
+  "explain": "HDMI überträgt Bild und Ton digital. VGA ist analog und nur Bild, PS/2 ist für Maus/Tastatur, RJ11 für Telefon.",
+  "id": "5edd80b9890b"
+ },
+ {
+  "cat": "IT",
+  "level": 2,
+  "q": "Welcher Stecker wird typischerweise für Netzwerkkabel (LAN) verwendet?",
+  "opts": [
+   "RJ45",
+   "RJ11",
+   "USB-C",
+   "HDMI"
+  ],
+  "correct": 0,
+  "explain": "LAN-Kabel haben RJ45-Stecker (8 Kontakte). RJ11 ist der kleinere Telefonstecker.",
+  "id": "bb6cd06f4f34"
+ },
+ {
+  "cat": "IT",
+  "level": 2,
+  "q": "Was bedeutet 'Open Source'?",
+  "opts": [
+   "Der Quellcode ist öffentlich einsehbar und darf verändert werden",
+   "Die Software ist immer kostenpflichtig",
+   "Die Software läuft nur online",
+   "Die Software hat keine Lizenz"
+  ],
+  "correct": 0,
+  "explain": "Beispiele: Linux, Firefox, LibreOffice. Open Source hat trotzdem Lizenzen (z. B. GPL).",
+  "id": "6d96e4823572"
+ },
+ {
+  "cat": "IT",
+  "level": 2,
+  "q": "Was ist Social Engineering?",
+  "opts": [
+   "Menschen werden manipuliert, um an vertrauliche Informationen zu kommen",
+   "Das Programmieren sozialer Netzwerke",
+   "Ein Teamevent",
+   "Ein Netzwerkprotokoll"
+  ],
+  "correct": 0,
+  "explain": "Z. B. ein falscher 'IT-Support' ruft an und fragt nach dem Passwort. Der Mensch ist die Schwachstelle.",
+  "id": "c38185a19f7d"
+ },
+ {
+  "cat": "IT",
+  "level": 2,
+  "q": "Wofür steht 'SSD'?",
+  "opts": [
+   "Solid State Drive",
+   "Super Speed Disk",
+   "System Storage Device",
+   "Serial Storage Drive"
+  ],
+  "correct": 0,
+  "explain": "SSD = Solid State Drive, ein Speicher mit Flash-Chips statt drehender Scheiben.",
+  "id": "c09bcdf81353"
+ },
+ {
+  "cat": "IT",
+  "level": 2,
+  "q": "Was ist ein typischer Vorteil einer SSD gegenüber einer HDD?",
+  "opts": [
+   "Schneller und ohne bewegliche Teile",
+   "Immer mehr Speicherplatz fürs gleiche Geld",
+   "Braucht keinen Strom",
+   "Kann nicht kaputtgehen"
+  ],
+  "correct": 0,
+  "explain": "SSDs sind viel schneller und stoßunempfindlicher. HDDs bieten dafür oft mehr Speicher pro Euro.",
+  "id": "0e57e539191e"
+ },
+ {
+  "cat": "IT",
+  "level": 2,
+  "q": "Woran erkennt man eine Phishing-Mail häufig?",
+  "opts": [
+   "Zeitdruck und ein Link, über den man Zugangsdaten eingeben soll",
+   "Eine korrekte persönliche Anrede",
+   "Sie enthält keine Links",
+   "Sie kommt von einem bekannten Kollegen zu einem echten Projekt"
+  ],
+  "correct": 0,
+  "explain": "Typisch: 'Ihr Konto wird gesperrt – jetzt hier klicken!'. Absender und Link-Ziel immer genau prüfen.",
+  "id": "78ef1f89d870"
+ },
+ {
+  "cat": "IT",
+  "level": 2,
+  "q": "Was macht ein Access Point?",
+  "opts": [
+   "Er stellt ein WLAN für kabellose Geräte bereit",
+   "Er druckt über das Netzwerk",
+   "Er speichert Backups",
+   "Er verschlüsselt Festplatten"
+  ],
+  "correct": 0,
+  "explain": "Ein Access Point verbindet WLAN-Geräte mit dem kabelgebundenen Netzwerk.",
+  "id": "6bf9702b5616"
+ },
+ {
+  "cat": "IT",
+  "level": 2,
+  "q": "Was versteht man unter Latenz (Ping-Zeit) im Netzwerk?",
+  "opts": [
+   "Die Verzögerung, bis ein Datenpaket ankommt",
+   "Die Datenmenge pro Monat",
+   "Die Anzahl der Geräte im Netz",
+   "Die Länge des Kabels"
+  ],
+  "correct": 0,
+  "explain": "Latenz wird in Millisekunden gemessen. Wichtig z. B. bei Videocalls und Online-Spielen.",
+  "id": "7ba18887923e"
+ },
+ {
+  "cat": "IT",
+  "level": 2,
+  "q": "Welches Protokoll dient zur Übertragung von Dateien?",
+  "opts": [
+   "FTP",
+   "DNS",
+   "DHCP",
+   "ARP"
+  ],
+  "correct": 0,
+  "explain": "FTP = File Transfer Protocol (Port 21). Sicherer ist SFTP über SSH.",
+  "id": "4e2d8a909f04"
+ },
+ {
+  "cat": "IT",
+  "level": 2,
+  "q": "Welcher Dezimalzahl entspricht die Binärzahl 1010?",
+  "opts": [
+   "8",
+   "10",
+   "12",
+   "5"
+  ],
+  "correct": 1,
+  "explain": "1·8 + 0·4 + 1·2 + 0·1 = 10.",
+  "id": "02aaa9b35035"
+ },
+ {
+  "cat": "IT",
+  "level": 3,
+  "q": "Was ist ein Hypervisor?",
+  "opts": [
+   "Software, die virtuelle Maschinen verwaltet und ausführt",
+   "Ein besonders schneller Prozessor",
+   "Ein Administrator mit allen Rechten",
+   "Ein Überwachungsprogramm für Mitarbeiter"
+  ],
+  "correct": 0,
+  "explain": "Beispiele: VMware ESXi, Microsoft Hyper-V, Proxmox.",
+  "id": "728ebc9b010c"
+ },
+ {
+  "cat": "IT",
+  "level": 3,
+  "q": "Welche Aufgabe hat ARP?",
+  "opts": [
+   "Es ermittelt zu einer IP-Adresse die passende MAC-Adresse",
+   "Es vergibt IP-Adressen",
+   "Es übersetzt Domainnamen",
+   "Es verschlüsselt Daten"
+  ],
+  "correct": 0,
+  "explain": "ARP (Address Resolution Protocol) verbindet Schicht 3 (IP) mit Schicht 2 (MAC).",
+  "id": "75af9550da55"
+ },
+ {
+  "cat": "IT",
+  "level": 3,
+  "q": "Welcher Dezimalzahl entspricht die Hexadezimalzahl FF?",
+  "opts": [
+   "15",
+   "255",
+   "256",
+   "100"
+  ],
+  "correct": 1,
+  "explain": "F = 15. FF = 15 × 16 + 15 = 255 (dasselbe wie binär 1111 1111).",
+  "id": "1112322f5fd2"
+ },
+ {
+  "cat": "IT",
+  "level": 3,
+  "q": "Wie viele Hosts sind in einem /30-Netz nutzbar?",
+  "opts": [
+   "1",
+   "2",
+   "4",
+   "30"
+  ],
+  "correct": 1,
+  "explain": "/30 = 4 Adressen. Minus Netzadresse und Broadcast = 2 nutzbare Hosts (typisch für Router-Verbindungen).",
+  "id": "8e256c0aa8f5"
+ },
+ {
+  "cat": "IT",
+  "level": 3,
+  "q": "Welchen Port nutzt SSH standardmäßig?",
+  "opts": [
+   "21",
+   "22",
+   "23",
+   "25"
+  ],
+  "correct": 1,
+  "explain": "SSH = 22. FTP = 21, Telnet = 23, SMTP = 25.",
+  "id": "bdf1a031efee"
+ },
+ {
+  "cat": "IT",
+  "level": 3,
+  "q": "Warum wurde IPv6 eingeführt?",
+  "opts": [
+   "Weil die IPv4-Adressen knapp wurden",
+   "Weil IPv4 zu langsam war",
+   "Weil IPv4 keine Verschlüsselung erlaubt",
+   "Weil WLAN IPv6 braucht"
+  ],
+  "correct": 0,
+  "explain": "IPv4 hat nur ca. 4,3 Milliarden Adressen (32 Bit). IPv6 hat 128 Bit – praktisch unbegrenzt viele.",
+  "id": "9133ce87ba66"
+ },
+ {
+  "cat": "IT",
+  "level": 3,
+  "q": "Was unterscheidet einen Hub von einem Switch?",
+  "opts": [
+   "Ein Hub schickt Daten an alle Ports, ein Switch gezielt an den richtigen Port",
+   "Ein Hub ist schneller als ein Switch",
+   "Ein Switch verbindet nur zwei Geräte",
+   "Es gibt keinen Unterschied"
+  ],
+  "correct": 0,
+  "explain": "Der Switch merkt sich, welche MAC-Adresse an welchem Port hängt, und leitet gezielt weiter.",
+  "id": "b82b4c6db6c6"
+ },
+ {
+  "cat": "IT",
+  "level": 3,
+  "q": "Was besagt die 3-2-1-Backup-Regel?",
+  "opts": [
+   "3 Kopien, auf 2 verschiedenen Medien, 1 Kopie außer Haus",
+   "3 Festplatten, 2 Server, 1 Cloud-Konto",
+   "Backup alle 3 Tage, 2 Wochen aufbewahren, 1 Admin",
+   "3 Passwörter, 2 Faktoren, 1 Konto"
+  ],
+  "correct": 0,
+  "explain": "So überstehen die Daten auch Brand, Diebstahl oder Ransomware an einem Standort.",
+  "id": "e4cfc7cf7d0b"
+ },
+ {
+  "cat": "IT",
+  "level": 3,
+  "q": "Was ist eine DMZ in der Netzwerktechnik?",
+  "opts": [
+   "Ein abgetrennter Netzbereich für öffentlich erreichbare Server",
+   "Ein spezielles Gäste-WLAN",
+   "Ein Dateisystem",
+   "Eine Verschlüsselungsmethode"
+  ],
+  "correct": 0,
+  "explain": "In der DMZ (demilitarisierte Zone) stehen z. B. Webserver – getrennt vom internen Firmennetz.",
+  "id": "9f42d9b8f221"
+ },
+ {
+  "cat": "IT",
+  "level": 3,
+  "q": "Was ist das Default Gateway?",
+  "opts": [
+   "Die Adresse, an die ein Gerät Pakete für fremde Netze schickt (meist der Router)",
+   "Der erste Benutzer im Netzwerk",
+   "Das Standardpasswort eines Routers",
+   "Ein Virenscanner"
+  ],
+  "correct": 0,
+  "explain": "Ohne korrektes Gateway erreicht ein Gerät nur das eigene Netz, aber nicht das Internet.",
+  "id": "43dcd2f96563"
+ },
+ {
+  "cat": "BWL",
+  "level": 1,
+  "q": "Was ist ein Kaufvertrag?",
+  "opts": [
+   "Eine Vereinbarung zwischen Käufer und Verkäufer über Ware und Preis",
+   "Ein Arbeitsvertrag",
+   "Ein Mietvertrag",
+   "Eine Rechnung"
+  ],
+  "correct": 0,
+  "explain": "Ein Kaufvertrag entsteht durch zwei übereinstimmende Willenserklärungen: Angebot und Annahme.",
+  "id": "b4d6f6febd67"
+ },
+ {
+  "cat": "BWL",
+  "level": 1,
+  "q": "Was ist eine Quittung?",
+  "opts": [
+   "Eine Bestätigung über eine erhaltene Zahlung",
+   "Eine Mahnung",
+   "Ein Angebot",
+   "Eine Bestellung"
+  ],
+  "correct": 0,
+  "explain": "Mit der Quittung bestätigt der Empfänger, dass er das Geld bekommen hat.",
+  "id": "4a8fcf021a27"
+ },
+ {
+  "cat": "BWL",
+  "level": 1,
+  "q": "Was ist ein Girokonto?",
+  "opts": [
+   "Ein Konto für den täglichen Zahlungsverkehr",
+   "Ein Sparbuch mit hohen Zinsen",
+   "Ein Kredit",
+   "Eine Aktie"
+  ],
+  "correct": 0,
+  "explain": "Über das Girokonto laufen Gehalt, Überweisungen, Lastschriften und Kartenzahlungen.",
+  "id": "2e8daedaca6a"
+ },
+ {
+  "cat": "BWL",
+  "level": 1,
+  "q": "Was bedeutet 'Import'?",
+  "opts": [
+   "Waren aus dem Ausland einführen",
+   "Waren ins Ausland verkaufen",
+   "Waren lagern",
+   "Waren verschrotten"
+  ],
+  "correct": 0,
+  "explain": "Import = Einfuhr. Das Gegenteil ist Export = Ausfuhr.",
+  "id": "fcb1916f8d38"
+ },
+ {
+  "cat": "BWL",
+  "level": 1,
+  "q": "Wer ist ein Arbeitgeber?",
+  "opts": [
+   "Wer Personen gegen Lohn beschäftigt",
+   "Wer bei einer Firma angestellt ist",
+   "Die Gewerkschaft",
+   "Die Agentur für Arbeit"
+  ],
+  "correct": 0,
+  "explain": "Der Arbeitgeber gibt die Arbeit und zahlt Lohn. Der Arbeitnehmer leistet die Arbeit.",
+  "id": "d60dd65e1282"
+ },
+ {
+  "cat": "BWL",
+  "level": 1,
+  "q": "Was ist ein Budget?",
+  "opts": [
+   "Ein geplanter finanzieller Rahmen für Ausgaben",
+   "Ein Kredit",
+   "Ein Gewinn",
+   "Eine Steuer"
+  ],
+  "correct": 0,
+  "explain": "Z. B. hat eine Abteilung ein Budget von 10.000 € für neue Hardware im Jahr.",
+  "id": "b489e6fca4d9"
+ },
+ {
+  "cat": "BWL",
+  "level": 1,
+  "q": "Was ist eine Zielgruppe?",
+  "opts": [
+   "Die Kunden, die mit einem Produkt angesprochen werden sollen",
+   "Alle Mitarbeiter eines Unternehmens",
+   "Die Aktionäre",
+   "Die Lieferanten"
+  ],
+  "correct": 0,
+  "explain": "Z. B. richtet sich ein Jugendtarif an Kunden unter 28 Jahren.",
+  "id": "3feb1ce6442d"
+ },
+ {
+  "cat": "BWL",
+  "level": 1,
+  "q": "Was versteht man unter Marketing?",
+  "opts": [
+   "Alle Maßnahmen, um ein Produkt am Markt erfolgreich zu machen",
+   "Nur das Drucken von Plakaten",
+   "Die Buchhaltung",
+   "Die Produktion"
+  ],
+  "correct": 0,
+  "explain": "Dazu gehören die 4 P: Produkt, Preis, Platzierung (Vertrieb) und Promotion (Werbung).",
+  "id": "fbd8d48fabbf"
+ },
+ {
+  "cat": "BWL",
+  "level": 1,
+  "q": "Was ist ein Arbeitszeugnis?",
+  "opts": [
+   "Eine schriftliche Beurteilung des Arbeitgebers über Leistung und Verhalten",
+   "Ein Schulzeugnis",
+   "Ein Gesundheitszeugnis",
+   "Ein Ausweis"
+  ],
+  "correct": 0,
+  "explain": "Auch Azubis haben am Ende der Ausbildung Anspruch auf ein Zeugnis.",
+  "id": "6612c5a55212"
+ },
+ {
+  "cat": "BWL",
+  "level": 1,
+  "q": "Was ist der Mindestlohn?",
+  "opts": [
+   "Der gesetzlich festgelegte niedrigste Stundenlohn",
+   "Der Lohn in der Probezeit",
+   "Das Gehalt eines Azubis",
+   "Der Lohn nach Abzug der Steuern"
+  ],
+  "correct": 0,
+  "explain": "Für Azubis gilt stattdessen eine eigene Mindestausbildungsvergütung.",
+  "id": "9cd4d7967167"
+ },
+ {
+  "cat": "BWL",
+  "level": 1,
+  "q": "Was bedeutet 'Export'?",
+  "opts": [
+   "Verkauf von Waren ins Ausland",
+   "Einkauf von Waren aus dem Ausland",
+   "Lagerung von Waren",
+   "Rücksendung von Waren"
+  ],
+  "correct": 0,
+  "explain": "Export = Ausfuhr ins Ausland. Deutschland exportiert z. B. viele Autos und Maschinen.",
+  "id": "f957c6bd6ed4"
+ },
+ {
+  "cat": "BWL",
+  "level": 2,
+  "q": "Was ist ein Wettbewerbsvorteil?",
+  "opts": [
+   "Etwas, das ein Unternehmen besser kann als die Konkurrenz",
+   "Ein staatlicher Zuschuss",
+   "Eine Preiserhöhung",
+   "Ein Kredit mit niedrigen Zinsen"
+  ],
+  "correct": 0,
+  "explain": "Z. B. das bessere Netz, günstigere Preise oder besserer Service.",
+  "id": "4e5c6343a384"
+ },
+ {
+  "cat": "BWL",
+  "level": 2,
+  "q": "Was ist eine Inventur?",
+  "opts": [
+   "Die Bestandsaufnahme aller Vermögensgegenstände und Schulden",
+   "Eine Werbeaktion",
+   "Eine Gehaltserhöhung",
+   "Eine Kundenbefragung"
+  ],
+  "correct": 0,
+  "explain": "Bei der Inventur wird gezählt, gemessen und gewogen – meist zum Jahresende.",
+  "id": "e45256ab8c16"
+ },
+ {
+  "cat": "BWL",
+  "level": 2,
+  "q": "Was bedeutet 'Deflation'?",
+  "opts": [
+   "Ein allgemeiner Rückgang der Preise",
+   "Ein allgemeiner Anstieg der Preise",
+   "Ein Anstieg der Arbeitslosigkeit",
+   "Ein Anstieg der Zinsen"
+  ],
+  "correct": 0,
+  "explain": "Deflation ist das Gegenteil von Inflation. Klingt gut, bremst aber oft die Wirtschaft, weil Käufe aufgeschoben werden.",
+  "id": "19777d17605f"
+ },
+ {
+  "cat": "BWL",
+  "level": 2,
+  "q": "Was bedeutet 'Mindestvertragslaufzeit', z. B. bei einem Handyvertrag?",
+  "opts": [
+   "Die Zeit, die ein Vertrag mindestens läuft, bevor man ihn beenden kann",
+   "Die Dauer der Lieferung",
+   "Die Garantiezeit",
+   "Die Probezeit im Job"
+  ],
+  "correct": 0,
+  "explain": "Bei Mobilfunkverträgen sind z. B. 24 Monate üblich.",
+  "id": "1a60db7d905f"
+ },
+ {
+  "cat": "BWL",
+  "level": 2,
+  "q": "Wie lange gilt in Deutschland die gesetzliche Gewährleistung beim Kauf neuer Ware?",
+  "opts": [
+   "6 Monate",
+   "1 Jahr",
+   "2 Jahre",
+   "5 Jahre"
+  ],
+  "correct": 2,
+  "explain": "2 Jahre für Neuware. Bei Gebrauchtware kann sie auf 1 Jahr verkürzt werden.",
+  "id": "1df608f7662b"
+ },
+ {
+  "cat": "BWL",
+  "level": 2,
+  "q": "Was bedeutet 'Kündigungsfrist'?",
+  "opts": [
+   "Die Zeit zwischen Kündigung und tatsächlichem Vertragsende",
+   "Die Probezeit",
+   "Der Urlaubsanspruch",
+   "Die Frist für eine Bewerbung"
+  ],
+  "correct": 0,
+  "explain": "Wer z. B. mit 4 Wochen Frist kündigt, arbeitet noch 4 Wochen weiter.",
+  "id": "5bed81e69ae8"
+ },
+ {
+  "cat": "BWL",
+  "level": 2,
+  "q": "Was ist ein Kostenvoranschlag?",
+  "opts": [
+   "Eine vorherige Schätzung der Kosten für einen Auftrag",
+   "Eine Rechnung",
+   "Eine Mahnung",
+   "Ein Rabatt"
+  ],
+  "correct": 0,
+  "explain": "Kennst du aus der Werkstatt: Vor der Reparatur bekommt der Kunde einen Kostenvoranschlag.",
+  "id": "e3b04c053f6e"
+ },
+ {
+  "cat": "BWL",
+  "level": 2,
+  "q": "Welche Gewerkschaft ist unter anderem für die Beschäftigten der Deutschen Telekom zuständig?",
+  "opts": [
+   "ver.di",
+   "IG Metall",
+   "GEW",
+   "IG BAU"
+  ],
+  "correct": 0,
+  "explain": "ver.di (Vereinte Dienstleistungsgewerkschaft) verhandelt die Tarifverträge bei der Telekom. Die IG Metall ist z. B. für die Autoindustrie zuständig.",
+  "id": "1093deef2559"
+ },
+ {
+  "cat": "BWL",
+  "level": 2,
+  "q": "Eine Rechnung beträgt 800 € netto. Wie hoch ist der Bruttobetrag bei 19 % Mehrwertsteuer?",
+  "opts": [
+   "819 €",
+   "919 €",
+   "952 €",
+   "972 €"
+  ],
+  "correct": 2,
+  "explain": "800 × 1,19 = 952 € (800 € + 152 € MwSt.).",
+  "id": "a20d335f2c7b"
+ },
+ {
+  "cat": "BWL",
+  "level": 2,
+  "q": "Ein Artikel kostet im Einkauf 60 €. Der Händler schlägt 30 % auf. Wie hoch ist der Verkaufspreis?",
+  "opts": [
+   "72 €",
+   "78 €",
+   "80 €",
+   "90 €"
+  ],
+  "correct": 1,
+  "explain": "30 % von 60 € = 18 €. 60 € + 18 € = 78 €.",
+  "id": "c2251a38e9d9"
+ },
+ {
+  "cat": "BWL",
+  "level": 2,
+  "q": "Was bedeutet eine Fusion von Unternehmen?",
+  "opts": [
+   "Zwei Unternehmen schließen sich zu einem zusammen",
+   "Ein Unternehmen wird geschlossen",
+   "Ein Unternehmen wird aufgeteilt",
+   "Ein Unternehmen geht an die Börse"
+  ],
+  "correct": 0,
+  "explain": "Beispiel: T-Mobile US und Sprint haben 2020 fusioniert.",
+  "id": "827b750a32b0"
+ },
+ {
+  "cat": "BWL",
+  "level": 3,
+  "q": "Welche Organe hat eine Aktiengesellschaft?",
+  "opts": [
+   "Vorstand, Aufsichtsrat, Hauptversammlung",
+   "Geschäftsführer und Gesellschafterversammlung",
+   "Betriebsrat und Gewerkschaft",
+   "Inhaber und Prokurist"
+  ],
+  "correct": 0,
+  "explain": "Der Vorstand leitet, der Aufsichtsrat kontrolliert, die Hauptversammlung (Aktionäre) entscheidet über Grundsätzliches. Geschäftsführer + Gesellschafterversammlung gehören zur GmbH.",
+  "id": "833c597b5a2b"
+ },
+ {
+  "cat": "BWL",
+  "level": 3,
+  "q": "Was ist Prokura?",
+  "opts": [
+   "Eine weitreichende Vollmacht, im Namen des Unternehmens zu handeln",
+   "Ein Kreditvertrag",
+   "Eine Steuererklärung",
+   "Ein Ausbildungsnachweis"
+  ],
+  "correct": 0,
+  "explain": "Ein Prokurist darf fast alle Geschäfte abschließen. Er unterschreibt mit 'ppa.'.",
+  "id": "ef6f1e2de338"
+ },
+ {
+  "cat": "BWL",
+  "level": 3,
+  "q": "Was unterscheidet Garantie und Gewährleistung?",
+  "opts": [
+   "Gewährleistung ist gesetzlich vorgeschrieben, Garantie ist eine freiwillige Zusage des Herstellers",
+   "Beide sind gesetzlich vorgeschrieben",
+   "Garantie ist gesetzlich, Gewährleistung freiwillig",
+   "Es gibt keinen Unterschied"
+  ],
+  "correct": 0,
+  "explain": "Gewährleistung: gesetzlich, gegenüber dem Verkäufer. Garantie: freiwillig, meist vom Hersteller.",
+  "id": "9bc6568e9378"
+ },
+ {
+  "cat": "BWL",
+  "level": 3,
+  "q": "Wie viele Werktage Urlaub stehen Arbeitnehmern bei einer 6-Tage-Woche gesetzlich mindestens zu?",
+  "opts": [
+   "20",
+   "24",
+   "26",
+   "30"
+  ],
+  "correct": 1,
+  "explain": "Bundesurlaubsgesetz: 24 Werktage = 4 Wochen. Bei einer 5-Tage-Woche entspricht das 20 Arbeitstagen. Für Jugendliche gilt mehr.",
+  "id": "2575a4e5ed42"
+ },
+ {
+  "cat": "BWL",
+  "level": 3,
+  "q": "Was bedeutet 'Rendite'?",
+  "opts": [
+   "Der Ertrag einer Geldanlage im Verhältnis zum eingesetzten Kapital",
+   "Die Höhe eines Kredits",
+   "Der Preis einer Aktie",
+   "Die Steuer auf Gewinne"
+  ],
+  "correct": 0,
+  "explain": "Wer 1.000 € anlegt und 50 € Ertrag bekommt, hat 5 % Rendite.",
+  "id": "79afbf3a4e36"
+ },
+ {
+  "cat": "BWL",
+  "level": 3,
+  "q": "Was bedeutet 'Just-in-time'-Produktion?",
+  "opts": [
+   "Material wird genau dann geliefert, wenn es gebraucht wird",
+   "Es wird nur nachts produziert",
+   "Alles wird auf Vorrat produziert",
+   "Produktion ganz ohne Maschinen"
+  ],
+  "correct": 0,
+  "explain": "Spart Lagerkosten, ist aber anfällig bei Lieferproblemen – typisch in der Autoindustrie.",
+  "id": "4714bd0b6cda"
+ },
+ {
+  "cat": "BWL",
+  "level": 3,
+  "q": "Was ist eine Bilanz?",
+  "opts": [
+   "Eine Gegenüberstellung von Vermögen (Aktiva) und Kapital (Passiva) zu einem Stichtag",
+   "Eine Liste aller Kunden",
+   "Die Gewinn- und Verlustrechnung eines Monats",
+   "Ein Kassenbuch"
+  ],
+  "correct": 0,
+  "explain": "Aktiva zeigen, WAS das Unternehmen hat. Passiva zeigen, WOHER das Geld dafür stammt. Beide Seiten sind immer gleich groß.",
+  "id": "cc6a1e5dd25a"
+ },
+ {
+  "cat": "BWL",
+  "level": 3,
+  "q": "Was steht auf der Aktivseite der Bilanz?",
+  "opts": [
+   "Das Vermögen, z. B. Gebäude, Maschinen, Bankguthaben",
+   "Eigenkapital und Schulden",
+   "Alle Mitarbeiter",
+   "Die Umsätze"
+  ],
+  "correct": 0,
+  "explain": "Aktiva = Vermögen (Mittelverwendung). Passiva = Eigen- und Fremdkapital (Mittelherkunft).",
+  "id": "5e84f8aa9122"
+ },
+ {
+  "cat": "BWL",
+  "level": 3,
+  "q": "Ein Unternehmen hat 400.000 € Eigenkapital und 600.000 € Fremdkapital. Wie hoch ist die Eigenkapitalquote?",
+  "opts": [
+   "40 %",
+   "60 %",
+   "66,7 %",
+   "150 %"
+  ],
+  "correct": 0,
+  "explain": "Gesamtkapital = 1.000.000 €. 400.000 ÷ 1.000.000 = 40 %.",
+  "id": "c24ea2609ad7"
+ },
+ {
+  "cat": "BWL",
+  "level": 3,
+  "q": "Ein Unternehmen macht 50.000 € Umsatz und 5.000 € Gewinn. Wie hoch ist die Umsatzrendite?",
+  "opts": [
+   "5 %",
+   "10 %",
+   "15 %",
+   "20 %"
+  ],
+  "correct": 1,
+  "explain": "Umsatzrendite = Gewinn ÷ Umsatz = 5.000 ÷ 50.000 = 10 %.",
+  "id": "3f6771c30c51"
+ },
+ {
+  "cat": "Konzentration",
+  "level": 1,
+  "q": "Rechne im Kopf: 36 + 47 = ?",
+  "opts": [
+   "73",
+   "81",
+   "83",
+   "84"
+  ],
+  "correct": 2,
+  "explain": "36 + 40 = 76, + 7 = 83.",
+  "id": "e305cb7fd102"
+ },
+ {
+  "cat": "Konzentration",
+  "level": 1,
+  "q": "Rechne im Kopf: 9 × 6 = ?",
+  "opts": [
+   "45",
+   "54",
+   "56",
+   "63"
+  ],
+  "correct": 1,
+  "explain": "9 × 6 = 54.",
+  "id": "e410dd88206a"
+ },
+ {
+  "cat": "Konzentration",
+  "level": 1,
+  "q": "Wie viele ungerade Zahlen stehen hier?  3, 8, 11, 14, 17, 20, 25, 29",
+  "opts": [
+   "3",
+   "4",
+   "5",
+   "6"
+  ],
+  "correct": 2,
+  "explain": "Ungerade: 3, 11, 17, 25, 29 = 5 Stück.",
+  "id": "d6ee61cdf2c4"
+ },
+ {
+  "cat": "Konzentration",
+  "level": 1,
+  "q": "Rechne im Kopf: 100 − 37 = ?",
+  "opts": [
+   "53",
+   "63",
+   "67",
+   "73"
+  ],
+  "correct": 1,
+  "explain": "100 − 40 = 60, + 3 = 63.",
+  "id": "0ec4a4fa1c11"
+ },
+ {
+  "cat": "Konzentration",
+  "level": 1,
+  "q": "Welches Kennzeichen ist identisch mit: WÜ-KL 4821?",
+  "opts": [
+   "WÜ-KL 4812",
+   "WÜ-LK 4821",
+   "WÜ-KL 4821",
+   "WU-KL 4821"
+  ],
+  "correct": 2,
+  "explain": "Nur 'WÜ-KL 4821' stimmt. Achte auf vertauschte Buchstaben, Ziffern und fehlende Umlaute.",
+  "id": "c133edb896c7"
+ },
+ {
+  "cat": "Konzentration",
+  "level": 2,
+  "q": "Wie oft kommt 'a' im Wort 'Datenbankadministrator' vor?",
+  "opts": [
+   "3",
+   "4",
+   "5",
+   "6"
+  ],
+  "correct": 1,
+  "explain": "D(a)tenb(a)nk(a)dministr(a)tor → 4-mal.",
+  "id": "410bf8afd29a"
+ },
+ {
+  "cat": "Konzentration",
+  "level": 2,
+  "q": "Welche Zahl ist die kleinste?  0,305 – 0,35 – 0,3 – 0,53",
+  "opts": [
+   "0,305",
+   "0,35",
+   "0,3",
+   "0,53"
+  ],
+  "correct": 2,
+  "explain": "Gleich viele Nachkommastellen machen es leichter: 0,305 – 0,350 – 0,300 – 0,530. Am kleinsten: 0,3.",
+  "id": "d1b18500c111"
+ },
+ {
+  "cat": "Konzentration",
+  "level": 2,
+  "q": "Rechne im Kopf: 15 × 12 = ?",
+  "opts": [
+   "160",
+   "170",
+   "180",
+   "190"
+  ],
+  "correct": 2,
+  "explain": "15 × 12 = 15 × 10 + 15 × 2 = 150 + 30 = 180.",
+  "id": "36f2f1727bb5"
+ },
+ {
+  "cat": "Konzentration",
+  "level": 2,
+  "q": "Rechne im Kopf: 144 ÷ 8 = ?",
+  "opts": [
+   "16",
+   "18",
+   "19",
+   "22"
+  ],
+  "correct": 1,
+  "explain": "8 × 18 = 144.",
+  "id": "8dfc48c46533"
+ },
+ {
+  "cat": "Konzentration",
+  "level": 2,
+  "q": "Wie viele Paare sind identisch?  A7K3–A7K3 | B9L2–B9I2 | C4M8–C4M8 | D1N5–D1N5",
+  "opts": [
+   "1",
+   "2",
+   "3",
+   "4"
+  ],
+  "correct": 2,
+  "explain": "Nur B9L2–B9I2 unterscheidet sich (L und I). Also 3 identische Paare.",
+  "id": "5f60f346414e"
+ },
+ {
+  "cat": "Konzentration",
+  "level": 2,
+  "q": "Welche MAC-Adresse ist identisch mit: 00:1A:2B:3C:4D:5E?",
+  "opts": [
+   "00:1A:2B:3C:4D:5E",
+   "00:1A:2B:3C:D4:5E",
+   "00:1A:B2:3C:4D:5E",
+   "00:A1:2B:3C:4D:5E"
+  ],
+  "correct": 0,
+  "explain": "Bei den anderen sind jeweils zwei Zeichen in einem Block vertauscht.",
+  "id": "257d80714449"
+ },
+ {
+  "cat": "Konzentration",
+  "level": 2,
+  "q": "Wie viele Zahlen liegen zwischen 100 und 200 (beide ausgeschlossen)?  99, 150, 201, 180, 100, 199, 250, 120, 101, 175",
+  "opts": [
+   "4",
+   "5",
+   "6",
+   "7"
+  ],
+  "correct": 2,
+  "explain": "150, 180, 199, 120, 101 und 175 = 6. Die 100 zählt nicht, weil die Grenzen ausgeschlossen sind.",
+  "id": "019440920e08"
+ },
+ {
+  "cat": "Konzentration",
+  "level": 2,
+  "q": "Rechne im Kopf: 250 − 75 + 30 = ?",
+  "opts": [
+   "195",
+   "205",
+   "215",
+   "355"
+  ],
+  "correct": 1,
+  "explain": "250 − 75 = 175. 175 + 30 = 205.",
+  "id": "fd369c1b23b4"
+ },
+ {
+  "cat": "Konzentration",
+  "level": 2,
+  "q": "Welcher Buchstabe fehlt?  A  C  E  G  _  K",
+  "opts": [
+   "H",
+   "I",
+   "J",
+   "L"
+  ],
+  "correct": 1,
+  "explain": "Jeder zweite Buchstabe: G, (H), I, (J), K.",
+  "id": "48b1ec236702"
+ },
+ {
+  "cat": "Konzentration",
+  "level": 2,
+  "q": "Rechne im Kopf: 17 × 4 = ?",
+  "opts": [
+   "64",
+   "68",
+   "71",
+   "74"
+  ],
+  "correct": 1,
+  "explain": "17 × 4 = 10 × 4 + 7 × 4 = 40 + 28 = 68.",
+  "id": "42f57af92f64"
+ },
+ {
+  "cat": "Konzentration",
+  "level": 2,
+  "q": "Wie lautet die Zahl 58213 rückwärts gelesen?",
+  "opts": [
+   "31285",
+   "31258",
+   "35218",
+   "13285"
+  ],
+  "correct": 0,
+  "explain": "5-8-2-1-3 rückwärts: 3-1-2-8-5.",
+  "id": "15bcabf08033"
+ },
+ {
+  "cat": "Konzentration",
+  "level": 2,
+  "q": "Rechne im Kopf: 1.000 − 368 = ?",
+  "opts": [
+   "632",
+   "642",
+   "672",
+   "732"
+  ],
+  "correct": 0,
+  "explain": "1.000 − 400 = 600, + 32 = 632.",
+  "id": "4bd7e3d15096"
+ },
+ {
+  "cat": "Konzentration",
+  "level": 2,
+  "q": "Wie viele Zahlen sind durch 4 teilbar?  12, 18, 24, 30, 36, 42, 50, 54",
+  "opts": [
+   "3",
+   "4",
+   "5",
+   "6"
+  ],
+  "correct": 0,
+  "explain": "12, 24 und 36. Die anderen sind nur durch 2 teilbar (Tipp: 50 ÷ 4 = 12,5).",
+  "id": "69156320bcd8"
+ },
+ {
+  "cat": "Konzentration",
+  "level": 3,
+  "q": "Wie viele Wörter beginnen mit s oder S?  'Sieben Server standen seit Sonntag still im Serverraum.'",
+  "opts": [
+   "5",
+   "6",
+   "7",
+   "8"
+  ],
+  "correct": 2,
+  "explain": "Sieben, Server, standen, seit, Sonntag, still, Serverraum = 7. Nur 'im' nicht.",
+  "id": "369b67ff1553"
+ },
+ {
+  "cat": "Konzentration",
+  "level": 3,
+  "q": "Wie oft kommt die Ziffer 3 vor?  3383 1303 7343 3033",
+  "opts": [
+   "8",
+   "9",
+   "10",
+   "11"
+  ],
+  "correct": 2,
+  "explain": "3383 (3×), 1303 (2×), 7343 (2×), 3033 (3×) = 10-mal.",
+  "id": "6e3f6d5bd369"
+ },
+ {
+  "cat": "Konzentration",
+  "level": 3,
+  "q": "Rechne im Kopf: 23 × 19 = ?",
+  "opts": [
+   "417",
+   "427",
+   "437",
+   "447"
+  ],
+  "correct": 2,
+  "explain": "23 × 20 = 460, minus 23 = 437.",
+  "id": "05db5909256e"
+ },
+ {
+  "cat": "Konzentration",
+  "level": 3,
+  "q": "Wie oft kommt 'n' vor in 'Netzwerkinfrastrukturanpassungen'? (N am Anfang zählt mit)",
+  "opts": [
+   "4",
+   "5",
+   "6",
+   "7"
+  ],
+  "correct": 1,
+  "explain": "(N)etzwerki(n)frastruktura(n)passu(n)ge(n) → 5-mal.",
+  "id": "e66f61f4045b"
+ },
+ {
+  "cat": "Konzentration",
+  "level": 3,
+  "q": "Wie oft kommt die Buchstabenfolge 'bd' vor?  dbbdbdddbbdbdbd",
+  "opts": [
+   "3",
+   "4",
+   "5",
+   "6"
+  ],
+  "correct": 2,
+  "explain": "d-b-(bd)-(bd)-d-d-b-(bd)-(bd)-(bd) → 5-mal.",
+  "id": "ac57d3dcc581"
+ },
+ {
+  "cat": "Konzentration",
+  "level": 3,
+  "q": "Rechne im Kopf: 7 + 8 × 3 − 4 = ?",
+  "opts": [
+   "27",
+   "41",
+   "29",
+   "37"
+  ],
+  "correct": 0,
+  "explain": "Punkt vor Strich: 8 × 3 = 24. Dann 7 + 24 − 4 = 27. (41 kommt raus, wenn man von links rechnet.)",
+  "id": "48a0ce43ad3d"
+ },
+ {
+  "cat": "Konzentration",
+  "level": 3,
+  "q": "Rechne im Kopf: (48 ÷ 6) × (15 − 7) = ?",
+  "opts": [
+   "56",
+   "64",
+   "72",
+   "48"
+  ],
+  "correct": 1,
+  "explain": "Klammern zuerst: 48 ÷ 6 = 8 und 15 − 7 = 8. 8 × 8 = 64.",
+  "id": "2749bc549231"
+ },
+ {
+  "cat": "Merkfähigkeit",
+  "level": 1,
+  "memo": "Löwe  –  Brot  –  Uhr  –  Zug",
+  "q": "Welcher Begriff stand an zweiter Stelle?",
+  "opts": [
+   "Löwe",
+   "Brot",
+   "Uhr",
+   "Zug"
+  ],
+  "correct": 1,
+  "explain": "Reihenfolge: Löwe, Brot, Uhr, Zug.",
+  "id": "a9aa5ccf2a2f"
+ },
+ {
+  "cat": "Merkfähigkeit",
+  "level": 1,
+  "memo": "4  –  9  –  2",
+  "q": "Wie lautete die Zahlenfolge?",
+  "opts": [
+   "4 – 9 – 2",
+   "4 – 2 – 9",
+   "9 – 4 – 2",
+   "4 – 9 – 7"
+  ],
+  "correct": 0,
+  "explain": "Die Folge war 4 – 9 – 2.",
+  "id": "a3efc71cb715"
+ },
+ {
+  "cat": "Merkfähigkeit",
+  "level": 1,
+  "memo": "Rot, Blau, Grün, Gelb",
+  "q": "Welche Farbe kam NICHT vor?",
+  "opts": [
+   "Rot",
+   "Lila",
+   "Grün",
+   "Gelb"
+  ],
+  "correct": 1,
+  "explain": "Die Farben waren Rot, Blau, Grün, Gelb. Lila war nicht dabei.",
+  "id": "6660d00f60df"
+ },
+ {
+  "cat": "Merkfähigkeit",
+  "level": 1,
+  "memo": "Herr Braun – Zimmer 14",
+  "q": "In welchem Zimmer ist Herr Braun?",
+  "opts": [
+   "12",
+   "14",
+   "41",
+   "16"
+  ],
+  "correct": 1,
+  "explain": "Herr Braun war in Zimmer 14.",
+  "id": "fc0f38d6bd07"
+ },
+ {
+  "cat": "Merkfähigkeit",
+  "level": 1,
+  "memo": "Maus  –  Tastatur  –  Monitor",
+  "q": "Welcher Begriff stand am Anfang?",
+  "opts": [
+   "Tastatur",
+   "Monitor",
+   "Maus",
+   "Drucker"
+  ],
+  "correct": 2,
+  "explain": "Reihenfolge: Maus, Tastatur, Monitor.",
+  "id": "0e59086e4220"
+ },
+ {
+  "cat": "Merkfähigkeit",
+  "level": 2,
+  "memo": "Lieferung: 12 Router, 5 Switches, 30 Kabel",
+  "q": "Wie viele Switches wurden geliefert?",
+  "opts": [
+   "3",
+   "5",
+   "12",
+   "30"
+  ],
+  "correct": 1,
+  "explain": "12 Router, 5 Switches, 30 Kabel.",
+  "id": "3e8e88c7c048"
+ },
+ {
+  "cat": "Merkfähigkeit",
+  "level": 2,
+  "memo": "Treffpunkt: Bahnhof Würzburg, Gleis 7, 8:15 Uhr",
+  "q": "Um wie viel Uhr ist das Treffen?",
+  "opts": [
+   "7:15 Uhr",
+   "8:15 Uhr",
+   "8:50 Uhr",
+   "8:07 Uhr"
+  ],
+  "correct": 1,
+  "explain": "Gleis 7, 8:15 Uhr. Die 7 gehörte zum Gleis, nicht zur Uhrzeit.",
+  "id": "450c83e4ad29"
+ },
+ {
+  "cat": "Merkfähigkeit",
+  "level": 2,
+  "memo": "Anna 23,  Ben 31,  Clara 19,  David 27",
+  "q": "Wie alt ist Clara?",
+  "opts": [
+   "23",
+   "31",
+   "19",
+   "27"
+  ],
+  "correct": 2,
+  "explain": "Clara ist 19.",
+  "id": "4e9407c64284"
+ },
+ {
+  "cat": "Merkfähigkeit",
+  "level": 2,
+  "memo": "Flug LH 4719 – Abflug 10:40 – Gate B12",
+  "q": "An welchem Gate ist der Abflug?",
+  "opts": [
+   "B21",
+   "B12",
+   "D12",
+   "B2"
+  ],
+  "correct": 1,
+  "explain": "Gate B12.",
+  "id": "30204adf2dd0"
+ },
+ {
+  "cat": "Merkfähigkeit",
+  "level": 2,
+  "memo": "Hammer, Säge, Zange, Bohrer, Feile",
+  "q": "Welches Werkzeug stand an dritter Stelle?",
+  "opts": [
+   "Säge",
+   "Zange",
+   "Bohrer",
+   "Hammer"
+  ],
+  "correct": 1,
+  "explain": "1. Hammer, 2. Säge, 3. Zange, 4. Bohrer, 5. Feile.",
+  "id": "39c550d9f3f0"
+ },
+ {
+  "cat": "Merkfähigkeit",
+  "level": 2,
+  "memo": "7  –  3  –  8  –  1  –  5  –  9",
+  "q": "Wie viele ungerade Zahlen waren dabei?",
+  "opts": [
+   "3",
+   "4",
+   "5",
+   "6"
+  ],
+  "correct": 2,
+  "explain": "7, 3, 1, 5, 9 sind ungerade – 5 Stück. Nur die 8 ist gerade.",
+  "id": "63aa7ea7c155"
+ },
+ {
+  "cat": "Merkfähigkeit",
+  "level": 2,
+  "memo": "Passwort-Hinweis: Sonne24!Mond",
+  "q": "Welches Sonderzeichen kam im Passwort vor?",
+  "opts": [
+   "?",
+   "!",
+   "#",
+   "@"
+  ],
+  "correct": 1,
+  "explain": "Sonne24!Mond – das Ausrufezeichen.",
+  "id": "ce438e46f542"
+ },
+ {
+  "cat": "Merkfähigkeit",
+  "level": 2,
+  "memo": "Der Kreis ist rot, das Dreieck ist blau,\ndas Quadrat ist grün, der Stern ist gelb.",
+  "q": "Welche Farbe hatte das Dreieck?",
+  "opts": [
+   "Rot",
+   "Blau",
+   "Grün",
+   "Gelb"
+  ],
+  "correct": 1,
+  "explain": "Das Dreieck war blau.",
+  "id": "852d79d180b7"
+ },
+ {
+  "cat": "Merkfähigkeit",
+  "level": 3,
+  "memo": "Server A – Raum 1.04 – Linux\nServer B – Raum 2.11 – Windows\nServer C – Raum 1.07 – Linux\nServer D – Raum 3.02 – Windows",
+  "q": "In welchem Raum steht Server C?",
+  "opts": [
+   "1.04",
+   "1.07",
+   "2.11",
+   "3.02"
+  ],
+  "correct": 1,
+  "explain": "Server C – Raum 1.07 – Linux.",
+  "id": "57bfd1aeee64"
+ },
+ {
+  "cat": "Merkfähigkeit",
+  "level": 3,
+  "memo": "Montag 9:00 – Teammeeting\nMontag 14:00 – Kunde Schulz\nDienstag 10:30 – Schulung\nMittwoch 8:00 – Wartung",
+  "q": "Wann ist der Termin mit Kunde Schulz?",
+  "opts": [
+   "Montag 9:00",
+   "Montag 14:00",
+   "Dienstag 10:30",
+   "Mittwoch 8:00"
+  ],
+  "correct": 1,
+  "explain": "Montag 14:00 – Kunde Schulz.",
+  "id": "818eba853e13"
+ },
+ {
+  "cat": "Merkfähigkeit",
+  "level": 3,
+  "memo": "Q7  –  M2  –  X9  –  B4  –  K1  –  T6",
+  "q": "Welche Kombination stand an vierter Stelle?",
+  "opts": [
+   "X9",
+   "B4",
+   "K1",
+   "M2"
+  ],
+  "correct": 1,
+  "explain": "1. Q7, 2. M2, 3. X9, 4. B4, 5. K1, 6. T6.",
+  "id": "eef068a668d8"
+ },
+ {
+  "cat": "Merkfähigkeit",
+  "level": 3,
+  "memo": "Blau = Netzwerk\nGelb = Strom\nGrün = Telefon\nRot = Notfall",
+  "q": "Wofür stand Grün?",
+  "opts": [
+   "Netzwerk",
+   "Strom",
+   "Telefon",
+   "Notfall"
+  ],
+  "correct": 2,
+  "explain": "Grün = Telefon.",
+  "id": "9426e752cf35"
+ },
+ {
+  "cat": "Merkfähigkeit",
+  "level": 3,
+  "memo": "5  –  8  –  3  –  9  –  2  –  7  –  4  –  6",
+  "q": "Wie groß ist die Summe der ersten drei Zahlen?",
+  "opts": [
+   "14",
+   "15",
+   "16",
+   "17"
+  ],
+  "correct": 2,
+  "explain": "Die ersten drei Zahlen waren 5, 8, 3. 5 + 8 + 3 = 16.",
+  "id": "f7d5dc341bbd"
+ },
+ {
+  "cat": "Merkfähigkeit",
+  "level": 3,
+  "memo": "Standort Nord: 184 Mitarbeiter\nStandort Süd: 148 Mitarbeiter\nStandort West: 108 Mitarbeiter\nStandort Ost: 77 Mitarbeiter",
+  "q": "Wie viele Mitarbeiter hat Standort Süd?",
+  "opts": [
+   "184",
+   "148",
+   "108",
+   "77"
+  ],
+  "correct": 1,
+  "explain": "Süd: 148. Vorsicht, Nord hatte mit 184 dieselben Ziffern in anderer Reihenfolge.",
+  "id": "d52cb07c923f"
+ },
+ {
+  "cat": "Merkfähigkeit",
+  "level": 3,
+  "memo": "Kundin: Frau Demir\nTarif: 250 Mbit/s\nVertragsnummer: 7730-2291",
+  "q": "Wie lautete die Vertragsnummer?",
+  "opts": [
+   "7730-2291",
+   "7730-2219",
+   "7703-2291",
+   "7730-2921"
+  ],
+  "correct": 0,
+  "explain": "7730-2291. Tipp: in Blöcken merken (77 / 30 / 22 / 91).",
+  "id": "e655ac7aea57"
+ },
+ {
+  "cat": "Deutsch",
+  "level": 1,
+  "q": "Welches Wort ist richtig geschrieben?",
+  "opts": [
+   "Wiederholung",
+   "Widerholung",
+   "Wiederhohlung",
+   "Wiederhollung"
+  ],
+  "correct": 0,
+  "explain": "'wieder' (= noch einmal) mit ie, 'holen' ohne h nach dem o: Wiederholung.",
+  "id": "da07f7fcc849"
+ },
+ {
+  "cat": "Deutsch",
+  "level": 1,
+  "q": "Welches Wort ist richtig geschrieben?",
+  "opts": [
+   "Gebühr",
+   "Gebür",
+   "Gebüer",
+   "Gebürh"
+  ],
+  "correct": 0,
+  "explain": "Richtig: 'Gebühr' mit Dehnungs-h.",
+  "id": "11dc1f877216"
+ },
+ {
+  "cat": "Deutsch",
+  "level": 1,
+  "q": "Welches Wort ist richtig geschrieben?",
+  "opts": [
+   "tolerant",
+   "tollerant",
+   "tolerrant",
+   "tollerrant"
+  ],
+  "correct": 0,
+  "explain": "Richtig: 'tolerant' – kein Buchstabe doppelt.",
+  "id": "837b81200bf8"
+ },
+ {
+  "cat": "Deutsch",
+  "level": 1,
+  "q": "Welches Wort ist richtig geschrieben?",
+  "opts": [
+   "Fahrrad",
+   "Farrad",
+   "Fahrad",
+   "Farhrad"
+  ],
+  "correct": 0,
+  "explain": "'fahren' + 'Rad' = Fahrrad (h aus 'fahren', zwei r an der Wortfuge).",
+  "id": "31b164bf9241"
+ },
+ {
+  "cat": "Deutsch",
+  "level": 1,
+  "q": "Welches Wort ist richtig geschrieben?",
+  "opts": [
+   "Paket",
+   "Packet",
+   "Pakett",
+   "Packett"
+  ],
+  "correct": 0,
+  "explain": "Deutsch: 'Paket'. Das englische 'packet' (Datenpaket) nicht verwechseln.",
+  "id": "f7985a52f0c9"
+ },
+ {
+  "cat": "Deutsch",
+  "level": 1,
+  "q": "Welches Wort ist richtig geschrieben?",
+  "opts": [
+   "Rezept",
+   "Rezebt",
+   "Rezäpt",
+   "Rezeptt"
+  ],
+  "correct": 0,
+  "explain": "Richtig: 'Rezept'.",
+  "id": "527f69c09abc"
+ },
+ {
+  "cat": "Deutsch",
+  "level": 1,
+  "q": "Was ist das Gegenteil von 'pünktlich'?",
+  "opts": [
+   "verspätet",
+   "schnell",
+   "genau",
+   "langsam"
+  ],
+  "correct": 0,
+  "explain": "pünktlich ↔ verspätet / unpünktlich.",
+  "id": "bd1e46cb059a"
+ },
+ {
+  "cat": "Deutsch",
+  "level": 1,
+  "q": "Welches Wort bedeutet dasselbe wie 'Fehler'?",
+  "opts": [
+   "Irrtum",
+   "Erfolg",
+   "Lösung",
+   "Ziel"
+  ],
+  "correct": 0,
+  "explain": "Fehler = Irrtum, Versehen.",
+  "id": "fe48d555df63"
+ },
+ {
+  "cat": "Deutsch",
+  "level": 1,
+  "q": "Welches Wort bedeutet dasselbe wie 'wichtig'?",
+  "opts": [
+   "bedeutend",
+   "klein",
+   "langweilig",
+   "schnell"
+  ],
+  "correct": 0,
+  "explain": "wichtig = bedeutend, wesentlich.",
+  "id": "55d719276479"
+ },
+ {
+  "cat": "Deutsch",
+  "level": 1,
+  "q": "Welches Wort ist ein Nomen (Hauptwort)?",
+  "opts": [
+   "schnell",
+   "Laptop",
+   "arbeiten",
+   "weil"
+  ],
+  "correct": 1,
+  "explain": "Nomen erkennt man am Artikel: der Laptop. schnell = Adjektiv, arbeiten = Verb, weil = Konjunktion.",
+  "id": "ff6adab642db"
+ },
+ {
+  "cat": "Deutsch",
+  "level": 1,
+  "q": "Welches Wort ist ein Verb (Tätigkeitswort)?",
+  "opts": [
+   "reparieren",
+   "Werkstatt",
+   "kaputt",
+   "gestern"
+  ],
+  "correct": 0,
+  "explain": "Verben beschreiben eine Tätigkeit: reparieren. Werkstatt = Nomen, kaputt = Adjektiv, gestern = Adverb.",
+  "id": "958c8e199170"
+ },
+ {
+  "cat": "Deutsch",
+  "level": 1,
+  "q": "Was bedeutet 'zuverlässig'?",
+  "opts": [
+   "Man kann sich darauf verlassen",
+   "sehr schnell",
+   "vorsichtig",
+   "neugierig"
+  ],
+  "correct": 0,
+  "explain": "Zuverlässig ist jemand, auf den man sich verlassen kann – eine wichtige Eigenschaft im Job.",
+  "id": "86982c48219d"
+ },
+ {
+  "cat": "Deutsch",
+  "level": 1,
+  "q": "Wie lautet die Mehrzahl von 'der Computer'?",
+  "opts": [
+   "die Computers",
+   "die Computer",
+   "die Computern",
+   "die Computeren"
+  ],
+  "correct": 1,
+  "explain": "der Computer → die Computer (wie der Lehrer → die Lehrer). Das englische -s gibt es hier nicht.",
+  "id": "5a8eaea69966"
+ },
+ {
+  "cat": "Deutsch",
+  "level": 1,
+  "q": "Welches Wort passt? 'Die Besprechung wurde auf nächste Woche ___.'",
+  "opts": [
+   "verschoben",
+   "verschiebt",
+   "verschob",
+   "verschiebend"
+  ],
+  "correct": 0,
+  "explain": "Passiv: 'wurde' + Partizip II → verschoben.",
+  "id": "192525c0aee8"
+ },
+ {
+  "cat": "Deutsch",
+  "level": 1,
+  "q": "Welches Satzzeichen gehört ans Ende? 'Hast du den Router schon neu gestartet_'",
+  "opts": [
+   "?",
+   "!",
+   ".",
+   ","
+  ],
+  "correct": 0,
+  "explain": "Es ist eine Frage → Fragezeichen.",
+  "id": "a02c67167a67"
+ },
+ {
+  "cat": "Deutsch",
+  "level": 2,
+  "q": "Welches Wort ist richtig geschrieben?",
+  "opts": [
+   "Karriere",
+   "Kariere",
+   "Karierre",
+   "Karriehre"
+  ],
+  "correct": 0,
+  "explain": "Richtig: 'Karriere' – doppeltes r in der Mitte, ie danach.",
+  "id": "99e4d5646aa2"
+ },
+ {
+  "cat": "Deutsch",
+  "level": 2,
+  "q": "Welches Wort ist richtig geschrieben?",
+  "opts": [
+   "Referenz",
+   "Referens",
+   "Refferenz",
+   "Referrenz"
+  ],
+  "correct": 0,
+  "explain": "Richtig: 'Referenz' mit z am Ende.",
+  "id": "c5561b1cb395"
+ },
+ {
+  "cat": "Deutsch",
+  "level": 2,
+  "q": "Welches Wort ist richtig geschrieben?",
+  "opts": [
+   "akzeptieren",
+   "akzebtieren",
+   "akseptieren",
+   "acceptieren"
+  ],
+  "correct": 0,
+  "explain": "Richtig: 'akzeptieren' – kz und pt.",
+  "id": "725da76c2c6a"
+ },
+ {
+  "cat": "Deutsch",
+  "level": 2,
+  "q": "Welches Wort ist richtig geschrieben?",
+  "opts": [
+   "Voraussetzung",
+   "Vorraussetzung",
+   "Voraussezung",
+   "Vorausetzung"
+  ],
+  "correct": 0,
+  "explain": "'vor' + 'aus' → voraus mit EINEM r. 'Vorraus' ist ein sehr häufiger Fehler.",
+  "id": "b846a7faab48"
+ },
+ {
+  "cat": "Deutsch",
+  "level": 2,
+  "q": "Welches Wort ist richtig geschrieben?",
+  "opts": [
+   "Zertifikat",
+   "Zertefikat",
+   "Zertivikat",
+   "Certifikat"
+  ],
+  "correct": 0,
+  "explain": "Richtig: 'Zertifikat'.",
+  "id": "48e0f4a76313"
+ },
+ {
+  "cat": "Deutsch",
+  "level": 2,
+  "q": "Welcher Satz ist richtig?",
+  "opts": [
+   "Ich habe das Formular gestern ausgefüllt.",
+   "Ich habe das Formular gestern ausgefüllen.",
+   "Ich habe das Formular gestern ausgefüllt haben.",
+   "Ich hab das Formular gestern ausfüllen."
+  ],
+  "correct": 0,
+  "explain": "Perfekt: haben + Partizip II (ausgefüllt).",
+  "id": "aaf16ad74027"
+ },
+ {
+  "cat": "Deutsch",
+  "level": 2,
+  "q": "Ergänze: 'Meine Kollegin und ich ___ morgen frei.'",
+  "opts": [
+   "haben",
+   "hat",
+   "habe",
+   "hast"
+  ],
+  "correct": 0,
+  "explain": "'Meine Kollegin und ich' = wir → wir haben.",
+  "id": "b260bfcd96b8"
+ },
+ {
+  "cat": "Deutsch",
+  "level": 2,
+  "q": "Ergänze: 'Ich warte schon seit einer Stunde auf ___ Techniker.'",
+  "opts": [
+   "den",
+   "dem",
+   "der",
+   "des"
+  ],
+  "correct": 0,
+  "explain": "'warten auf' verlangt den Akkusativ: auf den Techniker.",
+  "id": "3dffccd6796d"
+ },
+ {
+  "cat": "Deutsch",
+  "level": 2,
+  "q": "Ergänze: 'Er hilft ___ neuen Kollegin.'",
+  "opts": [
+   "die",
+   "der",
+   "den",
+   "dem"
+  ],
+  "correct": 1,
+  "explain": "'helfen' verlangt den Dativ: Wem hilft er? → der Kollegin.",
+  "id": "784d83e54973"
+ },
+ {
+  "cat": "Deutsch",
+  "level": 2,
+  "q": "Was bedeutet 'Diskretion'?",
+  "opts": [
+   "Verschwiegenheit, Zurückhaltung",
+   "Unterscheidung",
+   "Streit",
+   "Schnelligkeit"
+  ],
+  "correct": 0,
+  "explain": "Diskretion = vertrauliche Dinge für sich behalten – wichtig z. B. bei Kundendaten.",
+  "id": "de9064e20b88"
+ },
+ {
+  "cat": "Deutsch",
+  "level": 2,
+  "q": "Was bedeutet 'Initiative ergreifen'?",
+  "opts": [
+   "von sich aus aktiv werden",
+   "auf Anweisungen warten",
+   "eine Pause machen",
+   "sich beschweren"
+  ],
+  "correct": 0,
+  "explain": "Wer Initiative zeigt, packt von selbst mit an – kommt im Vorstellungsgespräch gut an.",
+  "id": "473a5ba1c312"
+ },
+ {
+  "cat": "Deutsch",
+  "level": 2,
+  "q": "Welcher Satz ist richtig geschrieben?",
+  "opts": [
+   "Ich wünsche dir alles Gute.",
+   "Ich wünsche dir alles gute.",
+   "ich wünsche dir Alles Gute.",
+   "Ich Wünsche dir alles Gute."
+  ],
+  "correct": 0,
+  "explain": "Nach 'alles' wird das Adjektiv zum Nomen: das Gute → alles Gute. 'alles' selbst bleibt klein.",
+  "id": "320e478051ff"
+ },
+ {
+  "cat": "Deutsch",
+  "level": 2,
+  "q": "Wie lautet die Mehrzahl von 'das Datum'?",
+  "opts": [
+   "die Datums",
+   "die Daten",
+   "die Datas",
+   "die Datümer"
+  ],
+  "correct": 1,
+  "explain": "das Datum → die Daten (aus dem Lateinischen).",
+  "id": "d35c047e47f2"
+ },
+ {
+  "cat": "Deutsch",
+  "level": 2,
+  "q": "Was ist ein Kompromiss?",
+  "opts": [
+   "Eine Einigung, bei der beide Seiten etwas nachgeben",
+   "Eine Niederlage",
+   "Ein Befehl",
+   "Ein Streit"
+  ],
+  "correct": 0,
+  "explain": "Beim Kompromiss treffen sich beide Seiten in der Mitte.",
+  "id": "af99b68e8893"
+ },
+ {
+  "cat": "Deutsch",
+  "level": 2,
+  "q": "Ergänze: 'Wenn ich mehr Zeit ___, würde ich öfter üben.'",
+  "opts": [
+   "hätte",
+   "habe",
+   "hatte",
+   "hab"
+  ],
+  "correct": 0,
+  "explain": "Irrealer Bedingungssatz → Konjunktiv II: wenn ich hätte ..., würde ich ...",
+  "id": "663bfe67c987"
+ },
+ {
+  "cat": "Deutsch",
+  "level": 2,
+  "q": "Was bedeutet 'lukrativ'?",
+  "opts": [
+   "gewinnbringend, einträglich",
+   "gefährlich",
+   "langweilig",
+   "kostenlos"
+  ],
+  "correct": 0,
+  "explain": "Ein lukratives Geschäft bringt viel Geld ein.",
+  "id": "a8f6ec848dd1"
+ },
+ {
+  "cat": "Deutsch",
+  "level": 3,
+  "q": "Welches Wort ist richtig geschrieben?",
+  "opts": [
+   "Ingenieur",
+   "Ingeneur",
+   "Ingenör",
+   "Inschenieur"
+  ],
+  "correct": 0,
+  "explain": "Richtig: 'Ingenieur' (aus dem Französischen) – mit 'ieur' am Ende.",
+  "id": "9b0a5b6315eb"
+ },
+ {
+  "cat": "Deutsch",
+  "level": 3,
+  "q": "Welches Wort ist richtig geschrieben?",
+  "opts": [
+   "Satellit",
+   "Sattelit",
+   "Satelit",
+   "Sattellit"
+  ],
+  "correct": 0,
+  "explain": "Richtig: 'Satellit' – ein t, zwei l. Nicht mit 'Sattel' verwechseln.",
+  "id": "06f5641ab6d4"
+ },
+ {
+  "cat": "Deutsch",
+  "level": 3,
+  "q": "Ergänze: 'Das Gerät, ___ Akku defekt ist, wird ausgetauscht.'",
+  "opts": [
+   "dessen",
+   "deren",
+   "dem",
+   "das"
+  ],
+  "correct": 0,
+  "explain": "Besitz (Genitiv) bei einem sächlichen Wort (das Gerät) → dessen. 'deren' steht bei femininen Wörtern oder in der Mehrzahl.",
+  "id": "af5cb0e84b78"
+ },
+ {
+  "cat": "Deutsch",
+  "level": 3,
+  "q": "Welcher Satz ist richtig gesetzt?",
+  "opts": [
+   "Anstatt zu warten, rief er den Support an.",
+   "Anstatt zu warten rief er, den Support an.",
+   "Anstatt, zu warten rief er den Support an.",
+   "Anstatt zu warten rief er den Support, an."
+  ],
+  "correct": 0,
+  "explain": "Eine Infinitivgruppe mit 'anstatt zu' wird mit Komma abgetrennt.",
+  "id": "b31e345f9149"
+ },
+ {
+  "cat": "Deutsch",
+  "level": 3,
+  "q": "Was bedeutet 'redundant'?",
+  "opts": [
+   "mehrfach vorhanden, eigentlich überflüssig",
+   "sehr wichtig",
+   "fehlerhaft",
+   "veraltet"
+  ],
+  "correct": 0,
+  "explain": "In der IT ist Redundanz gewollt: Doppelte Netzteile oder Leitungen sorgen für Ausfallsicherheit.",
+  "id": "bfaa7593957f"
+ },
+ {
+  "cat": "Deutsch",
+  "level": 3,
+  "q": "Was bedeutet 'Prämisse'?",
+  "opts": [
+   "Voraussetzung, Annahme",
+   "Belohnung",
+   "Ergebnis",
+   "Vorschrift"
+  ],
+  "correct": 0,
+  "explain": "Prämisse = Voraussetzung. Nicht mit 'Prämie' (Belohnung) verwechseln.",
+  "id": "40096b66573c"
+ },
+ {
+  "cat": "Deutsch",
+  "level": 3,
+  "q": "Welcher Satz enthält einen Fehler?",
+  "opts": [
+   "Seit gestern funktioniert das WLAN wieder.",
+   "Das Kabel, das du suchst, liegt im Schrank.",
+   "Ich hoffe, das du bald kommst.",
+   "Wir sind gestern angekommen."
+  ],
+  "correct": 2,
+  "explain": "Richtig wäre 'Ich hoffe, dass du bald kommst.' – Konjunktion mit ss.",
+  "id": "23585b48f397"
+ },
+ {
+  "cat": "Deutsch",
+  "level": 3,
+  "q": "Was ist das Akkusativobjekt im Satz 'Die Azubine schickt dem Kunden eine Rechnung.'?",
+  "opts": [
+   "Die Azubine",
+   "schickt",
+   "dem Kunden",
+   "eine Rechnung"
+  ],
+  "correct": 3,
+  "explain": "Wen oder was schickt sie? → eine Rechnung (Akkusativ). Wem? → dem Kunden (Dativ).",
+  "id": "f665860ae28d"
+ },
+ {
+  "cat": "Deutsch",
+  "level": 3,
+  "q": "In welchem Satz ist 'wider' richtig verwendet?",
+  "opts": [
+   "Das spricht wider jede Vernunft.",
+   "Ich komme morgen wider.",
+   "Wider einmal regnet es.",
+   "Er ruft dich wider an."
+  ],
+  "correct": 0,
+  "explain": "'wider' = gegen (Widerspruch, widerlegen). 'wieder' = noch einmal. In den anderen Sätzen müsste 'wieder' stehen.",
+  "id": "6b73dbb57140"
+ },
+ {
+  "cat": "Englisch",
+  "level": 1,
+  "q": "What is the English word for 'Tastatur'?",
+  "opts": [
+   "keyboard",
+   "keyring",
+   "keynote",
+   "keyhole"
+  ],
+  "correct": 0,
+  "explain": "'Tastatur' = 'keyboard'. keyring = Schlüsselring, keyhole = Schlüsselloch.",
+  "id": "10104e26eb28"
+ },
+ {
+  "cat": "Englisch",
+  "level": 1,
+  "q": "What does 'to download' mean?",
+  "opts": [
+   "herunterladen",
+   "hochladen",
+   "löschen",
+   "speichern"
+  ],
+  "correct": 0,
+  "explain": "download = herunterladen, upload = hochladen.",
+  "id": "545c8b446b71"
+ },
+ {
+  "cat": "Englisch",
+  "level": 1,
+  "q": "What is the past tense of 'buy'?",
+  "opts": [
+   "buyed",
+   "bought",
+   "brought",
+   "buys"
+  ],
+  "correct": 1,
+  "explain": "buy – bought – bought. Vorsicht: 'brought' kommt von 'bring'.",
+  "id": "3b4d58b5648a"
+ },
+ {
+  "cat": "Englisch",
+  "level": 1,
+  "q": "What is the plural of 'mouse' (the animal)?",
+  "opts": [
+   "mouses",
+   "mice",
+   "mices",
+   "mouse"
+  ],
+  "correct": 1,
+  "explain": "one mouse → two mice (unregelmäßig).",
+  "id": "386d215baf78"
+ },
+ {
+  "cat": "Englisch",
+  "level": 1,
+  "q": "Choose the correct sentence:",
+  "opts": [
+   "He works in Würzburg.",
+   "He work in Würzburg.",
+   "He working in Würzburg.",
+   "He are working in Würzburg."
+  ],
+  "correct": 0,
+  "explain": "he/she/it → -s: He works.",
+  "id": "abf81c07fda9"
+ },
+ {
+  "cat": "Englisch",
+  "level": 1,
+  "q": "What is the opposite of 'difficult'?",
+  "opts": [
+   "easy",
+   "hard",
+   "heavy",
+   "busy"
+  ],
+  "correct": 0,
+  "explain": "difficult = schwierig ↔ easy = leicht. 'hard' bedeutet hier dasselbe wie difficult.",
+  "id": "7d707b48b181"
+ },
+ {
+  "cat": "Englisch",
+  "level": 1,
+  "q": "What does 'to save' mean when you work with files?",
+  "opts": [
+   "speichern",
+   "senden",
+   "suchen",
+   "sortieren"
+  ],
+  "correct": 0,
+  "explain": "'Save the file' = die Datei speichern. 'to save' kann auch 'retten' oder 'sparen' bedeuten.",
+  "id": "888309ed3443"
+ },
+ {
+  "cat": "Englisch",
+  "level": 1,
+  "q": "What does 'to fix a problem' mean?",
+  "opts": [
+   "ein Problem beheben",
+   "ein Problem verlieren",
+   "ein Problem verkaufen",
+   "ein Problem vergessen"
+  ],
+  "correct": 0,
+  "explain": "to fix = reparieren, beheben. 'Bug fix' = Fehlerbehebung.",
+  "id": "61b575df1100"
+ },
+ {
+  "cat": "Englisch",
+  "level": 2,
+  "q": "What is the English word for 'Festplatte'?",
+  "opts": [
+   "hard drive",
+   "fixed plate",
+   "solid disk",
+   "hard board"
+  ],
+  "correct": 0,
+  "explain": "Festplatte = hard drive (auch: hard disk). SSD = solid-state drive.",
+  "id": "691f5852ba15"
+ },
+ {
+  "cat": "Englisch",
+  "level": 2,
+  "q": "What is the English word for 'Mitarbeiter/Angestellter'?",
+  "opts": [
+   "employee",
+   "employer",
+   "employment",
+   "emperor"
+  ],
+  "correct": 0,
+  "explain": "employee = Angestellter, employer = Arbeitgeber, employment = Beschäftigung.",
+  "id": "c30d3e441aee"
+ },
+ {
+  "cat": "Englisch",
+  "level": 2,
+  "q": "What does 'appointment' mean?",
+  "opts": [
+   "Termin",
+   "Wohnung",
+   "Bewerbung",
+   "Gerät"
+  ],
+  "correct": 0,
+  "explain": "appointment = Termin. Wohnung = apartment, Bewerbung = application.",
+  "id": "c3370600346d"
+ },
+ {
+  "cat": "Englisch",
+  "level": 2,
+  "q": "Complete: 'I ___ my homework yesterday.'",
+  "opts": [
+   "do",
+   "did",
+   "done",
+   "have done"
+  ],
+  "correct": 1,
+  "explain": "'yesterday' → Simple Past: did. Present Perfect geht nicht mit einer abgeschlossenen Zeitangabe.",
+  "id": "7f71079b56c9"
+ },
+ {
+  "cat": "Englisch",
+  "level": 2,
+  "q": "Complete: 'She has ___ in Berlin since 2020.'",
+  "opts": [
+   "live",
+   "lived",
+   "living",
+   "lives"
+  ],
+  "correct": 1,
+  "explain": "Present Perfect: has + Partizip (lived).",
+  "id": "a8af5f8e51bb"
+ },
+ {
+  "cat": "Englisch",
+  "level": 2,
+  "q": "Complete: 'This laptop is ___ than my old one.'",
+  "opts": [
+   "fast",
+   "faster",
+   "fastest",
+   "more fast"
+  ],
+  "correct": 1,
+  "explain": "Vergleich mit 'than' → Komparativ: faster (kurze Adjektive mit -er).",
+  "id": "9cbce10b0c70"
+ },
+ {
+  "cat": "Englisch",
+  "level": 2,
+  "q": "Complete: 'This is the ___ solution.'",
+  "opts": [
+   "best",
+   "goodest",
+   "better",
+   "most good"
+  ],
+  "correct": 0,
+  "explain": "good – better – best (unregelmäßig).",
+  "id": "5f79264ea264"
+ },
+ {
+  "cat": "Englisch",
+  "level": 2,
+  "q": "What does 'to apply for a job' mean?",
+  "opts": [
+   "sich um eine Stelle bewerben",
+   "eine Stelle kündigen",
+   "eine Stelle anbieten",
+   "eine Stelle ablehnen"
+  ],
+  "correct": 0,
+  "explain": "to apply for = sich bewerben um. application = Bewerbung.",
+  "id": "2f82d819c3ef"
+ },
+ {
+  "cat": "Englisch",
+  "level": 2,
+  "q": "What does 'available' mean?",
+  "opts": [
+   "verfügbar",
+   "wertvoll",
+   "zuverlässig",
+   "sichtbar"
+  ],
+  "correct": 0,
+  "explain": "available = verfügbar. 'Are you available on Monday?' = Hast du Montag Zeit?",
+  "id": "9923cde0c67c"
+ },
+ {
+  "cat": "Englisch",
+  "level": 2,
+  "q": "Complete: 'Could you ___ me with this problem?'",
+  "opts": [
+   "help",
+   "helping",
+   "helped",
+   "to help"
+  ],
+  "correct": 0,
+  "explain": "Nach can/could/will/would folgt der Infinitiv ohne 'to'.",
+  "id": "96e4a10013ee"
+ },
+ {
+  "cat": "Englisch",
+  "level": 2,
+  "q": "Which sentence is the most polite?",
+  "opts": [
+   "Could you please send me the invoice?",
+   "Send me the invoice.",
+   "Give invoice now.",
+   "You must send the invoice."
+  ],
+  "correct": 0,
+  "explain": "Höfliche Bitten: 'Could you please ...?' oder 'Would you mind ...?'.",
+  "id": "81baa3ef95b5"
+ },
+ {
+  "cat": "Englisch",
+  "level": 2,
+  "q": "Complete: 'We ___ a meeting tomorrow at 10.'",
+  "opts": [
+   "have",
+   "had",
+   "has",
+   "having"
+  ],
+  "correct": 0,
+  "explain": "we → have. Feste Termine in der Zukunft stehen oft im Present.",
+  "id": "357fba9a12ff"
+ },
+ {
+  "cat": "Englisch",
+  "level": 2,
+  "q": "What does 'to cancel' mean?",
+  "opts": [
+   "absagen, stornieren",
+   "verschieben",
+   "bestätigen",
+   "buchen"
+  ],
+  "correct": 0,
+  "explain": "to cancel = absagen. verschieben = to postpone, bestätigen = to confirm.",
+  "id": "ef4825e24459"
+ },
+ {
+  "cat": "Englisch",
+  "level": 2,
+  "q": "What does 'warranty' mean?",
+  "opts": [
+   "Garantie",
+   "Warnung",
+   "Wartezeit",
+   "Ware"
+  ],
+  "correct": 0,
+  "explain": "warranty = Garantie. Warnung = warning.",
+  "id": "346533c03fce"
+ },
+ {
+  "cat": "Englisch",
+  "level": 2,
+  "q": "Complete: 'How ___ does the router cost?'",
+  "opts": [
+   "much",
+   "many",
+   "long",
+   "often"
+  ],
+  "correct": 0,
+  "explain": "Preis / nicht zählbar → how much. Zählbare Dinge → how many.",
+  "id": "65de80d48790"
+ },
+ {
+  "cat": "Englisch",
+  "level": 2,
+  "q": "What does 'gift' mean?",
+  "opts": [
+   "Gift",
+   "Geschenk",
+   "Geld",
+   "Glück"
+  ],
+  "correct": 1,
+  "explain": "False Friend! gift = Geschenk. Gift heißt auf Englisch 'poison'.",
+  "id": "1b41d5019596"
+ },
+ {
+  "cat": "Englisch",
+  "level": 2,
+  "q": "What does 'map' mean?",
+  "opts": [
+   "Mappe",
+   "Landkarte",
+   "Maske",
+   "Menü"
+  ],
+  "correct": 1,
+  "explain": "False Friend! map = Landkarte. Mappe = folder.",
+  "id": "ac1024ae2b19"
+ },
+ {
+  "cat": "Englisch",
+  "level": 2,
+  "q": "What does 'issue' usually mean in IT support?",
+  "opts": [
+   "Problem, Störung",
+   "Rechnung",
+   "Lösung",
+   "abgeschlossener Auftrag"
+  ],
+  "correct": 0,
+  "explain": "'We have an issue with the server' = Wir haben ein Problem mit dem Server.",
+  "id": "e134ca345223"
+ },
+ {
+  "cat": "Englisch",
+  "level": 3,
+  "q": "What does 'chef' mean?",
+  "opts": [
+   "Chef / Vorgesetzter",
+   "Koch",
+   "Kellner",
+   "Kunde"
+  ],
+  "correct": 1,
+  "explain": "False Friend! chef = Koch. Der Chef heißt 'boss' oder 'manager'.",
+  "id": "25d95d616758"
+ },
+ {
+  "cat": "Englisch",
+  "level": 3,
+  "q": "What does 'handy' mean in English?",
+  "opts": [
+   "Handy (Mobiltelefon)",
+   "praktisch, nützlich",
+   "händisch",
+   "klein"
+  ],
+  "correct": 1,
+  "explain": "False Friend! handy = praktisch. Das Handy heißt 'mobile phone' (UK) oder 'cell phone' (US).",
+  "id": "f9ab9849cad1"
+ },
+ {
+  "cat": "Englisch",
+  "level": 3,
+  "q": "What is the best English word for 'Berufsschule'?",
+  "opts": [
+   "vocational school",
+   "job school",
+   "professional university",
+   "working school"
+  ],
+  "correct": 0,
+  "explain": "vocational = beruflich. vocational training = Berufsausbildung.",
+  "id": "c0b81d3afe80"
+ },
+ {
+  "cat": "Englisch",
+  "level": 3,
+  "q": "Complete: 'If I had known, I ___ you.'",
+  "opts": [
+   "would have told",
+   "would tell",
+   "will tell",
+   "had told"
+  ],
+  "correct": 0,
+  "explain": "If-Satz Typ 3 (Vergangenheit, nicht mehr änderbar): If + Past Perfect, would have + Partizip.",
+  "id": "e70e4270e38b"
+ },
+ {
+  "cat": "Englisch",
+  "level": 3,
+  "q": "Complete: 'The new software ___ installed next week.'",
+  "opts": [
+   "will be",
+   "will have",
+   "would",
+   "has been"
+  ],
+  "correct": 0,
+  "explain": "Passiv im Futur: will be + Partizip → will be installed.",
+  "id": "f7bd45edf3a8"
+ },
+ {
+  "cat": "Englisch",
+  "level": 3,
+  "q": "Complete: 'Yesterday she told me that she ___ the report the day before.'",
+  "opts": [
+   "had finished",
+   "has finished",
+   "finishes",
+   "will finish"
+  ],
+  "correct": 0,
+  "explain": "Indirekte Rede in der Vergangenheit, etwas lag noch davor → Past Perfect: had finished.",
+  "id": "74fc201faa0a"
+ },
+ {
+  "cat": "Englisch",
+  "level": 3,
+  "q": "Complete: 'I'm used to ___ up early.'",
+  "opts": [
+   "getting",
+   "get",
+   "got",
+   "gets"
+  ],
+  "correct": 0,
+  "explain": "'be used to' (an etwas gewöhnt sein) + -ing-Form.",
+  "id": "ef77ce060290"
+ },
+ {
+  "cat": "Englisch",
+  "level": 3,
+  "q": "Which word means 'Kündigung' (wenn du selbst kündigst)?",
+  "opts": [
+   "resignation",
+   "reservation",
+   "registration",
+   "recommendation"
+  ],
+  "correct": 0,
+  "explain": "to resign = kündigen (als Arbeitnehmer). reservation = Reservierung, recommendation = Empfehlung.",
+  "id": "564b5edbd71d"
+ },
+ {
+  "cat": "Englisch",
+  "level": 3,
+  "q": "What does 'to be in charge of' mean?",
+  "opts": [
+   "für etwas verantwortlich sein, etwas leiten",
+   "etwas aufladen",
+   "angeklagt sein",
+   "etwas bezahlen müssen"
+  ],
+  "correct": 0,
+  "explain": "'She is in charge of the IT department' = Sie leitet die IT-Abteilung.",
+  "id": "7813435e3ee3"
+ },
+ {
+  "cat": "Englisch",
+  "level": 3,
+  "q": "Complete: 'Neither the manager ___ the team knew about it.'",
+  "opts": [
+   "nor",
+   "or",
+   "and",
+   "but"
+  ],
+  "correct": 0,
+  "explain": "neither ... nor = weder ... noch.",
+  "id": "5573b4cfbdae"
  }
 ];
 window.PERSONALITY_ITEMS = [
