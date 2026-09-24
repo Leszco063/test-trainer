@@ -9,6 +9,8 @@ import "./pruefung.js";
 import "./lernen.js";
 import "./meldungen.js";
 import "./interview.js";
+import "./sjt.js";
+import "./interessen.js";
 
 go("start");
 

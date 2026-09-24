@@ -133,8 +133,11 @@ function showStart() {
       ${due ? `<button class="btn warn" id="faellig">Heute fällig: ${due} wiederholen</button>` : ""}
     </section>
 
+    <h3 style="margin-top:18px">Persönlichkeit & Situationen</h3>
     <nav class="menu">
-      <button class="menu-item" data-go="persoenlichkeit"><strong>Persönlichkeitsteil</strong><span>Skalenfragen ohne richtig/falsch</span></button>
+      <button class="menu-item" data-go="sjt"><strong>Situationen (SJT)</strong><span>8 Punkte auf 4 Reaktionen verteilen</span></button>
+      <button class="menu-item" data-go="persoenlichkeit"><strong>Persönlichkeit</strong><span>Skalenfragen ohne richtig/falsch</span></button>
+      <button class="menu-item" data-go="interessen"><strong>Interessen</strong><span>Berufs-Matching wie im Test</span></button>
       <button class="menu-item" data-go="statistik"><strong>Statistik</strong><span>Verlauf, Prüfungen, Fortschritt sichern</span></button>
     </nav>
     <div id="installSlot"></div>

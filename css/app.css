@@ -129,6 +129,20 @@ textarea:focus { outline: none; border-color: var(--accent); }
 .menu-item:active { background: var(--accent-soft); }
 .menu-item.wide { grid-column: 1 / -1; min-height: 0; }
 
+/* Situational Judgement Test */
+.sjt-option {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  background: var(--card); border: 1.5px solid var(--border); border-radius: 12px; padding: 10px 12px; margin-bottom: 10px;
+}
+.sjt-option p { margin: 0; font-size: 16px; }
+.sjt-option .stepper button:disabled { opacity: 0.35; }
+.sjt-review { display: flex; gap: 12px; align-items: flex-start; border-top: 1px solid var(--border); padding-top: 8px; margin-top: 8px; }
+.sjt-review p { margin: 0 0 4px; }
+.sjt-points {
+  flex-shrink: 0; width: 30px; height: 30px; border-radius: 50%; background: var(--accent); color: #fff;
+  font-weight: 700; display: flex; align-items: center; justify-content: center;
+}
+
 /* Tagesziel & Serie */
 .daily-top { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
 .streak { font-weight: 700; font-size: 17px; white-space: nowrap; }
@@ -289,6 +303,7 @@ textarea:focus { outline: none; border-color: var(--accent); }
 .trend-down { color: var(--bad); font-weight: 600; }
 .trend-flat { color: var(--muted); font-weight: 600; }
 .warn-text { color: var(--warn); }
+.opt.muted { color: var(--muted); }
 .bar-row { display: grid; grid-template-columns: 10.5em minmax(40px, 1fr) auto; align-items: center; gap: 8px; margin: 7px 0; font-size: 15px; }
 .bar { height: 12px; background: var(--track); border-radius: 6px; overflow: hidden; }
 .bar > div { height: 100%; border-radius: 6px; }
