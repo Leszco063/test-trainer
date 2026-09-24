@@ -25,6 +25,7 @@ function withDefaults(data) {
   data.runs = Array.isArray(data.runs) ? data.runs : [];
   data.fragen = data.fragen || {};      // Verlauf je Frage
   data.pruefungen = data.pruefungen || []; // Ergebnisse der Prüfungssimulation
+  data.tage = data.tage || {};           // { "2026-09-24": { anzahl, ziel } } für Tagesziel und Serie
   return data;
 }
 
@@ -57,6 +58,7 @@ export function loadSettings() {
     level: 2,
     timer: true,
     count: 20,
+    dailyGoal: 30,
   };
   try {
     const s = JSON.parse(localStorage.getItem(SETTINGS_KEY));
@@ -101,8 +103,44 @@ export function recordAnswer(q, isCorrect) {
     entry.zuletzt = nowStamp();
     data.fragen[q.id] = entry;
   }
+  // Tageszähler: jede beantwortete Aufgabe zählt, das Ziel des Tages wird mitgespeichert
+  const day = dateKey();
+  const t = data.tage[day] || { anzahl: 0 };
+  t.anzahl += 1;
+  t.ziel = loadSettings().dailyGoal;
+  data.tage[day] = t;
   saveProgress(data);
   return data.fragen;
+}
+
+// Tagesziel, aktuelle Serie und Rekord
+export function dailyStatus(data = loadProgress()) {
+  const goal = loadSettings().dailyGoal;
+  const today = dateKey();
+  const met = key => {
+    const t = data.tage[key];
+    return !!t && t.anzahl >= (t.ziel || goal);
+  };
+  const heute = data.tage[today] ? data.tage[today].anzahl : 0;
+
+  // Serie: heute zählt mit, wenn erreicht – sonst ist sie bis gestern noch nicht gerissen
+  let serie = 0;
+  let key = met(today) ? today : addDays(today, -1);
+  while (met(key)) { serie += 1; key = addDays(key, -1); }
+
+  let rekord = 0, run = 0, prev = null;
+  for (const k of Object.keys(data.tage).sort()) {
+    if (!met(k)) { run = 0; prev = k; continue; }
+    run = prev && addDays(prev, 1) === k && met(prev) ? run + 1 : 1;
+    rekord = Math.max(rekord, run);
+    prev = k;
+  }
+
+  const woche = Array.from({ length: 7 }, (_, i) => {
+    const k = addDays(today, i - 6);
+    return { key: k, erreicht: met(k), anzahl: data.tage[k] ? data.tage[k].anzahl : 0 };
+  });
+  return { heute, ziel: goal, erreicht: heute >= goal, serie, rekord: Math.max(rekord, serie), woche };
 }
 
 export function historySummary(history, questions = QUESTIONS) {

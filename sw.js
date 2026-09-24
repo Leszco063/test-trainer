@@ -2,7 +2,7 @@
 // Strategie "Netzwerk zuerst": Online gibt es immer die neueste Version (z. B. neue Fragen),
 // offline wird die zuletzt geladene Version aus dem Zwischenspeicher genommen.
 // Neue Dateien in js/ oder css/ hier eintragen – die GitHub-Prüfung meldet vergessene Dateien.
-const CACHE = "test-trainer-v2";
+const CACHE = "test-trainer-v3";
 const FILES = [
   "./",
   "index.html",
@@ -51,8 +51,11 @@ self.addEventListener("activate", event => {
 
 self.addEventListener("fetch", event => {
   if (event.request.method !== "GET") return;
+  if (new URL(event.request.url).origin !== self.location.origin) return;
   event.respondWith(
-    fetch(event.request)
+    // "no-cache": immer beim Server nachfragen, ob es eine neue Version gibt. Sonst kann der
+    // Browser nach einem Update alte und neue Dateien mischen, und die App startet nicht.
+    fetch(event.request.url, { cache: "no-cache", credentials: "same-origin" })
       .then(response => {
         if (response.ok) {
           const copy = response.clone();

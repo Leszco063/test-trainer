@@ -4,7 +4,7 @@ import { QUESTIONS } from "./fragen.js";
 import { CATEGORIES, LEVEL_NAMES, TIMER_SECONDS } from "./config.js";
 import { esc } from "./util.js";
 import { render, on, screen, go } from "./ui.js";
-import { loadProgress, loadSettings, saveSettings, historySummary, categoryWeakness, trend, dueQuestions, boxStats, LEARNED_BOX } from "./speicher.js";
+import { loadProgress, loadSettings, saveSettings, historySummary, categoryWeakness, trend, dueQuestions, boxStats, LEARNED_BOX, dailyStatus } from "./speicher.js";
 
 // Chrome/Edge am PC bieten an, die Web-App wie ein Programm zu installieren
 let installPrompt = null;
@@ -52,6 +52,36 @@ function progressCard(data) {
     </section>`;
 }
 
+const WEEKDAYS = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"];
+
+function dailyCard() {
+  const d = dailyStatus();
+  const pct = Math.min(100, (d.heute / d.ziel) * 100);
+  return `
+    <section class="card daily">
+      <div class="daily-top">
+        <div><strong>Heute: ${d.heute} / ${d.ziel}</strong> <span class="muted small">Aufgaben</span></div>
+        <div class="streak ${d.serie ? "" : "muted"}">${d.serie ? "🔥" : "○"} ${d.serie} ${d.serie === 1 ? "Tag" : "Tage"}</div>
+      </div>
+      <div class="progress" style="margin:8px 0 10px"><div style="width:${pct}%;${d.erreicht ? "background:var(--ok)" : ""}"></div></div>
+      <div class="week">
+        ${d.woche.map((w, i) => {
+          const [y, m, day] = w.key.split("-").map(Number);
+          const label = WEEKDAYS[new Date(y, m - 1, day).getDay()];
+          return `<span class="day ${w.erreicht ? "met" : w.anzahl ? "partly" : ""} ${i === 6 ? "today" : ""}" title="${w.anzahl} Aufgaben">${label}</span>`;
+        }).join("")}
+      </div>
+      <div class="row small" style="padding-bottom:0">
+        <span class="muted">${d.erreicht ? "Ziel für heute geschafft ✓" : `Noch ${d.ziel - d.heute} bis zum Tagesziel`}</span>
+        <div class="stepper small-stepper">
+          <button id="goalMinus" aria-label="Tagesziel verringern">−</button>
+          <output>${d.ziel}</output>
+          <button id="goalPlus" aria-label="Tagesziel erhöhen">+</button>
+        </div>
+      </div>
+    </section>`;
+}
+
 function showStart() {
   const settings = loadSettings();
   const data = loadProgress();
@@ -62,6 +92,7 @@ function showStart() {
   render(`
     <h1>Einstellungstest-Trainer</h1>
     <p class="muted small">${QUESTIONS.length} Fragen · bearbeitet: ${seen} · gelernt: ${learned} · heute fällig: ${due}</p>
+    ${dailyCard()}
 
     <nav class="menu">
       <button class="menu-item wide" data-go="pruefung"><strong>Prüfungssimulation</strong><span>Wie der echte Test: Abschnitte mit Zeitlimit, Auswertung am Ende</span></button>
@@ -135,6 +166,13 @@ function showStart() {
   on("#plus", "click", () => setCount(settings.count + 5));
   on("#start", "click", () => go("uebung", "normal"));
   on("#faellig", "click", () => go("uebung", "faellig"));
+  const setGoal = n => {
+    settings.dailyGoal = Math.max(10, Math.min(200, n));
+    saveSettings(settings);
+    showStart();
+  };
+  on("#goalMinus", "click", () => setGoal(settings.dailyGoal - 10));
+  on("#goalPlus", "click", () => setGoal(settings.dailyGoal + 10));
   on("[data-go]", "click", e => go(e.currentTarget.dataset.go));
 }
 

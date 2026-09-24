@@ -3,8 +3,8 @@
 
 import { QUESTIONS } from "./fragen.js";
 import { esc, rand, shuffle, nowStamp, formatDuration } from "./util.js";
-import { app, render, on, startTick, stopTick, barColor, screen, go } from "./ui.js";
-import { loadProgress, saveProgress, recordAnswer } from "./speicher.js";
+import { app, render, on, startTick, stopTick, barColor, screen, go, toast } from "./ui.js";
+import { loadProgress, saveProgress, recordAnswer, dailyStatus } from "./speicher.js";
 import { chooseByHistory } from "./auswahl.js";
 import { questionBodyHtml, shuffledOrder, answerText } from "./fragenansicht.js";
 import { examExtras } from "./pruefung-extras.js";
@@ -257,6 +257,7 @@ function showSectionBreak() {
 }
 
 function showExamResult() {
+  const dayBefore = dailyStatus();
   let total = 0, correct = 0;
   const sectionResults = E.sections.map(sec => {
     let right = 0;
@@ -300,6 +301,8 @@ function showExamResult() {
   `);
   on("#review", "click", () => showReview(true));
   on("#home", "click", () => go("start"));
+  const dayAfter = dailyStatus();
+  if (!dayBefore.erreicht && dayAfter.erreicht) toast(`🎯 Tagesziel erreicht! Serie: ${dayAfter.serie} ${dayAfter.serie === 1 ? "Tag" : "Tage"}`);
 }
 
 function showReview(onlyWrong) {

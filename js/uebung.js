@@ -4,8 +4,8 @@ import { QUESTIONS } from "./fragen.js";
 import { CATEGORIES, LEVEL_NAMES, LEVEL_COLORS, MEMO_SECONDS, TIMER_SECONDS } from "./config.js";
 import { esc, shuffle } from "./util.js";
 import { GENERATED_ONLY, GEN_SHARE, hasGenerator, generate } from "./gen/index.js";
-import { app, render, on, startTick, stopTick, screen, go } from "./ui.js";
-import { loadProgress, loadSettings, saveRun, recordAnswer, dueQuestions, withBox, isDue } from "./speicher.js";
+import { app, render, on, startTick, stopTick, screen, go, toast } from "./ui.js";
+import { loadProgress, loadSettings, saveRun, recordAnswer, dueQuestions, withBox, isDue, dailyStatus } from "./speicher.js";
 import { pickFromPool } from "./auswahl.js";
 import { questionBodyHtml, shuffledOrder, markAnswer } from "./fragenansicht.js";
 import { cardForQuestion } from "./lernkarten.js";
@@ -166,6 +166,8 @@ function checkAnswer(chosen) {
   if (isCorrect) cs.richtig += 1;
   S.history = recordAnswer(q, isCorrect);
   markAnswer(app, q, chosen);
+  const day = dailyStatus();
+  if (day.heute === day.ziel) toast(`🎯 Tagesziel erreicht! Serie: ${day.serie} ${day.serie === 1 ? "Tag" : "Tage"}`);
 
   let head;
   if (isCorrect) {

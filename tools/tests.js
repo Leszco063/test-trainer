@@ -110,6 +110,24 @@ const genQ = { id: "gen-1", gen: true };
 if (sp.recordAnswer(genQ, true)["gen-1"]) fail(`Generierte Aufgaben dürfen nicht im Verlauf landen`);
 console.log("✓ Leitner-System: Boxen, Fälligkeit und Migration korrekt");
 
+// 1e) Tagesziel und Serie
+localStorage.store = {};
+const tage = {};
+tage[today] = { anzahl: 30, ziel: 30 };                // heute erreicht
+tage[addDays(today, -1)] = { anzahl: 35, ziel: 30 };   // gestern erreicht
+tage[addDays(today, -2)] = { anzahl: 10, ziel: 30 };   // vorgestern nicht
+for (let i = 10; i <= 12; i++) tage[addDays(today, -i)] = { anzahl: 40, ziel: 30 }; // alte Serie von 3 Tagen
+localStorage.setItem("testTrainer.progress", JSON.stringify({ runs: [], fragen: {}, tage }));
+let ds = sp.dailyStatus();
+if (ds.serie !== 2) fail(`Serie sollte 2 sein, ist ${ds.serie}`);
+if (ds.rekord !== 3) fail(`Rekord sollte 3 sein, ist ${ds.rekord}`);
+if (!ds.erreicht || ds.heute !== 30) fail(`Heute sollte erreicht sein (30/30)`);
+delete tage[today];
+localStorage.setItem("testTrainer.progress", JSON.stringify({ runs: [], fragen: {}, tage }));
+ds = sp.dailyStatus();
+if (ds.serie !== 1) fail(`Serie ohne heutige Übung sollte bis gestern zählen (1), ist ${ds.serie}`);
+console.log("✓ Tagesziel & Serie korrekt berechnet");
+
 // 2) Jede Datei in js/ und css/ muss im Service Worker stehen (sonst fehlt sie offline)
 const sw = readFileSync(join(ROOT, "sw.js"), "utf-8");
 function walk(dir) {

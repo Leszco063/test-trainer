@@ -4,7 +4,7 @@ import { QUESTIONS } from "./fragen.js";
 import { POOL_CATEGORIES } from "./config.js";
 import { esc } from "./util.js";
 import { render, on, barColor, screen, go } from "./ui.js";
-import { loadProgress, importProgress, categoryWeakness, historySummary, boxStats } from "./speicher.js";
+import { loadProgress, importProgress, categoryWeakness, historySummary, boxStats, dailyStatus } from "./speicher.js";
 
 function showStats() {
   const data = loadProgress();
@@ -46,8 +46,21 @@ function showStats() {
       <div class="bar"><div style="width:${(n / QUESTIONS.length) * 100}%;background:${boxColors[i]}"></div></div>
       <span class="bar-val">${n}</span></div>`).join("");
 
+  const day = dailyStatus(data);
+  const activeDays = Object.keys(data.tage).length;
+  const totalAnswers = Object.values(data.tage).reduce((s, t) => s + t.anzahl, 0);
+
   render(`
     <h2>Deine Statistik</h2>
+    <section class="card">
+      <h3>Dranbleiben</h3>
+      <div class="grid2">
+        <span>Aktuelle Serie: <strong>${day.serie} ${day.serie === 1 ? "Tag" : "Tage"}</strong></span>
+        <span>Rekord: <strong>${day.rekord} ${day.rekord === 1 ? "Tag" : "Tage"}</strong></span>
+        <span>Übungstage: <strong>${activeDays}</strong></span>
+        <span>Aufgaben gesamt: <strong>${totalAnswers}</strong></span>
+      </div>
+    </section>
     <section class="card">
       <h3>Lernstand (Leitner-Boxen)</h3>
       ${boxHtml}
