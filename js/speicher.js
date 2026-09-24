@@ -27,6 +27,7 @@ function withDefaults(data) {
   data.pruefungen = data.pruefungen || []; // Ergebnisse der Prüfungssimulation
   data.tage = data.tage || {};           // { "2026-09-24": { anzahl, ziel } } für Tagesziel und Serie
   data.meldungen = data.meldungen || []; // gemeldete Fragen
+  data.interview = data.interview || {}; // { frageId: { notiz, sicher } } für den Interview-Trainer
   return data;
 }
 

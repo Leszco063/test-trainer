@@ -8,6 +8,7 @@ import "./persoenlichkeit.js";
 import "./pruefung.js";
 import "./lernen.js";
 import "./meldungen.js";
+import "./interview.js";
 
 go("start");
 
