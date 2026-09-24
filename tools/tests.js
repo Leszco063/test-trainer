@@ -74,6 +74,15 @@ for (let i = 0; i < 3000; i++) {
 }
 console.log(`✓ Stichproben nachgerechnet: ${checked} Aufgaben`);
 
+// 1c) Zu jedem Bereich gibt es einen Spickzettel
+const { QUESTIONS } = await import("../js/fragen.js");
+const { cardForQuestion, CARDS } = await import("../js/lernkarten.js");
+for (const cat of new Set([...QUESTIONS.map(q => q.cat), ...GENERATED_ONLY])) {
+  if (!cardForQuestion({ cat, q: "", explain: "" })) fail(`Kein Spickzettel für Bereich ${cat}`);
+}
+if (new Set(CARDS.map(c => c.id)).size !== CARDS.length) fail("Spickzettel-IDs doppelt");
+console.log(`✓ Spickzettel: ${CARDS.length} Karten, alle Bereiche abgedeckt`);
+
 // 2) Jede Datei in js/ und css/ muss im Service Worker stehen (sonst fehlt sie offline)
 const sw = readFileSync(join(ROOT, "sw.js"), "utf-8");
 function walk(dir) {

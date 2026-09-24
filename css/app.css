@@ -122,6 +122,38 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .menu-item:active { background: var(--accent-soft); }
 .menu-item.wide { grid-column: 1 / -1; min-height: 0; }
 
+/* Listen (Spickzettel, Interview) */
+.list-item {
+  display: flex; justify-content: space-between; align-items: center; width: 100%;
+  background: none; border: none; border-top: 1px solid var(--border);
+  padding: 12px 2px; font-size: 16px; text-align: left;
+}
+.list-item:first-of-type { border-top: none; }
+.list-item span { color: var(--muted); font-size: 20px; }
+
+/* Lernkarten */
+.lernkarte { font-size: 16px; }
+.lernkarte ul, .lernkarte ol { padding-left: 20px; margin: 6px 0 10px; }
+.lernkarte li { margin-bottom: 6px; }
+.lernkarte h4:first-child { margin-top: 0; }
+.ktable { width: 100%; border-collapse: collapse; margin: 6px 0 12px; font-size: 15px; }
+.ktable td, .ktable th { border-bottom: 1px solid var(--border); padding: 6px 6px 6px 0; vertical-align: top; text-align: left; }
+.ktable th { color: var(--muted); font-size: 13px; text-transform: uppercase; letter-spacing: 0.3px; }
+.ktable td:first-child { font-weight: 600; white-space: nowrap; }
+.ktable.center-cols td { text-align: center; white-space: normal; padding-right: 0; }
+
+/* Overlay über der laufenden Übung */
+.overlay {
+  position: fixed; inset: 0; background: rgba(0, 0, 0, 0.45); z-index: 50;
+  display: flex; align-items: flex-end; justify-content: center;
+}
+.overlay-sheet {
+  background: var(--bg); width: 100%; max-width: 560px; max-height: 88vh; overflow-y: auto;
+  border-radius: 18px 18px 0 0; padding: 16px 16px calc(env(safe-area-inset-bottom) + 16px);
+}
+.overlay-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-size: 18px; color: var(--accent); }
+.overlay-close { background: var(--track); border: none; width: 34px; height: 34px; border-radius: 50%; font-size: 16px; }
+
 /* Bereiche als Chips */
 .chips { display: flex; flex-wrap: wrap; gap: 8px; }
 .chip {

@@ -6,6 +6,7 @@ import "./uebung.js";
 import "./statistik.js";
 import "./persoenlichkeit.js";
 import "./pruefung.js";
+import "./lernen.js";
 
 go("start");
 

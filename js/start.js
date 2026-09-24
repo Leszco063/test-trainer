@@ -63,6 +63,7 @@ function showStart() {
 
     <nav class="menu">
       <button class="menu-item wide" data-go="pruefung"><strong>Prüfungssimulation</strong><span>Wie der echte Test: Abschnitte mit Zeitlimit, Auswertung am Ende</span></button>
+      <button class="menu-item" data-go="lernen"><strong>Spickzettel</strong><span>Formeln, Regeln und Tricks zum Nachlesen</span></button>
     </nav>
     ${progressCard(data)}
 

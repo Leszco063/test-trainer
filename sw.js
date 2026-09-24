@@ -22,6 +22,8 @@ const FILES = [
   "js/gen/konzentration.js",
   "js/gen/rechnen.js",
   "js/gen/reihen.js",
+  "js/lernen.js",
+  "js/lernkarten.js",
   "js/main.js",
   "js/persoenlichkeit.js",
   "js/pruefung.js",

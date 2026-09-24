@@ -8,13 +8,16 @@ import { app, render, on, startTick, stopTick, screen, go } from "./ui.js";
 import { loadProgress, loadSettings, saveRun, recordAnswer, historySummary } from "./speicher.js";
 import { pickFromPool } from "./auswahl.js";
 import { questionBodyHtml, shuffledOrder, markAnswer } from "./fragenansicht.js";
+import { cardForQuestion } from "./lernkarten.js";
+import { openCardOverlay } from "./lernen.js";
 
 let S = null; // aktuelle Runde
 
-function startSession(mode) {
+// override.cats: nur diese Bereiche üben (z. B. vom Spickzettel aus)
+function startSession(mode, override = {}) {
   const settings = loadSettings();
   const history = loadProgress().fragen;
-  const activeCats = CATEGORIES.filter(c => settings.cats[c]);
+  const activeCats = override.cats || CATEGORIES.filter(c => settings.cats[c]);
   if (!activeCats.length) {
     alert("Bitte mindestens einen Bereich auswählen.");
     return;
@@ -184,9 +187,12 @@ function checkAnswer(chosen) {
     if (S.level !== before) levelNote = `<span class="explain muted small">Schwierigkeit wird ${S.level > before ? "höher" : "niedriger"} gestellt.</span>`;
   }
 
+  const card = cardForQuestion(q);
   const fb = document.getElementById("feedback");
   fb.className = `feedback ${isCorrect ? "ok" : "bad"}`;
-  fb.innerHTML = `<strong>${head}</strong><span class="explain">${esc(q.explain)}</span>${levelNote}`;
+  fb.innerHTML = `<strong>${head}</strong><span class="explain">${esc(q.explain)}</span>${levelNote}
+    <div class="feedback-actions">${card ? `<button class="link" id="cardLink">📖 Spickzettel: ${esc(card.title)}</button>` : ""}</div>`;
+  if (card) document.getElementById("cardLink").addEventListener("click", () => openCardOverlay(card));
   document.getElementById("timer").textContent = "";
   const next = document.getElementById("next");
   next.style.display = "block";
