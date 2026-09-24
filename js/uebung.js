@@ -2,7 +2,8 @@
 
 import { QUESTIONS } from "./fragen.js";
 import { CATEGORIES, LEVEL_NAMES, LEVEL_COLORS, MEMO_SECONDS, TIMER_SECONDS } from "./config.js";
-import { esc, rand } from "./util.js";
+import { esc, rand, shuffle } from "./util.js";
+import { GENERATED_ONLY, GEN_SHARE, hasGenerator, generate } from "./gen/index.js";
 import { app, render, on, startTick, stopTick, screen, go } from "./ui.js";
 import { loadProgress, loadSettings, saveRun, recordAnswer, historySummary } from "./speicher.js";
 import { pickFromPool } from "./auswahl.js";
@@ -26,14 +27,21 @@ function startSession(mode) {
       return;
     }
   }
+  // Mit generierten Bereichen gehen die Aufgaben nie aus
+  const unlimited = activeCats.some(c => hasGenerator(c));
+  if (mode === "normal" && !pool.length && !unlimited) {
+    alert("In den ausgewählten Bereichen gibt es keine Fragen.");
+    return;
+  }
   S = {
     mode,
+    cats: activeCats,
     pool,
     history,
     adaptive: settings.adaptive && mode === "normal",
     fixedLevel: settings.level,
     timer: settings.timer,
-    total: mode === "fehler" ? pool.length : Math.min(settings.count, pool.length),
+    total: mode === "fehler" ? pool.length : (unlimited ? settings.count : Math.min(settings.count, pool.length)),
     level: settings.adaptive ? 1 : settings.level,
     streakCorrect: 0,
     streakWrong: 0,
@@ -55,7 +63,16 @@ function pickNext() {
     const free = S.pool.filter(x => !S.used.has(x.id));
     q = free.length ? rand(free) : null;
   } else {
-    q = pickFromPool(S.pool, S.adaptive ? S.level : S.fixedLevel, S.used, S.history);
+    // Erst zufällig einen Bereich wählen, damit alle Bereiche gleich oft drankommen
+    const level = S.adaptive ? S.level : S.fixedLevel;
+    for (const cat of shuffle(S.cats)) {
+      if (GENERATED_ONLY.includes(cat) || (hasGenerator(cat) && Math.random() < GEN_SHARE)) {
+        q = generate(cat, level);
+        break;
+      }
+      q = pickFromPool(S.pool.filter(x => x.cat === cat), level, S.used, S.history);
+      if (q) break;
+    }
   }
   if (!q) return null;
   S.used.add(q.id);

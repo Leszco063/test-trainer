@@ -170,6 +170,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 }
 .stem { margin: 0 0 16px; text-align: center; overflow-x: auto; }
 .stem svg { max-width: 100%; height: auto; }
+.fig-svg { color: var(--fig); display: block; margin: 0 auto; width: 100%; height: auto; }
 .opt {
   display: block; width: 100%; text-align: left;
   background: var(--card); border: 1.5px solid var(--border); border-radius: 12px;
