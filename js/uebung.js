@@ -10,6 +10,7 @@ import { pickFromPool } from "./auswahl.js";
 import { questionBodyHtml, shuffledOrder, markAnswer } from "./fragenansicht.js";
 import { cardForQuestion } from "./lernkarten.js";
 import { openCardOverlay } from "./lernen.js";
+import { openReportOverlay } from "./meldungen.js";
 
 let S = null; // aktuelle Runde
 
@@ -194,8 +195,16 @@ function checkAnswer(chosen) {
   const fb = document.getElementById("feedback");
   fb.className = `feedback ${isCorrect ? "ok" : "bad"}`;
   fb.innerHTML = `<strong>${head}</strong><span class="explain">${esc(q.explain)}</span>${levelNote}
-    <div class="feedback-actions">${card ? `<button class="link" id="cardLink">📖 Spickzettel: ${esc(card.title)}</button>` : ""}</div>`;
+    <div class="feedback-actions">
+      ${card ? `<button class="link" id="cardLink">📖 Spickzettel: ${esc(card.title)}</button>` : ""}
+      <button class="link muted-link" id="reportBtn">⚑ Frage melden</button>
+    </div>`;
   if (card) document.getElementById("cardLink").addEventListener("click", () => openCardOverlay(card));
+  const reportBtn = document.getElementById("reportBtn");
+  reportBtn.addEventListener("click", () => openReportOverlay(q, chosen, () => {
+    reportBtn.textContent = "⚑ Gemeldet";
+    reportBtn.disabled = true;
+  }));
   document.getElementById("timer").textContent = "";
   const next = document.getElementById("next");
   next.style.display = "block";

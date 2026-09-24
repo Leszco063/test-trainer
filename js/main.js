@@ -7,6 +7,7 @@ import "./statistik.js";
 import "./persoenlichkeit.js";
 import "./pruefung.js";
 import "./lernen.js";
+import "./meldungen.js";
 
 go("start");
 

@@ -70,6 +70,10 @@ function showStats() {
     <section class="card"><h3>Prüfungssimulationen</h3>${examHtml}</section>
     <section class="card"><h3>Trefferquote je Bereich</h3>${catHtml}</section>
     <section class="card"><h3>Bearbeitete Fragen</h3><div class="grid2">${coverHtml}</div></section>
+    <button class="menu-item wide" id="reports" style="width:100%;margin:12px 0">
+      <strong>Gemeldete Fragen (${data.meldungen.length})</strong>
+      <span>Liste ansehen und an mich weitergeben</span>
+    </button>
     <section class="card">
       <h3>Fortschritt sichern</h3>
       <p class="small muted">Als Datei speichern, auf ein anderes Gerät übertragen oder vom alten PC-Programm übernehmen (telekom_trainer_fortschritt.json).</p>
@@ -81,6 +85,7 @@ function showStats() {
   `);
 
   on("#back", "click", () => go("start"));
+  on("#reports", "click", () => go("meldungen"));
   on("#export", "click", () => {
     const blob = new Blob([JSON.stringify(loadProgress(), null, 2)], { type: "application/json" });
     const a = document.createElement("a");

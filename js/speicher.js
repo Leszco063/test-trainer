@@ -26,6 +26,7 @@ function withDefaults(data) {
   data.fragen = data.fragen || {};      // Verlauf je Frage
   data.pruefungen = data.pruefungen || []; // Ergebnisse der Prüfungssimulation
   data.tage = data.tage || {};           // { "2026-09-24": { anzahl, ziel } } für Tagesziel und Serie
+  data.meldungen = data.meldungen || []; // gemeldete Fragen
   return data;
 }
 

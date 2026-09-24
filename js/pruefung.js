@@ -10,6 +10,7 @@ import { questionBodyHtml, shuffledOrder, answerText } from "./fragenansicht.js"
 import { examExtras } from "./pruefung-extras.js";
 import { CARDS, cardForQuestion } from "./lernkarten.js";
 import { openCardOverlay } from "./lernen.js";
+import { openReportOverlay } from "./meldungen.js";
 
 // Abschnitte je Variante: Bereiche, Anzahl Fragen, Zeit in Sekunden
 export const PRESETS = {
@@ -318,7 +319,7 @@ function showReview(onlyWrong) {
       <button id="fWrong" class="${onlyWrong ? "on" : ""}">Nur Fehler</button>
       <button id="fAll" class="${onlyWrong ? "" : "on"}">Alle Fragen</button>
     </div>
-    ${items.length ? items.map(({ sec, q, chosen, ok }) => `
+    ${items.length ? items.map(({ sec, q, chosen, ok }, idx) => `
       <section class="card">
         <div class="cat">${esc(sec.name)}</div>
         ${q.memo ? `<p class="small muted">Merkblatt: ${esc(q.memo)}</p>` : ""}
@@ -329,11 +330,19 @@ function showReview(onlyWrong) {
         ${ok ? "" : `<p class="trend-up">Richtig: ${esc(answerText(q, q.correct))}</p>`}
         ${q.optHtml && !ok ? `<div class="optgrid review">${q.optHtml.map((h, i) => `<div class="opt fig ${i === q.correct ? "correct" : i === chosen ? "wrong" : ""}"><span class="optlabel">${i + 1}</span>${h}</div>`).join("")}</div>` : ""}
         <p class="small">${esc(q.explain)}</p>
-        ${cardForQuestion(q) ? `<button class="link" data-card="${cardForQuestion(q).id}">📖 Spickzettel: ${esc(cardForQuestion(q).title)}</button>` : ""}
+        <div class="feedback-actions">
+          ${cardForQuestion(q) ? `<button class="link" data-card="${cardForQuestion(q).id}">📖 Spickzettel: ${esc(cardForQuestion(q).title)}</button>` : ""}
+          <button class="link muted-link" data-report="${idx}">⚑ Frage melden</button>
+        </div>
       </section>`).join("") : `<p class="center trend-up">Keine Fehler – stark!</p>`}
     <button class="btn" id="home">Zum Start</button>
   `);
   on("[data-card]", "click", e => openCardOverlay(CARDS.find(c => c.id === e.currentTarget.dataset.card)));
+  on("[data-report]", "click", e => {
+    const btn = e.currentTarget;
+    const { q, chosen } = items[Number(btn.dataset.report)];
+    openReportOverlay(q, chosen, () => { btn.textContent = "⚑ Gemeldet"; btn.disabled = true; });
+  });
   on("#fWrong", "click", () => showReview(true));
   on("#fAll", "click", () => showReview(false));
   on("#home", "click", () => go("start"));
