@@ -107,11 +107,11 @@ function questionHeader(q) {
 }
 
 function showMemo(q) {
-  let left = MEMO_SECONDS[q.level] || 8;
+  let left = q.memoSeconds || MEMO_SECONDS[q.level] || 8;
   render(`
     ${questionHeader(q)}
     <p class="qtext">Präge dir Folgendes ein:</p>
-    <div class="memo">${esc(q.memo)}</div>
+    ${q.memoHtml ? `<div class="stem">${q.memoHtml}</div>` : `<div class="memo">${esc(q.memo)}</div>`}
     <div class="timer" id="memoTimer">Noch ${left} Sekunden</div>
     <p class="muted small center">Danach wird der Inhalt ausgeblendet und die Frage erscheint.</p>
     <button class="btn" id="memoDone">Hab's mir gemerkt – weiter</button>

@@ -35,7 +35,7 @@ function showStats() {
     ? exams.map(x => `
         <div class="bar-row"><span class="small">${esc(x.datum.slice(5, 10).split("-").reverse().join("."))} · ${esc(x.variante)}</span>
           <div class="bar"><div style="width:${x.prozent}%;background:${barColor(x.prozent)}"></div></div>
-          <span class="bar-val">${x.prozent}%</span></div>`).join("")
+          <span class="bar-val">${x.prozent} Pkt</span></div>`).join("")
     : `<p class="muted">Noch keine Prüfungssimulation gemacht.</p>`;
 
   const boxes = boxStats(data.fragen);

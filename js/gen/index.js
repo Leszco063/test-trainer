@@ -7,6 +7,8 @@ import { generateMath } from "./rechnen.js";
 import { generateConcentration } from "./konzentration.js";
 import { generateSeries } from "./reihen.js";
 import { generateChart } from "./diagramme.js";
+import { generateSpelling } from "./deutsch.js";
+import { generateSheetQuestion } from "./merkblatt.js";
 import { retry } from "./gemeinsam.js";
 
 const GENERATORS = {
@@ -15,6 +17,8 @@ const GENERATORS = {
   Mathe: generateMath,
   Konzentration: generateConcentration,
   Logik: generateSeries,
+  Deutsch: generateSpelling,
+  Merkfähigkeit: generateSheetQuestion,
 };
 
 export const GENERATED_ONLY = ["Figuren", "Diagramme"];

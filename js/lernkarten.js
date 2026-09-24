@@ -552,6 +552,17 @@ export const CARDS = [
     id: "taktik", cat: "Test-Taktik", title: "Taktik für den Online-Test",
     keys: [],
     html: `
+      <h4>Was über den Telekom-Test bekannt ist</h4>
+      <p class="small muted">Aus Angaben des Testherstellers (CYQUEST), Ratgeberseiten und Erfahrungsberichten – der genaue Inhalt hängt vom Beruf ab und kann sich ändern.</p>
+      <ul>
+        <li><strong>Dauer:</strong> etwa 90 Minuten einplanen, eventuell länger. Zwischen den Testbausteinen sind kurze Pausen möglich.</li>
+        <li><strong>Bausteine:</strong> mehrere kognitive Tests (je nach Beruf), ein Persönlichkeitstest, ein Interessenstest und ein Situational Judgement Test.</li>
+        <li><strong>Für alle:</strong> Rechentextaufgaben und Diagrammanalyse. Dazu je nach Beruf Logik, Sprache, Merkfähigkeit, Konzentration, Englisch, IT- oder BWL-Wissen.</li>
+        <li><strong>SJT:</strong> Situationen aus dem Arbeitsalltag, 8 Zustimmungspunkte auf 4 Reaktionen verteilen.</li>
+        <li><strong>Zeitlimit je Block:</strong> Laut Berichten kein Pausieren innerhalb eines Blocks und kein Zurückspringen zu vorherigen Fragen. Seiten können automatisch weiterblättern.</li>
+        <li><strong>Probefragen:</strong> Vor den Bausteinen gibt es Erklärungen und Beispielaufgaben – nutze sie, um das Format zu verstehen.</li>
+        <li><strong>Ergebnis:</strong> Es gibt eine Rückmeldung mit Passung zum Wunschberuf und Vorschlägen für Alternativen. Im Best Fit Interview wird das Ergebnis besprochen.</li>
+      </ul>
       <h4>Vorher</h4>
       <ul>
         <li>Ruhiger Raum, stabiles Internet, Handy stumm, Akku/Netzteil bereit.</li>
@@ -561,7 +572,8 @@ export const CARDS = [
       </ul>
       <h4>Während des Tests</h4>
       <ul>
-        <li><strong>Nicht festbeißen:</strong> Nach ca. 1 Minute ohne Idee weiter, später zurückkommen (falls möglich).</li>
+        <li><strong>Nicht festbeißen:</strong> Nach ca. 1 Minute ohne Idee eine Antwort wählen und weiter – zurückspringen geht meist nicht.</li>
+        <li><strong>Nicht in der Bahn oder nebenbei:</strong> Ein Bewerber berichtete, dass er den Test unterwegs gemacht und dadurch Punkte verschenkt hat.</li>
         <li><strong>Ausschlussverfahren:</strong> Offensichtlich falsche Antworten streichen, dann zwischen den übrigen wählen.</li>
         <li><strong>Raten:</strong> Wenn es keine Minuspunkte gibt, lieber raten als leer lassen.</li>
         <li><strong>Plausibilität:</strong> Kann das Ergebnis stimmen? (Mehr Arbeiter → weniger Zeit.)</li>

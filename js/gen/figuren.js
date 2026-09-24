@@ -261,9 +261,77 @@ function genOddOneOut(level) {
   };
 }
 
+// ---------------------------------------------------------------------------
+// Räumliches Denken: gedreht oder gespiegelt?
+// ---------------------------------------------------------------------------
+
+const BASE_SHAPES = [
+  [[1, 0], [2, 0], [0, 1], [1, 1], [1, 2]],           // F
+  [[0, 0], [0, 1], [0, 2], [0, 3], [1, 3]],           // L
+  [[1, 0], [1, 1], [0, 2], [1, 2], [0, 3]],           // N
+  [[0, 0], [1, 0], [0, 1], [1, 1], [0, 2]],           // P
+  [[1, 0], [0, 1], [1, 1], [1, 2], [1, 3]],           // Y
+  [[0, 0], [1, 0], [1, 1], [1, 2], [2, 2], [1, 3]],   // Sechser-Formen für schwere Aufgaben
+  [[0, 0], [0, 1], [1, 1], [2, 1], [2, 2], [3, 2]],
+  [[0, 0], [1, 0], [2, 0], [2, 1], [3, 1], [1, 2]],
+];
+
+function normalize(cells) {
+  const minX = Math.min(...cells.map(c => c[0])), minY = Math.min(...cells.map(c => c[1]));
+  return cells.map(([x, y]) => [x - minX, y - minY]).sort((a, b) => a[0] - b[0] || a[1] - b[1]);
+}
+const cellKey = cells => normalize(cells).map(c => c.join(",")).join(";");
+const rotate90 = cells => normalize(cells.map(([x, y]) => [-y, x])); // im Uhrzeigersinn (y zeigt nach unten)
+const mirror = cells => normalize(cells.map(([x, y]) => [-x, y]));
+function rotations(cells) {
+  const out = [normalize(cells)];
+  for (let i = 1; i < 4; i++) out.push(rotate90(out[i - 1]));
+  return out;
+}
+
+// Nur Formen ohne Symmetrie: alle 4 Drehungen verschieden und kein Spiegelbild ist eine Drehung
+const CHIRAL_SHAPES = BASE_SHAPES.filter(s => {
+  const rot = rotations(s).map(cellKey);
+  const mir = rotations(mirror(s)).map(cellKey);
+  return new Set(rot).size === 4 && !mir.some(k => rot.includes(k));
+});
+
+function cellsSvg(cells) {
+  const w = Math.max(...cells.map(c => c[0])) + 1, h = Math.max(...cells.map(c => c[1])) + 1;
+  const size = Math.min(80 / w, 80 / h);
+  const ox = (100 - w * size) / 2, oy = (100 - h * size) / 2;
+  const rects = cells.map(([x, y]) => `<rect x="${(ox + x * size).toFixed(1)}" y="${(oy + y * size).toFixed(1)}" width="${size.toFixed(1)}" height="${size.toFixed(1)}" fill="currentColor" stroke="var(--fig-bg)" stroke-width="2"/>`).join("");
+  return `<svg class="fig-svg" viewBox="0 0 100 100" role="img" aria-label="Figur">${rects}</svg>`;
+}
+
+function genRotation(level) {
+  const pool = CHIRAL_SHAPES.filter(s => (level === 3 ? s.length === 6 : s.length === 5));
+  const base = rand(pool.length ? pool : CHIRAL_SHAPES);
+  const start = rotations(base)[randInt(0, 3)];
+  const turns = randInt(1, 3);
+  const answer = rotations(start)[turns];
+  const mirrored = shuffle(rotations(mirror(start)).map((c, i) => ({ c, i }))).slice(0, 3);
+  const figs = [{ c: answer, label: `gedreht um ${turns * 90}°` }, ...mirrored.map(m => ({ c: m.c, label: `gespiegelt${m.i ? `, gedreht um ${m.i * 90}°` : ""}` }))];
+  const order = shuffle([0, 1, 2, 3]);
+  const opts = order.map(i => figs[i]);
+  return {
+    id: genId("fig"),
+    cat: "Figuren",
+    level,
+    q: "Welche Figur ist die Vorlage – nur gedreht, nicht gespiegelt?",
+    stemHtml: `<div class="fig-single">${cellsSvg(start)}</div>`,
+    optHtml: opts.map(o => cellsSvg(o.c)),
+    opts: opts.map(o => o.label),
+    correct: order.indexOf(0),
+    explain: `Die Vorlage wurde um ${turns * 90}° im Uhrzeigersinn gedreht. Die anderen drei sind Spiegelbilder – egal wie man sie dreht, sie passen nie genau auf die Vorlage. Tipp: auf eine markante Ecke oder einen „Ausleger“ achten und prüfen, auf welcher Seite er liegt.`,
+    gen: true,
+  };
+}
+
 export function generateFigure(level) {
   const r = Math.random();
-  if (r < 0.45) return genSeries(level);
-  if (r < 0.8) return genMatrix(level);
+  if (r < 0.35) return genSeries(level);
+  if (r < 0.65) return genMatrix(level);
+  if (r < 0.82) return genRotation(level);
   return genOddOneOut(level);
 }

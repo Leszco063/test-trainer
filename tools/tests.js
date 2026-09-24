@@ -29,7 +29,7 @@ function checkQuestion(q, where) {
 }
 
 // 1) Generatoren
-const genCats = ["Figuren", "Mathe", "Konzentration", "Logik", "Diagramme"].filter(hasGenerator);
+const genCats = ["Figuren", "Mathe", "Konzentration", "Logik", "Diagramme", "Deutsch", "Merkfähigkeit"].filter(hasGenerator);
 for (const cat of genCats) {
   let count = 0;
   for (const level of [1, 2, 3]) {
@@ -73,6 +73,29 @@ for (let i = 0; i < 3000; i++) {
   }
 }
 console.log(`✓ Stichproben nachgerechnet: ${checked} Aufgaben`);
+
+// 1a) Dreh-/Spiegel-Aufgaben: genau eine Antwort ist eine Drehung der Vorlage, und zwar die richtige
+function svgCells(svg) {
+  const rects = [...svg.matchAll(/<rect x="([\d.]+)" y="([\d.]+)" width="([\d.]+)"/g)].map(m => m.slice(1).map(Number));
+  const w = rects[0][2], mx = Math.min(...rects.map(r => r[0])), my = Math.min(...rects.map(r => r[1]));
+  return rects.map(([x, y]) => [Math.round((x - mx) / w), Math.round((y - my) / w)]);
+}
+const normCells = c => {
+  const mx = Math.min(...c.map(p => p[0])), my = Math.min(...c.map(p => p[1]));
+  return c.map(([x, y]) => [x - mx, y - my]).sort((a, b) => a[0] - b[0] || a[1] - b[1]).map(p => p.join(",")).join(";");
+};
+let rotChecked = 0;
+for (let i = 0; i < 6000 && rotChecked < 500; i++) {
+  const q = generate("Figuren", 1 + (i % 3));
+  if (!q.q.includes("nur gedreht")) continue;
+  let c = svgCells(q.stemHtml);
+  const rots = [];
+  for (let k = 0; k < 4; k++) { rots.push(normCells(c)); c = c.map(([x, y]) => [-y, x]); }
+  const isRot = q.optHtml.map(h => rots.includes(normCells(svgCells(h))));
+  if (isRot.filter(Boolean).length !== 1 || !isRot[q.correct]) fail(`Dreh-Aufgabe mehrdeutig oder falsch: ${JSON.stringify(isRot)} correct=${q.correct}`);
+  rotChecked++;
+}
+console.log(`✓ Dreh-/Spiegelaufgaben geometrisch geprüft: ${rotChecked}`);
 
 // 1c) Zu jedem Bereich gibt es einen Spickzettel
 const { QUESTIONS } = await import("../js/fragen.js");
