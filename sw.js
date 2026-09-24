@@ -15,6 +15,7 @@ const FILES = [
   "js/config.js",
   "js/fragen.js",
   "js/fragenansicht.js",
+  "js/gen/diagramme.js",
   "js/gen/figur.js",
   "js/gen/figuren.js",
   "js/gen/gemeinsam.js",

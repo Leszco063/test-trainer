@@ -19,7 +19,7 @@ export const PRESETS = {
     sections: [
       { name: "Mathematik", cats: ["Mathe"], count: 6, seconds: 360 },
       { name: "Logik", cats: ["Logik"], count: 6, seconds: 300 },
-      { name: "Deutsch", cats: ["Deutsch"], count: 5, seconds: 180 },
+      { name: "Deutsch & Textverständnis", cats: ["Deutsch", "Textverständnis"], count: 5, seconds: 240 },
       { name: "Englisch", cats: ["Englisch"], count: 5, seconds: 180 },
       { name: "IT & Wirtschaft", cats: ["IT", "BWL"], count: 6, seconds: 180 },
       { name: "Konzentration", cats: ["Konzentration"], count: 6, seconds: 180 },
@@ -30,8 +30,9 @@ export const PRESETS = {
     memo: { count: 5, seconds: 150 },
     sections: [
       { name: "Mathematik", cats: ["Mathe"], count: 12, seconds: 720 },
+      { name: "Diagramme & Tabellen", cats: ["Diagramme"], count: 5, seconds: 360 },
       { name: "Logik", cats: ["Logik"], count: 12, seconds: 600 },
-      { name: "Deutsch", cats: ["Deutsch"], count: 10, seconds: 360 },
+      { name: "Deutsch & Textverständnis", cats: ["Deutsch", "Textverständnis"], count: 10, seconds: 480 },
       { name: "Englisch", cats: ["Englisch"], count: 10, seconds: 360 },
       { name: "IT-Grundwissen", cats: ["IT"], count: 8, seconds: 240 },
       { name: "Wirtschaft", cats: ["BWL"], count: 6, seconds: 180 },

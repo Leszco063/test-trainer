@@ -1679,3 +1679,202 @@ QUESTIONS += [
      "opts": ["nor", "or", "and", "but"], "correct": 0,
      "explain": "neither ... nor = weder ... noch."},
 ]
+
+# =====================================================================
+# TEXTVERSTÄNDNIS – eigene Lesetexte mit je drei Fragen
+# =====================================================================
+
+_T_GLASFASER = (
+    "In der Kleinstadt Lindenau sollen bis Ende 2027 rund 4.800 Haushalte einen Glasfaseranschluss bekommen. "
+    "Der Ausbau erfolgt in drei Abschnitten: Zuerst werden das Gewerbegebiet und die Schulen angeschlossen, "
+    "danach die Ortsmitte und zuletzt die Außenbezirke. Für Hauseigentümer ist der Anschluss bis ins Gebäude "
+    "kostenlos, wenn sie sich während der Vorvermarktung für einen Tarif entscheiden. Wer sich später meldet, "
+    "muss mit einer Anschlussgebühr rechnen. Die Bauarbeiten sollen möglichst wenig stören: Statt ganze Straßen "
+    "aufzureißen, werden die Leerrohre in schmalen Schlitzen verlegt. Dadurch sind die Gehwege meist nach wenigen "
+    "Tagen wieder frei. Glasfaser überträgt Daten mit Licht und erreicht deutlich höhere Geschwindigkeiten als "
+    "die alten Kupferleitungen."
+)
+
+_T_PHISHING = (
+    "Am Montagmorgen erhielten mehrere Mitarbeitende eines Autohauses eine E-Mail, die angeblich von der "
+    "IT-Abteilung stammte. Darin hieß es, wegen eines Sicherheitsupdates müssten alle innerhalb von zwei Stunden "
+    "ihr Passwort über einen Link bestätigen. Eine Auszubildende wurde misstrauisch: Die Absenderadresse endete "
+    "nicht auf die Firmendomain, und die IT-Abteilung hatte noch nie per Mail nach Passwörtern gefragt. Sie meldete "
+    "die Nachricht sofort dem IT-Support. Dieser sperrte den Link im Firmennetz und warnte alle Beschäftigten. Zwei "
+    "Kollegen hatten ihre Daten bereits eingegeben; ihre Passwörter wurden noch am selben Tag zurückgesetzt. Seitdem "
+    "gibt es eine Regel: Verdächtige Mails werden nicht gelöscht, sondern über einen Melde-Button an die IT "
+    "weitergeleitet."
+)
+
+_T_RECHENZENTRUM = (
+    "Rechenzentren verbrauchen viel Energie – nicht nur für die Server selbst, sondern auch für deren Kühlung. "
+    "Ein Maß für die Effizienz ist der PUE-Wert (Power Usage Effectiveness). Er gibt an, wie viel Energie das "
+    "gesamte Rechenzentrum im Verhältnis zur Energie der IT-Geräte benötigt. Ein Wert von 1,0 wäre ideal: Dann "
+    "würde die gesamte Energie direkt von der IT genutzt. Ältere Rechenzentren liegen oft bei 2,0 oder darüber, "
+    "moderne erreichen Werte um 1,2. Um Energie zu sparen, nutzen viele Betreiber im Winter kalte Außenluft zur "
+    "Kühlung. Manche geben die entstehende Abwärme sogar an benachbarte Gebäude weiter, die damit beheizt werden."
+)
+
+_T_HOTLINE = (
+    "Bei einer Störung ruft Frau Berger verärgert die Hotline an: Ihr Internet funktioniert seit dem Vortag nicht, "
+    "und sie arbeitet im Homeoffice. Der Servicemitarbeiter lässt sie zunächst ausreden, entschuldigt sich für die "
+    "Unannehmlichkeiten und fasst ihr Problem noch einmal zusammen. Anschließend führt er sie Schritt für Schritt "
+    "durch einen Neustart des Routers. Als das nicht hilft, prüft er aus der Ferne die Leitung und stellt eine "
+    "Störung im Verteilerkasten fest. Er nennt ihr ein realistisches Zeitfenster für die Reparatur und bietet an, "
+    "bis dahin zusätzliches mobiles Datenvolumen freizuschalten. Frau Berger beendet das Gespräch deutlich ruhiger "
+    "– obwohl ihr Problem noch nicht gelöst ist."
+)
+
+_T_ELEKTROSCHROTT = (
+    "In vielen Schubladen liegen alte Handys, die niemand mehr benutzt. Dabei stecken in ihnen wertvolle Rohstoffe "
+    "wie Gold, Silber, Kupfer und Kobalt. Werden die Geräte fachgerecht recycelt, lassen sich diese Materialien "
+    "zurückgewinnen und müssen nicht neu abgebaut werden. Landen Handys dagegen im Hausmüll, gehen die Rohstoffe "
+    "verloren, und giftige Bestandteile können in die Umwelt gelangen. Größere Elektrohändler sind in Deutschland "
+    "verpflichtet, Altgeräte zurückzunehmen. Vor der Abgabe sollte man allerdings seine persönlichen Daten löschen "
+    "und das Gerät auf die Werkseinstellungen zurücksetzen. Noch besser als Recycling ist es, funktionierende Geräte "
+    "weiterzugeben oder reparieren zu lassen."
+)
+
+_T_DSGVO = (
+    "Seit Mai 2018 gilt in der gesamten Europäischen Union die Datenschutz-Grundverordnung, kurz DSGVO. Sie regelt, "
+    "wie Unternehmen mit personenbezogenen Daten umgehen dürfen – also mit allen Informationen, die sich einer "
+    "bestimmten Person zuordnen lassen, zum Beispiel Name, Adresse, Telefonnummer oder IP-Adresse. Ein wichtiger "
+    "Grundsatz ist die Datensparsamkeit: Es sollen nur so viele Daten erhoben werden, wie für den jeweiligen Zweck "
+    "tatsächlich nötig sind. Außerdem haben Betroffene das Recht zu erfahren, welche Daten über sie gespeichert "
+    "sind, und können unter bestimmten Voraussetzungen deren Löschung verlangen. Verstöße können für Unternehmen "
+    "teuer werden, denn die Aufsichtsbehörden dürfen hohe Bußgelder verhängen."
+)
+
+_T_BLOCKUNTERRICHT = (
+    "In vielen IT-Berufen findet der Berufsschulunterricht im Blockunterricht statt. Statt ein bis zwei Tage pro "
+    "Woche in die Schule zu gehen, verbringen die Auszubildenden mehrere Wochen am Stück in der Berufsschule und "
+    "arbeiten danach wieder einige Wochen durchgehend im Betrieb. Befürworter sehen darin einen Vorteil für beide "
+    "Seiten: Die Schule kann Themen zusammenhängend unterrichten, und im Betrieb können Azubis länger an einem "
+    "Projekt mitarbeiten, ohne ständig unterbrochen zu werden. Kritiker bemängeln, dass zwischen Theorie und Praxis "
+    "manchmal viel Zeit vergeht. Wer den Stoff aus dem letzten Block nicht regelmäßig wiederholt, hat beim nächsten "
+    "Schulblock oft schon vieles vergessen."
+)
+
+_T_5G = (
+    "Der Mobilfunkstandard 5G ist nicht nur schneller als sein Vorgänger 4G, er hat auch eine deutlich geringere "
+    "Latenz – also eine kürzere Verzögerung, bis Daten beim Empfänger ankommen. Das ist vor allem für Anwendungen "
+    "wichtig, bei denen es auf Sekundenbruchteile ankommt, etwa bei der Steuerung von Maschinen in Fabriken. "
+    "Außerdem kann ein 5G-Netz sehr viele Geräte gleichzeitig versorgen. Für Handynutzer im Alltag ist der "
+    "Unterschied dagegen oft kleiner als erwartet: Für Videos, Musik oder Navigation reicht auch 4G meist aus. "
+    "Wie gut 5G funktioniert, hängt außerdem stark vom Frequenzbereich ab. Hohe Frequenzen ermöglichen sehr hohe "
+    "Datenraten, haben aber eine geringere Reichweite und dringen schlechter durch Wände."
+)
+
+QUESTIONS += [
+    # Glasfaser
+    {"cat": "Textverständnis", "level": 1, "text": _T_GLASFASER,
+     "q": "Welcher Bereich wird laut Text zuerst angeschlossen?",
+     "opts": ["Das Gewerbegebiet und die Schulen", "Die Ortsmitte", "Die Außenbezirke", "Alle Bereiche gleichzeitig"], "correct": 0,
+     "explain": "„Zuerst werden das Gewerbegebiet und die Schulen angeschlossen, danach die Ortsmitte und zuletzt die Außenbezirke.“"},
+    {"cat": "Textverständnis", "level": 2, "text": _T_GLASFASER,
+     "q": "Unter welcher Bedingung ist der Anschluss für Hauseigentümer kostenlos?",
+     "opts": ["Wenn sie sich während der Vorvermarktung für einen Tarif entscheiden", "Wenn sie in der Ortsmitte wohnen", "Wenn sie bis Ende 2027 einen Antrag stellen", "Immer, für alle Haushalte"], "correct": 0,
+     "explain": "Kostenlos ist der Anschluss nur bei einer Entscheidung während der Vorvermarktung – wer sich später meldet, zahlt eine Anschlussgebühr."},
+    {"cat": "Textverständnis", "level": 3, "text": _T_GLASFASER,
+     "q": "Welche Aussage steht so NICHT im Text?",
+     "opts": ["Die Glasfaser wird für alle kostenlos bis in jede Wohnung verlegt", "Die Leerrohre werden in schmalen Schlitzen verlegt", "Glasfaser überträgt Daten mit Licht", "Rund 4.800 Haushalte sollen angeschlossen werden"], "correct": 0,
+     "explain": "Der Text sagt: kostenlos „bis ins Gebäude“ und nur unter einer Bedingung – nicht für alle und nicht bis in jede Wohnung."},
+
+    # Phishing
+    {"cat": "Textverständnis", "level": 1, "text": _T_PHISHING,
+     "q": "Woran erkannte die Auszubildende, dass die Mail verdächtig war?",
+     "opts": ["An der Absenderadresse und daran, dass die IT nie per Mail nach Passwörtern fragt", "An Rechtschreibfehlern in der Mail", "An einem unbekannten Dateianhang", "Daran, dass die Mail nachts kam"], "correct": 0,
+     "explain": "„Die Absenderadresse endete nicht auf die Firmendomain, und die IT-Abteilung hatte noch nie per Mail nach Passwörtern gefragt.“"},
+    {"cat": "Textverständnis", "level": 2, "text": _T_PHISHING,
+     "q": "Was geschah bei den zwei Kollegen, die ihre Daten schon eingegeben hatten?",
+     "opts": ["Ihre Passwörter wurden noch am selben Tag zurückgesetzt", "Ihre Konten wurden dauerhaft gelöscht", "Sie mussten eine Schulung besuchen", "Nichts, weil der Link schon gesperrt war"], "correct": 0,
+     "explain": "„Ihre Passwörter wurden noch am selben Tag zurückgesetzt.“ Von Löschung oder Schulung steht nichts im Text."},
+    {"cat": "Textverständnis", "level": 3, "text": _T_PHISHING,
+     "q": "Welche Regel gilt seit dem Vorfall?",
+     "opts": ["Verdächtige Mails werden über einen Melde-Button an die IT weitergeleitet", "Verdächtige Mails werden sofort gelöscht", "Passwörter müssen alle zwei Stunden geändert werden", "E-Mails von außen werden komplett blockiert"], "correct": 0,
+     "explain": "„Verdächtige Mails werden nicht gelöscht, sondern über einen Melde-Button an die IT weitergeleitet.“ – Achtung: Löschen ist gerade NICHT die Regel."},
+
+    # Rechenzentrum
+    {"cat": "Textverständnis", "level": 1, "text": _T_RECHENZENTRUM,
+     "q": "Welchen PUE-Wert erreichen moderne Rechenzentren laut Text etwa?",
+     "opts": ["1,2", "1,0", "2,0", "0,8"], "correct": 0,
+     "explain": "„Moderne erreichen Werte um 1,2.“ 1,0 wäre der Idealwert, 2,0 der Wert älterer Rechenzentren."},
+    {"cat": "Textverständnis", "level": 2, "text": _T_RECHENZENTRUM,
+     "q": "Warum wäre ein PUE-Wert von 1,0 laut Text ideal?",
+     "opts": ["Weil dann die gesamte Energie direkt von der IT genutzt würde", "Weil dann keine Server mehr nötig wären", "Weil dann die Kühlung doppelt so stark wäre", "Weil dann nur Außenluft zur Kühlung dient"], "correct": 0,
+     "explain": "„Ein Wert von 1,0 wäre ideal: Dann würde die gesamte Energie direkt von der IT genutzt.“"},
+    {"cat": "Textverständnis", "level": 3, "text": _T_RECHENZENTRUM,
+     "q": "Was bedeutet nach der Erklärung im Text ein PUE-Wert von 2,0?",
+     "opts": ["Das Rechenzentrum braucht insgesamt doppelt so viel Energie wie die IT-Geräte allein", "Die IT-Geräte brauchen doppelt so viel Energie wie das ganze Rechenzentrum", "Das Rechenzentrum ist doppelt so effizient wie ein modernes", "Die Server laufen nur mit halber Leistung"], "correct": 0,
+     "explain": "PUE = Gesamtenergie ÷ Energie der IT-Geräte. Bei 2,0 ist die Gesamtenergie doppelt so hoch – die Hälfte geht z. B. für Kühlung drauf."},
+
+    # Hotline
+    {"cat": "Textverständnis", "level": 1, "text": _T_HOTLINE,
+     "q": "Was tut der Servicemitarbeiter als Erstes?",
+     "opts": ["Er lässt Frau Berger ausreden", "Er startet den Router neu", "Er prüft die Leitung aus der Ferne", "Er schickt einen Techniker"], "correct": 0,
+     "explain": "„Der Servicemitarbeiter lässt sie zunächst ausreden …“ – das Wort „zunächst“ zeigt die Reihenfolge."},
+    {"cat": "Textverständnis", "level": 2, "text": _T_HOTLINE,
+     "q": "Wo liegt laut Text die Ursache der Störung?",
+     "opts": ["Im Verteilerkasten", "Im Router von Frau Berger", "Im WLAN der Wohnung", "Beim Arbeitgeber von Frau Berger"], "correct": 0,
+     "explain": "Der Router-Neustart half nicht; die Fernprüfung ergab „eine Störung im Verteilerkasten“."},
+    {"cat": "Textverständnis", "level": 3, "text": _T_HOTLINE,
+     "q": "Warum ist Frau Berger am Ende ruhiger, obwohl das Problem noch besteht?",
+     "opts": ["Weil sie ernst genommen wurde, einen Zeitrahmen kennt und eine Übergangslösung bekommt", "Weil der Router nach dem Neustart wieder funktioniert", "Weil sie eine Gutschrift erhalten hat", "Weil sofort ein Techniker vorbeikommt"], "correct": 0,
+     "explain": "Der Mitarbeiter hört zu, entschuldigt sich, nennt ein realistisches Zeitfenster und bietet mobiles Datenvolumen an. Die anderen Antworten stehen nicht im Text."},
+
+    # Elektroschrott
+    {"cat": "Textverständnis", "level": 1, "text": _T_ELEKTROSCHROTT,
+     "q": "Was sollte man laut Text vor der Abgabe eines alten Handys tun?",
+     "opts": ["Persönliche Daten löschen und auf Werkseinstellungen zurücksetzen", "Den Akku ausbauen und separat wegwerfen", "Das Gerät in den Hausmüll geben", "Die SIM-Karte an den Hersteller schicken"], "correct": 0,
+     "explain": "„Vor der Abgabe sollte man allerdings seine persönlichen Daten löschen und das Gerät auf die Werkseinstellungen zurücksetzen.“"},
+    {"cat": "Textverständnis", "level": 2, "text": _T_ELEKTROSCHROTT,
+     "q": "Was ist laut Text noch besser als Recycling?",
+     "opts": ["Funktionierende Geräte weitergeben oder reparieren lassen", "Die Geräte in der Schublade aufbewahren", "Die Rohstoffe selbst ausbauen", "Neue Rohstoffe abbauen"], "correct": 0,
+     "explain": "Letzter Satz: „Noch besser als Recycling ist es, funktionierende Geräte weiterzugeben oder reparieren zu lassen.“"},
+    {"cat": "Textverständnis", "level": 3, "text": _T_ELEKTROSCHROTT,
+     "q": "Welche Aussage passt NICHT zum Text?",
+     "opts": ["Alle Händler müssen Altgeräte zurücknehmen", "In alten Handys stecken wertvolle Rohstoffe", "Im Hausmüll gehen die Rohstoffe verloren", "Giftige Bestandteile können in die Umwelt gelangen"], "correct": 0,
+     "explain": "Im Text steht „größere Elektrohändler“ – nicht alle Händler. Auf solche Verallgemeinerungen („alle“, „immer“) achten!"},
+
+    # DSGVO
+    {"cat": "Textverständnis", "level": 1, "text": _T_DSGVO,
+     "q": "Seit wann gilt die DSGVO laut Text?",
+     "opts": ["Seit Mai 2018", "Seit Januar 2016", "Seit Mai 2020", "Seit Dezember 2018"], "correct": 0,
+     "explain": "„Seit Mai 2018 gilt in der gesamten Europäischen Union die Datenschutz-Grundverordnung.“"},
+    {"cat": "Textverständnis", "level": 2, "text": _T_DSGVO,
+     "q": "Was bedeutet der Grundsatz der Datensparsamkeit?",
+     "opts": ["Nur so viele Daten erheben, wie für den Zweck nötig sind", "Daten möglichst günstig speichern", "Alle Daten nach einem Jahr löschen", "Nur Namen und Adressen speichern"], "correct": 0,
+     "explain": "„Es sollen nur so viele Daten erhoben werden, wie für den jeweiligen Zweck tatsächlich nötig sind.“"},
+    {"cat": "Textverständnis", "level": 3, "text": _T_DSGVO,
+     "q": "Welche Aussage ist laut Text richtig?",
+     "opts": ["Betroffene können unter bestimmten Voraussetzungen die Löschung ihrer Daten verlangen", "Betroffene können jederzeit ohne Bedingungen die Löschung verlangen", "Eine IP-Adresse zählt nicht zu den personenbezogenen Daten", "Die DSGVO gilt nur in Deutschland"], "correct": 0,
+     "explain": "Im Text: „unter bestimmten Voraussetzungen“. Die IP-Adresse wird ausdrücklich als Beispiel genannt, und die DSGVO gilt EU-weit."},
+
+    # Blockunterricht
+    {"cat": "Textverständnis", "level": 1, "text": _T_BLOCKUNTERRICHT,
+     "q": "Was bedeutet Blockunterricht laut Text?",
+     "opts": ["Mehrere Wochen am Stück Schule, danach mehrere Wochen am Stück Betrieb", "Ein bis zwei Schultage pro Woche", "Unterricht nur am Wochenende", "Unterricht ausschließlich online"], "correct": 0,
+     "explain": "Statt ein bis zwei Tage pro Woche verbringen Azubis „mehrere Wochen am Stück in der Berufsschule“ und danach wieder einige Wochen im Betrieb."},
+    {"cat": "Textverständnis", "level": 2, "text": _T_BLOCKUNTERRICHT,
+     "q": "Welchen Vorteil für den Betrieb nennt der Text?",
+     "opts": ["Azubis können länger ohne Unterbrechung an einem Projekt mitarbeiten", "Der Betrieb spart Ausbildungsvergütung", "Azubis müssen kein Berichtsheft führen", "Der Betrieb bestimmt die Unterrichtsthemen"], "correct": 0,
+     "explain": "„… im Betrieb können Azubis länger an einem Projekt mitarbeiten, ohne ständig unterbrochen zu werden.“"},
+    {"cat": "Textverständnis", "level": 3, "text": _T_BLOCKUNTERRICHT,
+     "q": "Welche Schlussfolgerung passt am besten zum letzten Satz des Textes?",
+     "opts": ["Regelmäßiges Wiederholen hilft, den Stoff bis zum nächsten Block zu behalten", "Blockunterricht sollte abgeschafft werden", "Im Betrieb lernt man nichts Theoretisches", "Schulblöcke sollten länger dauern"], "correct": 0,
+     "explain": "Der letzte Satz sagt: Wer nicht wiederholt, vergisst viel. Daraus folgt direkt, dass Wiederholen hilft. Die anderen Antworten gehen über den Text hinaus."},
+
+    # 5G
+    {"cat": "Textverständnis", "level": 1, "text": _T_5G,
+     "q": "Was bedeutet „Latenz“ laut Text?",
+     "opts": ["Die Verzögerung, bis Daten beim Empfänger ankommen", "Die maximale Datenmenge pro Monat", "Die Reichweite eines Funkmasts", "Die Anzahl der verbundenen Geräte"], "correct": 0,
+     "explain": "„Latenz – also eine kürzere Verzögerung, bis Daten beim Empfänger ankommen.“"},
+    {"cat": "Textverständnis", "level": 2, "text": _T_5G,
+     "q": "Für welche Anwendung ist die geringe Latenz laut Text besonders wichtig?",
+     "opts": ["Die Steuerung von Maschinen in Fabriken", "Das Streamen von Musik", "Die Navigation im Auto", "Das Versenden von E-Mails"], "correct": 0,
+     "explain": "Genannt wird die „Steuerung von Maschinen in Fabriken“. Für Musik und Navigation reicht laut Text meist auch 4G."},
+    {"cat": "Textverständnis", "level": 3, "text": _T_5G,
+     "q": "Welche Aussage über hohe Frequenzen stimmt laut Text?",
+     "opts": ["Sie ermöglichen hohe Datenraten, haben aber eine geringere Reichweite", "Sie haben eine größere Reichweite und dringen gut durch Wände", "Sie werden nur für 4G genutzt", "Sie senken die Latenz auf null"], "correct": 0,
+     "explain": "„Hohe Frequenzen ermöglichen sehr hohe Datenraten, haben aber eine geringere Reichweite und dringen schlechter durch Wände.“"},
+]

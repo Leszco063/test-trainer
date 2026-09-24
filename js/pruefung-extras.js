@@ -5,8 +5,9 @@ import { generate } from "./gen/index.js";
 // Abschnitt (über seinen ersten Bereich) -> [Generator-Bereich, Anteil am Abschnitt]
 const EXTRAS = {
   Logik: [["Figuren", 1 / 3], ["Logik", 1 / 6]],
-  Mathe: [["Mathe", 1 / 3]],
+  Mathe: [["Mathe", 1 / 3], ["Diagramme", 1 / 6]],
   Konzentration: [["Konzentration", 1 / 2]],
+  Diagramme: [["Diagramme", 1]],
 };
 
 function randomLevel() {

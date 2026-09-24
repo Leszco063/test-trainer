@@ -483,6 +483,41 @@ export const CARDS = [
       <p><strong>Höflich bitten:</strong> Could you please …? · Would you mind …? · I would like to …<br><strong>Mail-Schluss:</strong> Kind regards / Best regards</p>`,
   },
 
+  // ============================ DIAGRAMME & TEXTE ============================
+  {
+    id: "diagramme", cat: "Diagramme", title: "Diagramme & Tabellen lesen",
+    keys: ["Diagramm", "Monat", "Quartal", "Anteil", "Fälle", "Durchschnitt"],
+    html: `
+      <ol>
+        <li><strong>Erst die Überschrift und Achsen lesen:</strong> Was wird gezählt, in welcher Einheit („in Hundert“, „Stück“, „%“)?</li>
+        <li><strong>Frage genau lesen:</strong> Einzelwert, Differenz, Summe, Durchschnitt oder Prozent?</li>
+        <li><strong>Werte notieren</strong>, bevor du rechnest – nicht im Kopf zwischen Diagramm und Antworten springen.</li>
+      </ol>
+      <h4>Die wichtigsten Rechnungen</h4>
+      <table class="ktable">
+        <tr><td>Differenz</td><td>neuer Wert − alter Wert (Vorzeichen beachten)</td></tr>
+        <tr><td>Veränderung in %</td><td>Differenz ÷ ALTER Wert × 100</td></tr>
+        <tr><td>Durchschnitt</td><td>Summe ÷ Anzahl</td></tr>
+        <tr><td>Anteil in %</td><td>Teil ÷ Summe × 100</td></tr>
+        <tr><td>Anzahl aus %</td><td>Gesamtzahl × Prozent ÷ 100</td></tr>
+      </table>
+      <p><strong>Prozent vs. Prozentpunkte:</strong> Von 20 % auf 30 % sind es 10 Prozent<em>punkte</em> – aber ein Anstieg um 50 %.</p>
+      <p><strong>Ablesen:</strong> Hilfslinien nutzen. Liegt ein Balken zwischen zwei beschrifteten Linien, ist er meist genau in der Mitte.</p>`,
+  },
+  {
+    id: "textverstaendnis", cat: "Textverständnis", title: "Textverständnis",
+    keys: ["Text", "laut", "Aussage"],
+    html: `
+      <ol>
+        <li><strong>Erst die Fragen überfliegen</strong>, dann den Text lesen – so weißt du, worauf du achten musst.</li>
+        <li><strong>Nur was im Text steht zählt</strong> – nicht dein Vorwissen. „Klingt richtig“ reicht nicht.</li>
+        <li><strong>Auf Signalwörter achten:</strong> „nur“, „alle“, „immer“, „nie“, „mindestens“, „nicht“ – eine Antwort mit einem Wort zu viel oder zu wenig ist oft der Ablenker.</li>
+        <li><strong>Zahlen und Namen</strong> genau abgleichen – Ablenker vertauschen gern Jahreszahlen, Prozente oder Reihenfolgen.</li>
+        <li><strong>„Welche Aussage steht NICHT im Text?“</strong> – jede Antwort einzeln im Text suchen und abhaken.</li>
+      </ol>
+      <p>Hauptaussage finden: Was würde als Überschrift passen? Worum geht es in einem Satz?</p>`,
+  },
+
   // ============================ KONZENTRATION & MERKEN ============================
   {
     id: "konzentration", cat: "Konzentration", title: "Konzentrationsaufgaben",
