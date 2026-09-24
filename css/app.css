@@ -193,6 +193,16 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .timer { text-align: center; font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; margin-top: 8px; }
 .timer.low { color: var(--bad); }
 
+/* Prüfung: Fragennavigation */
+.qdots { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; }
+.qdot {
+  width: 34px; height: 34px; border-radius: 9px; border: 1.5px solid var(--border);
+  background: var(--card); font-size: 14px; font-variant-numeric: tabular-nums; padding: 0;
+}
+.qdot.done { background: var(--track); border-color: var(--track); }
+.qdot.current { border-color: var(--accent); color: var(--accent); font-weight: 700; }
+.optgrid.review .opt { cursor: default; }
+
 .memo {
   background: var(--card); border: 1.5px solid var(--border); border-radius: 14px;
   padding: 24px 16px; text-align: center; font-size: 22px; font-weight: 700;

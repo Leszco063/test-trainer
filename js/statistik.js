@@ -30,9 +30,18 @@ function showStats() {
     return `<span class="${wrong ? "warn-text" : ""}">${esc(cat)}: ${seen}/${qs.length}${wrong ? ` (${wrong} offen)` : ""}</span>`;
   }).join("");
 
+  const exams = data.pruefungen.slice(-5).reverse();
+  const examHtml = exams.length
+    ? exams.map(x => `
+        <div class="bar-row"><span class="small">${esc(x.datum.slice(5, 10).split("-").reverse().join("."))} · ${esc(x.variante)}</span>
+          <div class="bar"><div style="width:${x.prozent}%;background:${barColor(x.prozent)}"></div></div>
+          <span class="bar-val">${x.prozent}%</span></div>`).join("")
+    : `<p class="muted">Noch keine Prüfungssimulation gemacht.</p>`;
+
   render(`
     <h2>Deine Statistik</h2>
     <section class="card"><h3>Verlauf der letzten Runden</h3>${historyHtml}</section>
+    <section class="card"><h3>Prüfungssimulationen</h3>${examHtml}</section>
     <section class="card"><h3>Trefferquote je Bereich</h3>${catHtml}</section>
     <section class="card"><h3>Bearbeitete Fragen</h3><div class="grid2">${coverHtml}</div></section>
     <section class="card">

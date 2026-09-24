@@ -60,6 +60,10 @@ function showStart() {
   render(`
     <h1>Einstellungstest-Trainer</h1>
     <p class="muted small">${QUESTIONS.length} Fragen · bearbeitet: ${seen} · zuletzt falsch: ${wrong}</p>
+
+    <nav class="menu">
+      <button class="menu-item wide" data-go="pruefung"><strong>Prüfungssimulation</strong><span>Wie der echte Test: Abschnitte mit Zeitlimit, Auswertung am Ende</span></button>
+    </nav>
     ${progressCard(data)}
 
     <section class="card">
@@ -96,7 +100,7 @@ function showStart() {
 
     <nav class="menu">
       <button class="menu-item" data-go="persoenlichkeit"><strong>Persönlichkeitsteil</strong><span>Skalenfragen ohne richtig/falsch</span></button>
-      <button class="menu-item" data-go="statistik"><strong>Statistik</strong><span>Verlauf, Schwächen, Fortschritt sichern</span></button>
+      <button class="menu-item" data-go="statistik"><strong>Statistik</strong><span>Verlauf, Prüfungen, Fortschritt sichern</span></button>
     </nav>
     <div id="installSlot"></div>
   `);

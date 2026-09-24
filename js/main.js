@@ -5,6 +5,7 @@ import "./start.js";
 import "./uebung.js";
 import "./statistik.js";
 import "./persoenlichkeit.js";
+import "./pruefung.js";
 
 go("start");
 

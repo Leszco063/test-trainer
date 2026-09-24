@@ -17,6 +17,8 @@ const FILES = [
   "js/fragenansicht.js",
   "js/main.js",
   "js/persoenlichkeit.js",
+  "js/pruefung.js",
+  "js/pruefung-extras.js",
   "js/speicher.js",
   "js/start.js",
   "js/statistik.js",
