@@ -1,0 +1,9 @@
+{
+  "name": "test-trainer",
+  "private": true,
+  "type": "module",
+  "description": "Übungs-App für den Online-Einstellungstest",
+  "scripts": {
+    "test": "node tools/tests.js"
+  }
+}

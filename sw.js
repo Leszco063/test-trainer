@@ -1,8 +1,29 @@
 // Service Worker: macht die App offline nutzbar.
 // Strategie "Netzwerk zuerst": Online gibt es immer die neueste Version (z. B. neue Fragen),
 // offline wird die zuletzt geladene Version aus dem Zwischenspeicher genommen.
-const CACHE = "test-trainer-v1";
-const FILES = ["./", "index.html", "app.js", "fragen.js", "manifest.webmanifest", "icon-180.png", "icon-192.png", "icon-512.png"];
+// Neue Dateien in js/ oder css/ hier eintragen – die GitHub-Prüfung meldet vergessene Dateien.
+const CACHE = "test-trainer-v2";
+const FILES = [
+  "./",
+  "index.html",
+  "manifest.webmanifest",
+  "icon-180.png",
+  "icon-192.png",
+  "icon-512.png",
+  "css/app.css",
+  "js/auswahl.js",
+  "js/config.js",
+  "js/fragen.js",
+  "js/fragenansicht.js",
+  "js/main.js",
+  "js/persoenlichkeit.js",
+  "js/speicher.js",
+  "js/start.js",
+  "js/statistik.js",
+  "js/uebung.js",
+  "js/ui.js",
+  "js/util.js",
+];
 
 self.addEventListener("install", event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(FILES)));
