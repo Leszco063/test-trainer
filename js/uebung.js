@@ -2,10 +2,10 @@
 
 import { QUESTIONS } from "./fragen.js";
 import { CATEGORIES, LEVEL_NAMES, LEVEL_COLORS, MEMO_SECONDS, TIMER_SECONDS } from "./config.js";
-import { esc, rand, shuffle } from "./util.js";
+import { esc, shuffle } from "./util.js";
 import { GENERATED_ONLY, GEN_SHARE, hasGenerator, generate } from "./gen/index.js";
 import { app, render, on, startTick, stopTick, screen, go } from "./ui.js";
-import { loadProgress, loadSettings, saveRun, recordAnswer, historySummary } from "./speicher.js";
+import { loadProgress, loadSettings, saveRun, recordAnswer, dueQuestions, withBox, isDue } from "./speicher.js";
 import { pickFromPool } from "./auswahl.js";
 import { questionBodyHtml, shuffledOrder, markAnswer } from "./fragenansicht.js";
 import { cardForQuestion } from "./lernkarten.js";
@@ -23,10 +23,10 @@ function startSession(mode, override = {}) {
     return;
   }
   let pool = QUESTIONS.filter(q => activeCats.includes(q.cat));
-  if (mode === "fehler") {
-    pool = pool.filter(q => history[q.id] && history[q.id].letzte_richtig === false);
+  if (mode === "faellig") {
+    pool = dueQuestions(history, pool); // wackeligste zuerst
     if (!pool.length) {
-      alert("In den ausgewählten Bereichen gibt es keine offenen Fehler.");
+      alert("In den ausgewählten Bereichen ist heute nichts zum Wiederholen fällig.");
       return;
     }
   }
@@ -44,7 +44,7 @@ function startSession(mode, override = {}) {
     adaptive: settings.adaptive && mode === "normal",
     fixedLevel: settings.level,
     timer: settings.timer,
-    total: mode === "fehler" ? pool.length : (unlimited ? settings.count : Math.min(settings.count, pool.length)),
+    total: mode === "faellig" ? Math.min(pool.length, Math.max(settings.count, 20)) : (unlimited ? settings.count : Math.min(settings.count, pool.length)),
     level: settings.adaptive ? 1 : settings.level,
     streakCorrect: 0,
     streakWrong: 0,
@@ -62,9 +62,8 @@ function startSession(mode, override = {}) {
 
 function pickNext() {
   let q;
-  if (S.mode === "fehler") {
-    const free = S.pool.filter(x => !S.used.has(x.id));
-    q = free.length ? rand(free) : null;
+  if (S.mode === "faellig") {
+    q = S.pool.find(x => !S.used.has(x.id)) || null; // schon nach Box sortiert
   } else {
     // Erst zufällig einen Bereich wählen, damit alle Bereiche gleich oft drankommen
     const level = S.adaptive ? S.level : S.fixedLevel;
@@ -85,14 +84,16 @@ function pickNext() {
 
 function historyTag(q) {
   if (q.gen) return `<span class="muted">Neu erzeugt</span>`;
-  const e = S.history[q.id];
-  if (!e) return `<span style="color:var(--info)" class="badge">Neu</span>`;
-  if (e.letzte_richtig === false) return `<span style="color:var(--warn)" class="badge">Wiederholung – letztes Mal falsch</span>`;
-  return `<span class="muted">Schon ${e.gesehen}× gehabt</span>`;
+  const raw = S.history[q.id];
+  if (!raw) return `<span style="color:var(--info)" class="badge">Neu</span>`;
+  const e = withBox(raw);
+  if (isDue(e) && e.box === 1) return `<span style="color:var(--warn)" class="badge">Wiederholung – zuletzt falsch</span>`;
+  if (isDue(e)) return `<span style="color:var(--warn)" class="badge">Wiederholung · Box ${e.box}</span>`;
+  return `<span class="muted">Box ${e.box} · ${e.gesehen}× gehabt</span>`;
 }
 
 function questionHeader(q) {
-  const modeLabel = S.mode === "fehler" ? "Fehler-Training" : (S.adaptive ? "Adaptiv" : "");
+  const modeLabel = S.mode === "faellig" ? "Wiederholung" : (S.adaptive ? "Adaptiv" : "");
   return `
     <div class="qhead"><span>Frage ${S.index + 1} / ${S.total}</span><span>Richtig: ${S.score}</span></div>
     <div class="qmeta">
@@ -211,7 +212,7 @@ function showResult() {
   const before = loadProgress().runs;
   let lastPct = before.length ? before[before.length - 1].prozent : null;
 
-  if (S.mode === "fehler") lastPct = null;  // Fehler-Training zählt nicht in den Verlauf
+  if (S.mode === "faellig") lastPct = null;  // Wiederholungen zählen nicht in den Verlauf
   else saveRun(S.score, total, S.catStats, S.level);
 
   let cmp = "";
@@ -223,9 +224,9 @@ function showResult() {
   }
 
   let extra = "";
-  if (S.mode === "fehler") {
-    const { wrong } = historySummary(S.history);
-    extra = `<p class="center"><strong>${S.score} Fehler ausgebessert</strong> · insgesamt noch offen: ${wrong}</p>`;
+  if (S.mode === "faellig") {
+    const stillDue = dueQuestions(S.history).length;
+    extra = `<p class="center"><strong>${S.score} von ${total} gewusst</strong> – diese rücken eine Box weiter.<br>Heute noch fällig: ${stillDue}</p>`;
   } else if (S.adaptive) {
     extra = `<p class="center">Zuletzt erreichtes Level: <strong>${LEVEL_NAMES[S.level]}</strong></p>`;
   }
@@ -237,7 +238,7 @@ function showResult() {
     : "";
 
   render(`
-    <h2 class="center">${S.mode === "fehler" ? "Fehler-Training beendet" : "Ergebnis"}</h2>
+    <h2 class="center">${S.mode === "faellig" ? "Wiederholung beendet" : "Ergebnis"}</h2>
     <div class="big">${S.score} / ${total}</div>
     <p class="center muted">${pct} % richtig</p>
     ${cmp}${extra}${wrongHtml}

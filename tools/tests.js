@@ -83,6 +83,33 @@ for (const cat of new Set([...QUESTIONS.map(q => q.cat), ...GENERATED_ONLY])) {
 if (new Set(CARDS.map(c => c.id)).size !== CARDS.length) fail("Spickzettel-IDs doppelt");
 console.log(`✓ Spickzettel: ${CARDS.length} Karten, alle Bereiche abgedeckt`);
 
+// 1d) Leitner-System (mit simuliertem Browser-Speicher)
+globalThis.localStorage = {
+  store: {},
+  getItem(k) { return this.store[k] ?? null; },
+  setItem(k, v) { this.store[k] = String(v); },
+};
+const sp = await import("../js/speicher.js");
+const { dateKey, addDays } = await import("../js/util.js");
+const today = dateKey();
+const qA = { id: "testA", cat: "Mathe" }, qB = { id: "testB", cat: "Mathe" };
+let h = sp.recordAnswer(qA, true);
+if (h.testA.box !== 3 || h.testA.faellig !== addDays(today, 3)) fail(`Leitner: neu+richtig sollte Box 3 / +3 Tage sein, ist ${JSON.stringify(h.testA)}`);
+h = sp.recordAnswer(qA, true);
+if (h.testA.box !== 4 || h.testA.faellig !== addDays(today, 7)) fail(`Leitner: Box 3 + richtig sollte Box 4 / +7 Tage sein`);
+h = sp.recordAnswer(qA, false);
+if (h.testA.box !== 1 || h.testA.faellig !== today) fail(`Leitner: falsch sollte Box 1 / heute sein`);
+h = sp.recordAnswer(qB, false);
+if (h.testB.box !== 1 || !sp.isDue(h.testB)) fail(`Leitner: neu+falsch sollte heute fällig sein`);
+const migrated = sp.withBox({ gesehen: 2, richtig: 1, letzte_richtig: false, zuletzt: "2026-01-01 10:00:00" });
+if (migrated.box !== 1 || migrated.faellig !== "2026-01-01") fail(`Leitner: Migration alter Einträge fehlerhaft`);
+const due = sp.dueQuestions(h, [qA, qB, { id: "x" }]);
+if (due.length !== 2) fail(`Leitner: dueQuestions sollte 2 liefern, liefert ${due.length}`);
+if (h.testA.gesehen !== 3 || h.testA.richtig !== 2) fail(`Leitner: Zähler falsch`);
+const genQ = { id: "gen-1", gen: true };
+if (sp.recordAnswer(genQ, true)["gen-1"]) fail(`Generierte Aufgaben dürfen nicht im Verlauf landen`);
+console.log("✓ Leitner-System: Boxen, Fälligkeit und Migration korrekt");
+
 // 2) Jede Datei in js/ und css/ muss im Service Worker stehen (sonst fehlt sie offline)
 const sw = readFileSync(join(ROOT, "sw.js"), "utf-8");
 function walk(dir) {

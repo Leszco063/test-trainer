@@ -3,7 +3,20 @@
 
 import { QUESTIONS } from "./fragen.js";
 import { CATEGORIES } from "./config.js";
-import { nowStamp } from "./util.js";
+import { nowStamp, dateKey, addDays } from "./util.js";
+
+// Leitner-System: Box 1–5. Nach einer Antwort kommt die Frage nach so vielen Tagen wieder.
+export const BOX_INTERVALS = [0, 0, 1, 3, 7, 16]; // Index = Box
+export const LEARNED_BOX = 5;
+
+// Alte Einträge (vor dem Leitner-System) bekommen eine Box und ein Fälligkeitsdatum
+export function withBox(entry) {
+  if (!entry || entry.box) return entry;
+  const last = (entry.zuletzt || nowStamp()).slice(0, 10);
+  return entry.letzte_richtig === false
+    ? { ...entry, box: 1, faellig: last }
+    : { ...entry, box: 2, faellig: addDays(last, BOX_INTERVALS[2]) };
+}
 
 const PROGRESS_KEY = "testTrainer.progress";
 const SETTINGS_KEY = "testTrainer.settings";
@@ -76,7 +89,12 @@ export function saveRun(score, total, catStats, levelReached) {
 export function recordAnswer(q, isCorrect) {
   const data = loadProgress();
   if (!q.gen) {
-    const entry = data.fragen[q.id] || { gesehen: 0, richtig: 0 };
+    const old = data.fragen[q.id];
+    const entry = old ? withBox(old) : { gesehen: 0, richtig: 0 };
+    // Neu und gleich richtig -> vermutlich bekannt, direkt Box 3. Neu und falsch -> Box 1.
+    if (!old) entry.box = isCorrect ? 3 : 1;
+    else entry.box = isCorrect ? Math.min(LEARNED_BOX, entry.box + 1) : 1;
+    entry.faellig = addDays(dateKey(), BOX_INTERVALS[entry.box]);
     entry.gesehen += 1;
     if (isCorrect) entry.richtig += 1;
     entry.letzte_richtig = isCorrect;
@@ -95,6 +113,28 @@ export function historySummary(history, questions = QUESTIONS) {
     if (e && e.letzte_richtig === false) wrong++;
   }
   return { seen, wrong };
+}
+
+export function isDue(entry, today = dateKey()) {
+  const e = withBox(entry);
+  return !!e && e.faellig <= today;
+}
+
+// Heute fällige Fragen, die mit der niedrigsten Box (= am wackeligsten) zuerst
+export function dueQuestions(history, questions = QUESTIONS, today = dateKey()) {
+  return questions
+    .filter(q => history[q.id] && isDue(history[q.id], today))
+    .sort((a, b) => withBox(history[a.id]).box - withBox(history[b.id]).box);
+}
+
+// Verteilung auf die Boxen: [neu, box1, ..., box5]
+export function boxStats(history, questions = QUESTIONS) {
+  const counts = [0, 0, 0, 0, 0, 0];
+  for (const q of questions) {
+    const e = history[q.id];
+    counts[e ? withBox(e).box : 0] += 1;
+  }
+  return counts;
 }
 
 export function categoryWeakness(data) {

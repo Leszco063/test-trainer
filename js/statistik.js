@@ -4,7 +4,7 @@ import { QUESTIONS } from "./fragen.js";
 import { POOL_CATEGORIES } from "./config.js";
 import { esc } from "./util.js";
 import { render, on, barColor, screen, go } from "./ui.js";
-import { loadProgress, importProgress, categoryWeakness, historySummary } from "./speicher.js";
+import { loadProgress, importProgress, categoryWeakness, historySummary, boxStats } from "./speicher.js";
 
 function showStats() {
   const data = loadProgress();
@@ -38,8 +38,21 @@ function showStats() {
           <span class="bar-val">${x.prozent}%</span></div>`).join("")
     : `<p class="muted">Noch keine Prüfungssimulation gemacht.</p>`;
 
+  const boxes = boxStats(data.fragen);
+  const boxLabels = ["Noch nie gehabt", "Box 1 · wackelig", "Box 2", "Box 3", "Box 4", "Box 5 · gelernt"];
+  const boxColors = ["var(--track)", "var(--bad)", "var(--lvl2)", "var(--lvl2)", "var(--ok)", "var(--ok)"];
+  const boxHtml = boxes.map((n, i) => `
+    <div class="bar-row"><span class="small">${boxLabels[i]}</span>
+      <div class="bar"><div style="width:${(n / QUESTIONS.length) * 100}%;background:${boxColors[i]}"></div></div>
+      <span class="bar-val">${n}</span></div>`).join("");
+
   render(`
     <h2>Deine Statistik</h2>
+    <section class="card">
+      <h3>Lernstand (Leitner-Boxen)</h3>
+      ${boxHtml}
+      <p class="small muted" style="margin-top:8px">Richtig beantwortet → eine Box weiter, falsch → zurück in Box 1. Wiederholt wird nach 0, 1, 3, 7 und 16 Tagen.</p>
+    </section>
     <section class="card"><h3>Verlauf der letzten Runden</h3>${historyHtml}</section>
     <section class="card"><h3>Prüfungssimulationen</h3>${examHtml}</section>
     <section class="card"><h3>Trefferquote je Bereich</h3>${catHtml}</section>

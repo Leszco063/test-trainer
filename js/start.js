@@ -4,7 +4,7 @@ import { QUESTIONS } from "./fragen.js";
 import { CATEGORIES, LEVEL_NAMES, TIMER_SECONDS } from "./config.js";
 import { esc } from "./util.js";
 import { render, on, screen, go } from "./ui.js";
-import { loadProgress, loadSettings, saveSettings, historySummary, categoryWeakness, trend } from "./speicher.js";
+import { loadProgress, loadSettings, saveSettings, historySummary, categoryWeakness, trend, dueQuestions, boxStats, LEARNED_BOX } from "./speicher.js";
 
 // Chrome/Edge am PC bieten an, die Web-App wie ein Programm zu installieren
 let installPrompt = null;
@@ -55,11 +55,13 @@ function progressCard(data) {
 function showStart() {
   const settings = loadSettings();
   const data = loadProgress();
-  const { seen, wrong } = historySummary(data.fragen);
+  const { seen } = historySummary(data.fragen);
+  const due = dueQuestions(data.fragen).length;
+  const learned = boxStats(data.fragen)[LEARNED_BOX];
 
   render(`
     <h1>Einstellungstest-Trainer</h1>
-    <p class="muted small">${QUESTIONS.length} Fragen · bearbeitet: ${seen} · zuletzt falsch: ${wrong}</p>
+    <p class="muted small">${QUESTIONS.length} Fragen · bearbeitet: ${seen} · gelernt: ${learned} · heute fällig: ${due}</p>
 
     <nav class="menu">
       <button class="menu-item wide" data-go="pruefung"><strong>Prüfungssimulation</strong><span>Wie der echte Test: Abschnitte mit Zeitlimit, Auswertung am Ende</span></button>
@@ -96,7 +98,7 @@ function showStart() {
         </div>
       </div>
       <button class="btn" id="start">Übung starten</button>
-      ${wrong ? `<button class="btn warn" id="fehler">Fehler wiederholen (${wrong})</button>` : ""}
+      ${due ? `<button class="btn warn" id="faellig">Heute fällig: ${due} wiederholen</button>` : ""}
     </section>
 
     <nav class="menu">
@@ -132,7 +134,7 @@ function showStart() {
   on("#minus", "click", () => setCount(settings.count - 5));
   on("#plus", "click", () => setCount(settings.count + 5));
   on("#start", "click", () => go("uebung", "normal"));
-  on("#fehler", "click", () => go("uebung", "fehler"));
+  on("#faellig", "click", () => go("uebung", "faellig"));
   on("[data-go]", "click", e => go(e.currentTarget.dataset.go));
 }
 
