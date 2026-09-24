@@ -170,6 +170,11 @@ button { font: inherit; color: inherit; cursor: pointer; }
 }
 .stem { margin: 0 0 16px; text-align: center; overflow-x: auto; }
 .stem svg { max-width: 100%; height: auto; }
+.mono {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 20px; letter-spacing: 1.5px;
+  background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 12px;
+  word-break: break-word; line-height: 1.6; text-align: center;
+}
 .fig-svg { color: var(--fig); display: block; margin: 0 auto; width: 100%; height: auto; }
 .opt {
   display: block; width: 100%; text-align: left;

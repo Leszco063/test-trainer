@@ -3,10 +3,16 @@
 // Andere Bereiche mit Generator bekommen einen Teil ihrer Aufgaben erzeugt (GEN_SHARE).
 
 import { generateFigure } from "./figuren.js";
+import { generateMath } from "./rechnen.js";
+import { generateConcentration } from "./konzentration.js";
+import { generateSeries } from "./reihen.js";
 import { retry } from "./gemeinsam.js";
 
 const GENERATORS = {
   Figuren: generateFigure,
+  Mathe: generateMath,
+  Konzentration: generateConcentration,
+  Logik: generateSeries,
 };
 
 export const GENERATED_ONLY = ["Figuren"];
