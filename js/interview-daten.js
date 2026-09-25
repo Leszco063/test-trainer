@@ -71,6 +71,20 @@ export const INTERVIEW = [
     ],
   },
   {
+    id: "alternative", group: 0, q: "Dein Testergebnis passt auch gut zu einem anderen Beruf – wäre das eine Option für dich?",
+    ziel: "Laut Telekom werden im Best Fit Interview die Testergebnisse besprochen und passende Berufe vorgeschlagen. Die Frage prüft, wie offen und wie überzeugt du bist.",
+    tipps: [
+      "Nicht abblocken: Offenheit zeigen und nach dem vorgeschlagenen Beruf fragen – was wären die Aufgaben?",
+      "Gleichzeitig klar sagen, warum Systemintegration deine erste Wahl ist – mit Begründung, nicht nur „weil ich das will“.",
+      "Deine Auswertung aus dem Onlinetest vorher ansehen (Screenshot/Notizen) – dann überrascht dich der Vorschlag nicht.",
+      "Überleg dir vorher: Welche Alternative könntest du dir ehrlich vorstellen? (z. B. IT-System-Elektroniker/in wegen deiner Technik-Erfahrung)",
+    ],
+    bausteine: [
+      "„Das finde ich interessant – was wären in dem Beruf die typischen Aufgaben?“",
+      "„Meine erste Wahl bleibt Systemintegration, weil mich [Netzwerke / Fehlersuche / Support] am meisten reizt. [Alternative] könnte ich mir aber auch vorstellen, weil …“",
+    ],
+  },
+  {
     id: "wissenausbildung", group: 0, q: "Was weißt du über die Ausbildung zum Fachinformatiker für Systemintegration?",
     ziel: "Hast du dich informiert, worauf du dich einlässt?",
     tipps: [

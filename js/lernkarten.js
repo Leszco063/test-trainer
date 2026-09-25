@@ -552,16 +552,24 @@ export const CARDS = [
     id: "taktik", cat: "Test-Taktik", title: "Taktik für den Online-Test",
     keys: [],
     html: `
-      <h4>Was über den Telekom-Test bekannt ist</h4>
-      <p class="small muted">Aus Angaben des Testherstellers (CYQUEST), Ratgeberseiten und Erfahrungsberichten – der genaue Inhalt hängt vom Beruf ab und kann sich ändern.</p>
+      <h4>Offiziell von der Telekom bestätigt</h4>
       <ul>
-        <li><strong>Dauer:</strong> etwa 90 Minuten einplanen, eventuell länger. Zwischen den Testbausteinen sind kurze Pausen möglich.</li>
-        <li><strong>Bausteine:</strong> mehrere kognitive Tests (je nach Beruf), ein Persönlichkeitstest, ein Interessenstest und ein Situational Judgement Test.</li>
-        <li><strong>Für alle:</strong> Rechentextaufgaben und Diagrammanalyse. Dazu je nach Beruf Logik, Sprache, Merkfähigkeit, Konzentration, Englisch, IT- oder BWL-Wissen.</li>
-        <li><strong>SJT:</strong> Situationen aus dem Arbeitsalltag, 8 Zustimmungspunkte auf 4 Reaktionen verteilen.</li>
-        <li><strong>Zeitlimit je Block:</strong> Laut Berichten kein Pausieren innerhalb eines Blocks und kein Zurückspringen zu vorherigen Fragen. Seiten können automatisch weiterblättern.</li>
-        <li><strong>Probefragen:</strong> Vor den Bausteinen gibt es Erklärungen und Beispielaufgaben – nutze sie, um das Format zu verstehen.</li>
-        <li><strong>Ergebnis:</strong> Es gibt eine Rückmeldung mit Passung zum Wunschberuf und Vorschlägen für Alternativen. Im Best Fit Interview wird das Ergebnis besprochen.</li>
+        <li><strong>Dauer:</strong> etwa 90 Minuten.</li>
+        <li><strong>Bestandteile:</strong> Interessenstest, kognitiver Leistungstest und Persönlichkeitstest.</li>
+        <li><strong>Direkt danach</strong> bekommst du eine individuelle Auswertung deiner Stärken und Interessen mit Berufsempfehlungen – <strong>Screenshot machen oder aufschreiben</strong>, sie ist Thema im Interview.</li>
+        <li><strong>Best Fit Interview:</strong> Die Testergebnisse werden besprochen, die Telekom schlägt passende Berufe vor – eine Zusage ist direkt am Ende des Gesprächs möglich. Danach folgt das Business Match mit dem künftigen Team.</li>
+      </ul>
+      <h4>Laut Testhersteller (CYQUEST) und Ratgebern</h4>
+      <ul>
+        <li>Je nach Beruf bis zu <strong>6 kognitive Tests</strong>, z. B. Rechentextaufgaben, Diagrammanalyse, Logik, Sprache, Merkfähigkeit, Konzentration, Englisch, IT- oder BWL-Wissen.</li>
+        <li><strong>Situational Judgement Test:</strong> Situationen aus dem Arbeitsalltag, 8 Zustimmungspunkte auf 4 Reaktionen verteilen.</li>
+        <li>Zwischen den Testbausteinen sind kurze <strong>Pausen</strong> möglich, vorab gibt es Erklärungen und Probefragen.</li>
+      </ul>
+      <h4>Laut Erfahrungsberichten (nicht offiziell)</h4>
+      <ul>
+        <li><strong>Zeitlimit je Block</strong>, kein Pausieren innerhalb eines Blocks, <strong>kein Zurückspringen</strong>; Seiten können automatisch weiterblättern.</li>
+        <li>Viele schaffen nicht alle Aufgaben in der Zeit – nicht festbeißen.</li>
+        <li>Ein Bewerber (2023) wurde mit 60 von 100 Punkten eingeladen und angenommen.</li>
       </ul>
       <h4>Vorher</h4>
       <ul>

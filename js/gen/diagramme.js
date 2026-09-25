@@ -2,7 +2,7 @@
 // Durchschnitt und Prozent. Die Zahlen sind so gewählt, dass man ohne Taschenrechner auskommt.
 
 import { rand, randInt, shuffle, esc, fmt } from "../util.js";
-import { textQuestion } from "./gemeinsam.js";
+import { textQuestion, genId } from "./gemeinsam.js";
 
 const CAT = "Diagramme";
 const MONTHS = ["Jan", "Feb", "Mär", "Apr", "Mai", "Jun"];
@@ -59,8 +59,36 @@ function barChart(level) {
   const idxMax = values.indexOf(Math.max(...values));
   const idxMin = values.indexOf(Math.min(...values));
 
-  const types = level === 1 ? ["max", "min", "read"] : level === 2 ? ["diff", "sum", "read"] : ["pct", "avg", "diff"];
+  const types = level === 1 ? ["max", "min", "read"] : level === 2 ? ["diff", "sum", "read", "tfn"] : ["pct", "avg", "diff", "tfn"];
   const type = rand(types);
+
+  if (type === "tfn") {
+    // Aussage bewerten: richtig / falsch / aus dem Diagramm nicht ableitbar
+    const truth = rand(["richtig", "falsch", "nicht ableitbar"]);
+    let statement, why;
+    if (truth === "nicht ableitbar") {
+      [statement, why] = rand([
+        [`Im Juli lag der Wert über ${values[5]}.`, "Das Diagramm endet im Juni – über Juli sagt es nichts."],
+        [`Der Umsatz in Euro war im ${MONTHS_LONG[idxMax]} am höchsten.`, "Das Diagramm zeigt Stückzahlen, keine Euro-Beträge."],
+        [`Im ${MONTHS_LONG[idxMin]} waren die meisten Mitarbeiter im Urlaub.`, "Über die Gründe für die Werte enthält das Diagramm keine Angaben."],
+        [`Im Vorjahr lagen alle Werte niedriger.`, "Das Diagramm enthält keine Vorjahreswerte."],
+      ]);
+    } else {
+      let a, b;
+      do { a = randInt(0, 5); b = randInt(0, 5); } while (a === b || values[a] === values[b]);
+      const aHigher = values[a] > values[b];
+      const claimHigher = truth === "richtig" ? aHigher : !aHigher;
+      statement = `Im ${MONTHS_LONG[a]} lag der Wert ${claimHigher ? "höher" : "niedriger"} als im ${MONTHS_LONG[b]}.`;
+      why = `${MONTHS_LONG[a]}: ${values[a]}, ${MONTHS_LONG[b]}: ${values[b]}.`;
+    }
+    const opts = ["richtig", "falsch", "nicht ableitbar"];
+    return {
+      id: genId(CAT), cat: CAT, level, gen: true, stemHtml,
+      q: `Bewerte die Aussage: „${statement}“`,
+      opts, correct: opts.indexOf(truth),
+      explain: `${truth === "nicht ableitbar" ? "Nicht ableitbar" : truth === "richtig" ? "Richtig" : "Falsch"}: ${why} Nur werten, was wirklich im Diagramm steht – Vorwissen oder Vermutungen zählen nicht.`,
+    };
+  }
 
   if (type === "max" || type === "min") {
     const idx = type === "max" ? idxMax : idxMin;
